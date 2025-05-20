@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -80,16 +81,16 @@ nav a.activo {
 ---------------------------------- */
 #hero {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 4rem 2rem;
   background-color: #e0f7f4;
-  gap: 2rem;
-  flex-wrap: wrap;
 }
 
 .hero-contenido {
-  flex: 1 1 500px;
-  max-width: 500px;
+  flex: 1 1 150px;
+  max-width: 1200px;
 }
 
 #hero h1 {
@@ -119,13 +120,6 @@ nav a.activo {
   background-color: #0a6f56;
 }
 
-.hero-img {
-  flex: 1 1 250px;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
 /* ----------------------------------
    SOBRE NOSOTROS
 ---------------------------------- */
@@ -144,7 +138,7 @@ nav a.activo {
   font-size: 2rem;
   color: #0c8a68;
   margin-bottom: 1.5rem;
-  position: relative
+  position: relative;
 }
 
 #sobre-nosotros h2::after {
@@ -197,8 +191,9 @@ nav a.activo {
 /* Grilla para productos destacados */
 .grid-catalogo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  justify-content: center;
   margin-bottom: 2.5rem;
 }
 
@@ -280,7 +275,7 @@ nav a.activo {
 }
 
 .info-texto {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
   text-align: left;
 }
 
@@ -326,30 +321,6 @@ h1 {
 }
 
 /* ----------------------------------
-   BOTÓN DE WHATSAPP
----------------------------------- */
-.whatsapp-button {
-  margin-top: 2rem;
-  display: none;
-}
-
-.whatsapp-button a {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background-color: #25d366;
-  transition: background-color 0.3s;
-}
-
-.whatsapp-button a:hover {
-  background-color: #1ebe5d;
-}
-
-/* ----------------------------------
    SECCIÓN DE CONTACTO
 ---------------------------------- */
 .contenedor-contacto {
@@ -378,6 +349,27 @@ h1 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.whatsapp-button {
+  margin-top: 2rem;
+  display: none;
+}
+
+.whatsapp-button a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: #25d366;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button a:hover {
+  background-color: #1ebe5d;
+}
+
 /* ----------------------------------
    CATÁLOGO DE PRODUCTOS
 ---------------------------------- */
@@ -388,6 +380,14 @@ h1 {
   padding: 2rem;
 }
 
+.titulo-seccion {
+  color: #0c8a68;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .producto {
   background: #fff;
   border-radius: 10px;
@@ -395,6 +395,10 @@ h1 {
   text-align: center;
   padding: 1rem;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .producto:hover {
@@ -403,25 +407,30 @@ h1 {
 
 .producto img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .producto h2 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+  color: #222;
+  text-align: center;
 }
 
 .producto p {
   font-size: 0.9rem;
   color: #555;
+  text-align: center;
 }
 
 .precio {
   font-weight: bold;
   font-size: 1rem;
   color: #25a244;
+  margin-top: 0.3rem;
+  text-align: center;
 }
 
 #buscador {
@@ -433,6 +442,59 @@ h1 {
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
+}
+
+/* Filtros: buscador + categoría */
+.filtros-catalogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filtros-catalogo input[type="text"] {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 220px;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Estilo del selector */
+.filtros-catalogo select {
+  padding: 0.8rem 1rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  background-color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%230c8a68'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.stock-disponible {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #0c8a68;
+  font-weight: bold;
+}
+
+.stock-agotado {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #d9534f;
+  font-weight: bold;
 }
 
 /* ----------------------------------
