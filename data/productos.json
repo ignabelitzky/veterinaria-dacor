@@ -3,54 +3,63 @@
         "nombre": "Alimento para Gato",
         "descripcion": "Marca Whiskas, 1Kg",
         "precio": 2500,
-        "imagen": "alimento-gato.jpeg"
+        "imagen": "alimento-gato.jpeg",
+        "destacado": true
     },
     {
         "nombre": "Shampoo para Perro",
         "descripcion": "Antipulgas, 250ml",
         "precio": 1800,
-        "imagen": "shampoo-perro.jpeg"
+        "imagen": "shampoo-perro.jpeg",
+        "destacado": false
     },
     {
         "nombre": "Juguete de goma",
         "descripcion": "Ideal para perros medianos",
         "precio": 950,
-        "imagen": "juguete-goma.jpeg"
+        "imagen": "juguete-goma.jpeg",
+        "destacado": true
     },
     {
         "nombre": "Alimento para Gato",
         "descripcion": "Marca Whiskas, 1Kg",
         "precio": 2500,
-        "imagen": "alimento-gato.jpeg"
+        "imagen": "alimento-gato.jpeg",
+        "destacado": false
     },
     {
         "nombre": "Shampoo para Perro",
         "descripcion": "Antipulgas, 250ml",
         "precio": 1800,
-        "imagen": "shampoo-perro.jpeg"
+        "imagen": "shampoo-perro.jpeg",
+        "destacado": true
     },
     {
         "nombre": "Juguete de goma",
         "descripcion": "Ideal para perros medianos",
         "precio": 950,
-        "imagen": "juguete-goma.jpeg"
+        "imagen": "juguete-goma.jpeg",
+        "destacado": false
     },
     {
         "nombre": "Alimento para Gato",
         "descripcion": "Marca Whiskas, 1Kg",
         "precio": 2500,
-        "imagen": "alimento-gato.jpeg"
+        "imagen": "alimento-gato.jpeg",
+        "destacado": false
     },
     {
         "nombre": "Shampoo para Perro",
         "descripcion": "Antipulgas, 250ml",
         "precio": 1800,
-        "imagen": "shampoo-perro.jpeg"
+        "imagen": "shampoo-perro.jpeg",
+        "destacado": false
     },
     {
         "nombre": "Juguete de goma",
         "descripcion": "Ideal para perros medianos",
         "precio": 950,
-        "imagen": "juguete-goma.jpeg"
+        "imagen": "juguete-goma.jpeg",
+        "destacado": false
     }
 ]

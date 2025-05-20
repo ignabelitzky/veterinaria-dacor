@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Veterinaria Dacor - Atención veterinaria, tienda de mascotas y productos. Cuidamos a tus mascotas con amor."
+    />
     <title>Veterinaria Dacor</title>
     <link rel="stylesheet" href="css/estilos.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
@@ -18,32 +22,107 @@
           />
           <nav>
             <a href="index.html" class="activo">Inicio</a>
-            <a href="servicios.html">Servicios</a>
             <a href="catalogo.html">Catálogo</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="envios.html">Cómo comprar</a>
             <a href="contacto.html">Contacto</a>
           </nav>
         </div>
       </header>
 
       <main>
-        <section class="portada">
-          <div class="texto-portada">
+        <!-- Hero -->
+        <section id="hero">
+          <div class="hero-contenido">
             <h1>Bienvenidos a Veterinaria Dacor</h1>
-            <p>Cuidamos a tus mascotas como parte de nuestra familia.</p>
-            <a href="https://wa.me/5493516784060" target="_blank" class="boton">
-              <img
-                src="img/whatsapp-icono-30.png"
-                alt="Icono WhatsApp"
-                class="icono"
-              />
-              ¡Escribinos por WhatsApp!
-            </a>
+            <p>
+              Cuidamos a tus mascotas como parte de nuestra familia. Todo lo que
+              necesitás, en un solo lugar.
+            </p>
+            <a href="catalogo.html" class="btn">Ver Catálogo</a>
+            <a href="servicios.html" class="btn">Ver Servicios</a>
+          </div>
+          <img src="img/hero-img.png" alt="Mascota y logo" class="hero-img" />
+        </section>
+
+        <!-- Sobre nosotros -->
+        <section id="sobre-nosotros">
+          <div class="contenedor">
+            <h2>Sobre nosotros</h2>
+            <p>
+              Somos una veterinaria con más de 5 años de experiencia brindando
+              atención personalizada a mascotas en nuestra comunidad. Ofrecemos
+              servicios veterinarios de calidad, una tienda completa de
+              productos, y un trato humano y cálido tanto para los animales como
+              para sus familias.
+            </p>
           </div>
         </section>
 
-        <section class="informacion">
-          <h2>Dirección</h2>
-          <p>Gral. Simón Bolivar 945, Córdoba, Argentina</p>
+        <!-- Catálogo destacado -->
+        <section id="catalogo-destacado">
+          <div class="contenedor">
+            <h2>Productos destacados</h2>
+            <div class="grid-catalogo" id="contenedor-destacados">
+              <!-- Aquí se insertan los productos con JS -->
+            </div>
+            <a href="catalogo.html" class="btn">Ver catálogo completo</a>
+          </div>
+        </section>
+
+        <script src="js/catalogoDestacado.js"></script>
+
+        <!-- Información de contacto -->
+        <section id="contacto-info">
+          <div class="contenedor">
+            <h2>Contacto</h2>
+            <div class="info-contacto">
+              <div class="info-texto">
+                <p>
+                  <strong>Dirección:</strong> Gral. Simón Bolivar 945, Córdoba
+                </p>
+                <p><strong>WhatsApp Pet-Shop:</strong> +54 9 351 678-4060</p>
+                <p><strong>WhatsApp Veterinaria:</strong> +54 9 351 274-1854</p>
+
+                <p><strong>Horarios de atención:</strong></p>
+                <ul class="horarios">
+                  <li>Lunes a Viernes: 10:00 a 13:30 - 15:30 a 19:00</li>
+                  <li>Sábados: 10:30 a 13:30</li>
+                  <li>Domingos: Cerrados</li>
+                </ul>
+
+                <p>
+                  <strong>Instagram</strong>
+                  <a
+                    href="https://www.instagram.com/dacorveterinaria/"
+                    target="_blank"
+                    >@dacorveterinaria</a
+                  >
+                </p>
+                <p>
+                  <strong>Facebook</strong>
+                  <a
+                    href="https://www.facebook.com/dacorveterinaria/"
+                    target="_blank"
+                    >/dacorveterinaria</a
+                  >
+                </p>
+              </div>
+
+              <div class="info-mapa">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6073895048303!2d-64.1978064235965!3d-31.424941496666463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a27d56351aa5%3A0x1ce8b14639601a4c!2sGral.%20Sim%C3%B3n%20Bol%C3%ADvar%20945%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1747755698433!5m2!1ses!2sar"
+                  width="100%"
+                  height="250"
+                  style="border: 0; border-radius: 10px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 

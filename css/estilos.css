@@ -1,59 +1,47 @@
-/* Reset básico */
+/* ----------------------------------
+   RESET BÁSICO Y ESTILOS GENERALES
+---------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
+html, body {
   height: 100%;
   margin: 0;
-}
-
-body {
-  height: 100%;
   font-family: "Segoe UI", sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  margin: 0;
 }
 
-header {
-  background-color: #0c8a68;
-  padding: 10px 0;
-  color: white;
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
+/* ----------------------------------
+   ESTRUCTURA DE LA PÁGINA
+---------------------------------- */
+.contenedor-pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   flex: 1;
 }
 
-.whatsapp-button {
-  margin-top: 2rem;
-  display: none;
-}
-
-.whatsapp-button a {
-  display: inline-block;
-  padding: 1rem 1.5rem;
+/* ----------------------------------
+   HEADER Y NAVEGACIÓN
+---------------------------------- */
+header {
+  background-color: #0c8a68;
+  padding: 10px 0;
   color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background-color: #25d366;
-  transition: background-color 0.3s;
-}
-
-.whatsapp-button a:hover {
-  background-color: #1ebe5d;
 }
 
 .contenedor-header {
@@ -87,61 +75,283 @@ nav a.activo {
   text-decoration: underline;
 }
 
-.portada {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+/* ----------------------------------
+   HERO - SECCIÓN PRINCIPAL
+---------------------------------- */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #e0f7f4;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.texto-portada {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 12px;
+.hero-contenido {
+  flex: 1 1 500px;
+  max-width: 500px;
 }
 
-.boton {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  background-color: #1ccf86;
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0c8a68;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+#hero .btn {
+  padding: 0.8rem 1.6rem;
+  background-color: #0c8a68;
   color: white;
+  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 5px;
-  line-height: 1;
-  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.boton:hover {
-  background-color: #14a26b;
+#hero .btn:hover {
+  background-color: #0a6f56;
 }
 
-.informacion {
-  max-width: 1400px;
-  margin: 40px auto;
-  padding: 0 20px;
+.hero-img {
+  flex: 1 1 250px;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------------
+   SOBRE NOSOTROS
+---------------------------------- */
+#sobre-nosotros {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.banner {
+#sobre-nosotros .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#sobre-nosotros h2 {
+  font-size: 2rem;
+  color: #0c8a68;
+  margin-bottom: 1.5rem;
+  position: relative
+}
+
+#sobre-nosotros h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0c8a68;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+#sobre-nosotros p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ----------------------------------
+   CATÁLOGO DESTACADO
+---------------------------------- */
+#catalogo-destacado {
+  background-color: #e0f7f4;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#catalogo-destacado .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#catalogo-destacado h2 {
+  font-size: 2rem;
+  color: #0c8a68;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#catalogo-destacado h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0c8a68;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Grilla para productos destacados */
+.grid-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Reutiliza estilos existentes para tarjetas de producto */
+.gird-catalogo .producto {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.grid-catalogo .producto:hover {
+  transform: scale(1.03);
+}
+
+.grid-catalogo .producto img {
   width: 100%;
-  height: 100px;
-  display: flex;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
-.contenedor-pagina {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.grid-catalogo .producto h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
 }
 
+.grid-catalogo .producto .precio {
+  font-weight: bold;
+  color: #25a244;
+  font-size: 1rem;
+}
+
+/* Botón de catálogo */
+#catalogo-destacado .btn {
+  padding: 0.8rem 1.6rem;
+  background-color: #0c8a68;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#catalogo-destacado .btn:hover {
+  background-color: #0a6f56;
+}
+
+/* ----------------------------------
+   CONTACTO - INFORMACIÓN Y MAPA
+---------------------------------- */
+#contacto-info {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#contacto-info .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contacto-info h2 {
+  font-size: 2rem;
+  color: #0c8a68;
+  margin-bottom: 2rem;
+}
+
+.info-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.info-texto {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.info-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.info-texto a {
+  color: #0c8a68;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-texto a:hover {
+  text-decoration: underline;
+}
+
+.horarios {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.horarios li {
+  margin-bottom: 0.3rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.info-mapa {
+  flex: 1 1 400px;
+}
+
+/* ----------------------------------
+   TÍTULOS GENERALES
+---------------------------------- */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------
+   BOTÓN DE WHATSAPP
+---------------------------------- */
+.whatsapp-button {
+  margin-top: 2rem;
+  display: none;
+}
+
+.whatsapp-button a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: #25d366;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button a:hover {
+  background-color: #1ebe5d;
+}
+
+/* ----------------------------------
+   SECCIÓN DE CONTACTO
+---------------------------------- */
 .contenedor-contacto {
   display: flex;
   flex-direction: column;
@@ -168,6 +378,9 @@ nav a.activo {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* ----------------------------------
+   CATÁLOGO DE PRODUCTOS
+---------------------------------- */
 .catalogo {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -222,6 +435,9 @@ nav a.activo {
   border: 1px solid #ccc;
 }
 
+/* ----------------------------------
+   FOOTER
+---------------------------------- */
 footer {
   background-color: #0c8a68;
   color: white;
@@ -230,8 +446,24 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive para móviles */
-@media (max-width: 600px) {
+/* ----------------------------------
+   RESPONSIVE - MÓVILES
+---------------------------------- */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-contenido {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    max-width: 100%;
+  }
+
   .contenedor-header {
     flex-direction: column;
     align-items: flex-start;
@@ -239,10 +471,5 @@ footer {
 
   nav {
     margin-top: 10px;
-  }
-
-  .texto-portada {
-    padding: 10px;
-    font-size: 0.9em;
   }
 }
