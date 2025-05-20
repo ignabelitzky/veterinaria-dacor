@@ -29,7 +29,7 @@
   {
     "nombre": "Alimento para Gato",
     "descripcion": "Marca Whiskas, 1Kg",
-    "precio": 2500,
+    "precio": 4500,
     "stock": true,
     "imagen": "alimento-gato.jpeg",
     "categoria": "alimentos",
@@ -38,7 +38,7 @@
   {
     "nombre": "Shampoo para Perro",
     "descripcion": "Antipulgas, 250ml",
-    "precio": 1800,
+    "precio": 5000,
     "stock": true,
     "imagen": "shampoo-perro.jpeg",
     "categoria": "higiene",
@@ -47,7 +47,7 @@
   {
     "nombre": "Juguete de goma",
     "descripcion": "Ideal para perros medianos",
-    "precio": 950,
+    "precio": 500,
     "stock": false,
     "imagen": "juguete-goma.jpeg",
     "categoria": "juguetes",
@@ -56,7 +56,7 @@
   {
     "nombre": "Alimento para Gato",
     "descripcion": "Marca Whiskas, 1Kg",
-    "precio": 2500,
+    "precio": 3300,
     "stock": false,
     "imagen": "alimento-gato.jpeg",
     "categoria": "alimentos",
@@ -65,7 +65,7 @@
   {
     "nombre": "Shampoo para Perro",
     "descripcion": "Antipulgas, 250ml",
-    "precio": 1800,
+    "precio": 7500,
     "stock": true,
     "imagen": "shampoo-perro.jpeg",
     "categoria": "higiene",
@@ -74,7 +74,7 @@
   {
     "nombre": "Juguete de goma",
     "descripcion": "Ideal para perros medianos",
-    "precio": 950,
+    "precio": 1750,
     "stock": true,
     "imagen": "juguete-goma.jpeg",
     "categoria": "juguetes",

@@ -161,6 +161,7 @@ nav a.activo {
    CATÁLOGO DESTACADO
 ---------------------------------- */
 #catalogo-destacado {
+  gap: 1rem;
   background-color: #e0f7f4;
   padding: 4rem 2rem;
   text-align: center;
@@ -190,7 +191,10 @@ nav a.activo {
 
 /* Grilla para productos destacados */
 .grid-catalogo {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   justify-content: center;
@@ -447,11 +451,12 @@ h1 {
 /* Filtros: buscador + categoría */
 .filtros-catalogo {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  align-items: space-evenly;
+  margin: 1.5rem auto;
+  max-width: 1200px;
 }
 
 .filtros-catalogo input[type="text"] {
@@ -464,7 +469,6 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-
 /* Estilo del selector */
 .filtros-catalogo select {
   padding: 0.8rem 1rem;
@@ -472,13 +476,27 @@ h1 {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 250px;
+  min-width: 200px;
   background-color: #fff;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%230c8a68'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 1rem;
+}
+
+.filtros-catalogo label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  margin: 1rem auto;
 }
 
 .stock-disponible {
@@ -495,6 +513,29 @@ h1 {
   font-size: 0.85rem;
   color: #d9534f;
   font-weight: bold;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.paginacion .btn-pagina {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0c8a68;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.paginacion .btn-pagina.activo {
+  background-color: #4caf50;
+  color: white;
 }
 
 /* ----------------------------------
