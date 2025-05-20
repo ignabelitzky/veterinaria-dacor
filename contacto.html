@@ -5,43 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - Veterinaria Dacor</title>
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
   </head>
   <body>
-    <header>
-      <div class="contenedor-header">
-        <img
-          src="img/dacor-logo.png"
-          alt="Logo de la veterinaria"
-          class="logo"
-        />
-        <nav>
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="catalogo.html">Catálogo</a>
-          <a href="contacto.html" class="activo">Contacto</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <div class="contenedor-contacto">
-        <h1>¿Con qué área querés contactarte?</h1>
-
-        <select id="opcionContacto">
-          <option value="">Elegí una opción...</option>
-          <option value="consultorio">Consultorio Veterinario</option>
-          <option value="petshop">Pet-Shop / Venta Artículos</option>
-        </select>
-
-        <div class="whatsapp-button" id="botonWhatsapp">
-          <!-- Se llenará dinámicamente -->
+    <div class="contenedor-pagina">
+      <header>
+        <div class="contenedor-header">
+          <img
+            src="img/dacor-logo.png"
+            alt="Logo de la veterinaria"
+            class="logo"
+          />
+          <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+          </nav>
         </div>
-      </div>
+      </header>
 
-      <script src="js/whatsapp.js"></script>
-    </main>
-    <footer>
-      <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
-    </footer>
+      <main>
+        <div class="contenedor-contacto">
+          <h1>¿Con qué área querés contactarte?</h1>
+
+          <select id="opcionContacto">
+            <option value="">Elegí una opción...</option>
+            <option value="consultorio">Consultorio Veterinario</option>
+            <option value="petshop">Pet-Shop / Venta Artículos</option>
+          </select>
+
+          <div class="whatsapp-button" id="botonWhatsapp">
+            <!-- Se llenará dinámicamente -->
+          </div>
+        </div>
+
+        <script src="js/whatsapp.js"></script>
+      </main>
+      <footer>
+        <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
+      </footer>
+    </div>
   </body>
 </html>

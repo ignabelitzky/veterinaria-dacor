@@ -5,17 +5,34 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
+  height: 100%;
   font-family: "Segoe UI", sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  margin: 0;
 }
 
 header {
   background-color: #0c8a68;
   padding: 10px 0;
   color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main {
+  flex: 1;
 }
 
 .whatsapp-button {
@@ -49,7 +66,7 @@ header {
 }
 
 .logo {
-  height: 100px;
+  height: 50px;
 }
 
 .icono {
@@ -119,6 +136,12 @@ nav a.activo {
   display: flex;
 }
 
+.contenedor-pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .contenedor-contacto {
   display: flex;
   flex-direction: column;
@@ -143,6 +166,60 @@ nav a.activo {
   max-width: 300px;
   margin-bottom: 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.producto {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.producto h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.producto p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #25a244;
+}
+
+#buscador {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+  display: block;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 footer {
