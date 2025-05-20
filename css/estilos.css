@@ -1,71 +1,92 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-    background-color: #0c8a68;
-    padding: 10px 0;
-    color: white;
+  background-color: #0c8a68;
+  padding: 10px 0;
+  color: white;
+}
+
+.whatsapp-button {
+  margin-top: 2rem;
+  display: none;
+}
+
+.whatsapp-button a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: #25d366;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button a:hover {
+  background-color: #1ebe5d;
 }
 
 .contenedor-header {
-    max-width: 1600px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .logo {
-    height: 50px;
+  height: 100px;
 }
 
 .icono {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
 }
 
 nav a:hover,
 nav a.activo {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .portada {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
 .texto-portada {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .boton {
@@ -82,43 +103,69 @@ nav a.activo {
 }
 
 .boton:hover {
-    background-color: #14a26b;
+  background-color: #14a26b;
 }
 
 .informacion {
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .banner {
-    width: 100%;
-    height: 100px;
-    display: flex;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.contenedor-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.contenedor-contacto h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.contenedor-contacto select {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #0c8a68;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+  background-color: #0c8a68;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
 
 /* Responsive para móviles */
 @media (max-width: 600px) {
-    .contenedor-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .contenedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    nav {
-        margin-top: 10px;
-    }
+  nav {
+    margin-top: 10px;
+  }
 
-    .texto-portada {
-        padding: 10px;
-        font-size: 0.9em;
-    }
+  .texto-portada {
+    padding: 10px;
+    font-size: 0.9em;
+  }
 }
