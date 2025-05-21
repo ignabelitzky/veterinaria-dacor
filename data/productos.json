@@ -1,5 +1,14 @@
 [
   {
+    "nombre": "Cepillo a vapor",
+    "descripcion": "Ideal para todo tipo de pelaje: corto, largo, rizado o liso",
+    "precio": 6000,
+    "stock": true,
+    "imagen": "cepillo_vapor.jpg",
+    "categoria": "accesorios",
+    "destacado": true
+  },
+  {
     "nombre": "Alimento para Gato",
     "descripcion": "Marca Whiskas, 1Kg",
     "precio": 2500,
