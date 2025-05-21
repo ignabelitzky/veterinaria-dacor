@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.innerHTML = `
         <img src="img/productos/${producto.imagen}" alt="${producto.nombre}" />
         <h3>${producto.nombre}</h3>
-        <p class="precio">$${producto.precio.toLocaleString("es-AR")}</p>
       `;
       contenedor.appendChild(card);
     });

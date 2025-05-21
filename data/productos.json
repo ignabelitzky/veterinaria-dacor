@@ -1,92 +1,16 @@
 [
   {
-    "nombre": "Cepillo a vapor",
-    "descripcion": "Ideal para todo tipo de pelaje: corto, largo, rizado o liso",
-    "precio": 6000,
+    "id": 1,
+    "nombre": "Plato Comida Acero Inoxidable",
+    "descripcion": "Plato de acero inoxidable para comida de perros y gatos, fácil de limpiar.",
     "stock": true,
-    "imagen": "cepillo_vapor.jpg",
+    "imagen": "plato_acero_inoxidable.png",
     "categoria": "accesorios",
-    "destacado": true
-  },
-  {
-    "nombre": "Alimento para Gato",
-    "descripcion": "Marca Whiskas, 1Kg",
-    "precio": 2500,
-    "stock": true,
-    "imagen": "alimento-gato.jpeg",
-    "categoria": "alimentos",
-    "destacado": true
-  },
-  {
-    "nombre": "Shampoo para Perro",
-    "descripcion": "Antipulgas, 250ml",
-    "precio": 1800,
-    "stock": false,
-    "imagen": "shampoo-perro.jpeg",
-    "categoria": "higiene",
-    "destacado": false
-  },
-  {
-    "nombre": "Juguete de goma",
-    "descripcion": "Ideal para perros medianos",
-    "precio": 950,
-    "stock": true,
-    "imagen": "juguete-goma.jpeg",
-    "categoria": "juguetes",
-    "destacado": true
-  },
-  {
-    "nombre": "Alimento para Gato",
-    "descripcion": "Marca Whiskas, 1Kg",
-    "precio": 4500,
-    "stock": true,
-    "imagen": "alimento-gato.jpeg",
-    "categoria": "alimentos",
-    "destacado": false
-  },
-  {
-    "nombre": "Shampoo para Perro",
-    "descripcion": "Antipulgas, 250ml",
-    "precio": 5000,
-    "stock": true,
-    "imagen": "shampoo-perro.jpeg",
-    "categoria": "higiene",
-    "destacado": true
-  },
-  {
-    "nombre": "Juguete de goma",
-    "descripcion": "Ideal para perros medianos",
-    "precio": 500,
-    "stock": false,
-    "imagen": "juguete-goma.jpeg",
-    "categoria": "juguetes",
-    "destacado": false
-  },
-  {
-    "nombre": "Alimento para Gato",
-    "descripcion": "Marca Whiskas, 1Kg",
-    "precio": 3300,
-    "stock": false,
-    "imagen": "alimento-gato.jpeg",
-    "categoria": "alimentos",
-    "destacado": false
-  },
-  {
-    "nombre": "Shampoo para Perro",
-    "descripcion": "Antipulgas, 250ml",
-    "precio": 7500,
-    "stock": true,
-    "imagen": "shampoo-perro.jpeg",
-    "categoria": "higiene",
-    "destacado": false
-  },
-  {
-    "nombre": "Juguete de goma",
-    "descripcion": "Ideal para perros medianos",
-    "precio": 1750,
-    "stock": true,
-    "imagen": "juguete-goma.jpeg",
-    "categoria": "juguetes",
-    "destacado": false
+    "destacado": true,
+    "variantes": [
+      { "tamaño": "Chico", "precio": 1500 },
+      { "tamaño": "Mediano", "precio": 1800 },
+      { "tamaño": "Grande", "precio": 2000 }
+    ]
   }
 ]

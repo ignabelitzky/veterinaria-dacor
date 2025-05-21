@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-catalogo");
   const buscador = document.getElementById("buscador");
-  const selectCategoria = document.getElementById("categoria");
+  const modal = document.getElementById("modal");
+  const cerrarModal = document.getElementById("cerrarModal");
+  const modalNombre = document.getElementById("modalNombre");
+  const modalDescripcion = document.getElementById("modalDescripcion");
+  const selectorVariante = document.getElementById("selectorVariante");
+  const modalPrecio = document.getElementById("modalPrecio");
+  const selectorCategoria = document.getElementById("categoria");
   const mostrarSinStock = document.getElementById("mostrarSinStock");
   const paginacion = document.getElementById("paginacion");
   const productosPorPagina = 9; // Cambia este valor para ajustar la cantidad de productos por página
@@ -28,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Eventos de filtros
   // -----------------------
   buscador.addEventListener("input", aplicarFiltros);
-  selectCategoria.addEventListener("change", aplicarFiltros);
+  selectorCategoria.addEventListener("change", aplicarFiltros);
   mostrarSinStock.addEventListener("change", aplicarFiltros);
 
   // -----------------------
@@ -36,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------
   function aplicarFiltros() {
     const texto = buscador.value.toLowerCase();
-    const categoria = selectCategoria.value;
+    const categoria = selectorCategoria.value;
 
     productosFiltrados = productos.filter((p) => {
       const coincideTexto =
@@ -79,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    lista.forEach((producto) => {
+    lista.forEach(producto => {
       const div = document.createElement("div");
       div.className = "producto";
 
@@ -90,12 +96,43 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="img/productos/${producto.imagen}" alt="${producto.nombre}">
         <h2>${producto.nombre}</h2>
         <p>${producto.descripcion}</p>
-        <span class="precio">$${producto.precio.toLocaleString("es-AR")}</span>
         <span class="${claseStock}">${stockTexto}</span>
       `;
+      div.addEventListener("click", () => abrirModal(producto));
       contenedor.appendChild(div);
     });
   }
+
+  function abrirModal(producto) {
+    modalNombre.textContent = producto.nombre;
+    modalDescripcion.textContent = producto.descripcion;
+
+    // Limpiar selector
+    selectorVariante.innerHTML = "";
+
+    producto.variantes.forEach((variante, i) => {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = `${variante.tamaño}`;
+      selectorVariante.appendChild(option);
+    });
+
+    // Mostrar precio de la primera variante
+    modalPrecio.className = "precio-verde";
+    modalPrecio.textContent = `$${producto.variantes[0].precio}`;
+
+    // Actualizar precio al cambiar variante
+    selectorVariante.onchange = () => {
+      const i = selectorVariante.value;
+      modalPrecio.textContent = `$${producto.variantes[i].precio}`;
+    };
+
+    modal.classList.remove("oculto");
+  }
+
+  cerrarModal.addEventListener("click", () => {
+    modal.classList.add("oculto");
+  });
 
   // -----------------------
   // 6. Controles de paginación
