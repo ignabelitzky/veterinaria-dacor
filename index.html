@@ -20,13 +20,16 @@
             alt="Logo de la veterinaria"
             class="logo"
           />
-          <nav>
+          <nav class="navbar">
             <a href="index.html" class="activo">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
             <a href="servicios.html">Servicios</a>
             <a href="envios.html">Cómo comprar</a>
             <a href="contacto.html">Contacto</a>
           </nav>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            &#9776;
+          </button>
         </div>
       </header>
 
@@ -69,8 +72,6 @@
             <a href="catalogo.html" class="btn">Ver catálogo completo</a>
           </div>
         </section>
-
-        <script src="js/catalogoDestacado.js"></script>
 
         <!-- Información de contacto -->
         <section id="contacto-info">
@@ -122,6 +123,9 @@
           </div>
         </section>
       </main>
+
+      <script src="js/catalogoDestacado.js"></script>
+      <script src="js/navbar.js"></script>
 
       <footer>
         <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
