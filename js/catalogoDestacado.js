@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-destacados");
   const paginacion = document.getElementById("paginacion-destacados");
-  const productosPorPagina = 5; // Cambia este valor para ajustar la cantidad de productos por página
+  const productosPorPagina = 3;
   let destacados = [];
   let paginaActual = 1;
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pagina.forEach((producto) => {
       const card = document.createElement("div");
-      card.classList.add("producto");
+      card.classList.add("producto-destacado");
       card.innerHTML = `
         <img src="img/productos/${producto.imagen}" alt="${producto.nombre}" />
         <h3>${producto.nombre}</h3>

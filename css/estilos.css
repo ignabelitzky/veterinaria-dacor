@@ -189,7 +189,6 @@ nav a.activo {
   border-radius: 2px;
 }
 
-/* Grilla para productos destacados */
 .grid-catalogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -197,8 +196,10 @@ nav a.activo {
   margin-bottom: 2.5rem;
 }
 
-/* Reutiliza estilos existentes para tarjetas de producto */
-.grid-catalogo .producto {
+.producto-destacado {
+  max-width: 350px;
+  max-height: 350px;
+  margin: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -207,18 +208,18 @@ nav a.activo {
   transition: transform 0.2s ease;
 }
 
-.grid-catalogo .producto:hover {
+.producto-destacado:hover {
   transform: scale(1.03);
 }
 
-.grid-catalogo .producto img {
+.producto-destacado img {
   width: 100%;
   height: 180px;
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
 
-.grid-catalogo .producto h3 {
+.producto-destacado h3 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
   color: #333;

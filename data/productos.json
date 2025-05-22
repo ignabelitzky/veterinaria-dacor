@@ -32,7 +32,7 @@
     "stock": true,
     "imagen": "cepillo_deslanador.png",
     "categoria": "higiene",
-    "destacado": false,
+    "destacado": true,
     "variantes": [
       { "tamaño": "M", "precio": 23700 },
       { "tamaño": "L", "precio": 26500 },
@@ -46,7 +46,7 @@
     "stock": true,
     "imagen":"limpia_patas.png",
     "categoria": "higiene",
-    "destacado": false,
+    "destacado": true,
     "variantes": [
       { "tamaño": "10cm x 14.5cm x 8cm", "precio": 20000 }
     ]
@@ -101,7 +101,7 @@
   },
   {
     "id": 9,
-    "nombre": "Quita pelusa silicona para lavar ropa L",
+    "nombre": "Quita pelusa silicona para lavarropa L",
     "descripcion": "Quita pelusa de silicona para lavar ropa. Ideal para eliminar el pelo de mascotas.",
     "stock": true,
     "imagen": "quita_pelusa.png",
@@ -121,6 +121,118 @@
     "destacado": false,
     "variantes": [
       { "tamaño": "12cm", "precio": 500 }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Bandeja sanitaria",
+    "descripcion": "Bandeja sanitaria para gatos. Ideal para mantener la higiene.",
+    "stock": true,
+    "imagen": "bandeja_sanitaria.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "M (40cm x 30cm x 10cm)", "precio": 5000 },
+      { "tamaño": "L (50cm x 39cm x 13cm)", "precio": 11800 }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Gallo",
+    "descripcion": "Gallo de goma para perros. Ideal para jugar y morder.",
+    "stock": true,
+    "imagen": "gallo.png",
+    "categoria": "juguetes",
+    "destacado": true,
+    "variantes": [
+      { "tamaño": "S (10cm)", "precio": 2300 },
+      { "tamaño": "L (30cm)", "precio": 7400 }
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Pera c/ catnip rascals",
+    "descripcion": "Pera de catnip para gatos. Ideal para jugar y estimular.",
+    "stock": true,
+    "imagen": "pera_catnip_rascals.png",
+    "categoria": "juguetes",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "15cm", "precio": 8500 }
+    ]
+  },
+   {
+    "id": 14,
+    "nombre": "Manzana c/ catnip rascals",
+    "descripcion": "Manzana de catnip para gatos. Ideal para jugar y estimular.",
+    "stock": true,
+    "imagen": "manzana_catnip_rascals.png",
+    "categoria": "juguetes",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "15cm", "precio": 8500 }
+    ]
+  },
+  {
+    "id": 15,
+    "nombre": "Alicate guillotina N11",
+    "descripcion": "Alicate guillotina para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "stock": true,
+    "imagen": "alicate_guillotina_n11.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "12cm", "precio": 8600 }
+    ]
+  },
+  {
+    "id": 16,
+    "nombre": "Alicate tijera M N2",
+    "descripcion": "Alicate tijera para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "stock": true,
+    "imagen": "alicate_tijera_m_n2.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "12cm", "precio": 5600 }
+    ]
+  },
+  {
+    "id": 17,
+    "nombre": "Pelota dosificadora",
+    "descripcion": "Pelota dosificadora para perros. Ideal para jugar y estimular.",
+    "stock": true,
+    "imagen": "pelota_dosificadora.png",
+    "categoria": "juguetes",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "M", "precio": 5600 },
+      { "tamaño": "L", "precio": 7000 } 
+    ]
+  },
+  {
+    "id": 18,
+    "nombre": "Conjunto pretal gato prince",
+    "descripcion": "Conjunto de pretal para gatos. Ideal para pasear y mantener la seguridad.",
+    "stock": true,
+    "imagen": "conjunto_pretal_gato_prince.png",
+    "categoria": "correas-pretales",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 10000 }
+    ]
+  },
+  {
+    "id": 19,
+    "nombre": "Comedero retractil",
+    "descripcion": "Comedero retractil para perros y gatos. Ideal para viajes y mantener la comida fresca.",
+    "stock": true,
+    "imagen": "comedero_retractil.png",
+    "categoria": "comederos",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Chico", "precio": 3000 },
+      { "tamaño": "Mediano", "precio": 6700 }
     ]
   }
 ]
