@@ -2,362 +2,488 @@
   {
     "id": 1,
     "nombre": "Comedero Acero Inoxidable",
-    "descripcion": "Plato de acero inoxidable con base antideslizante. Ideal para perros y gatos.",
+    "descripcion": "Resistente plato de acero inoxidable con base antideslizante para evitar derrames. Apto para perros y gatos.",
     "stock": true,
     "imagen": "plato_acero_inoxidable.png",
     "categoria": "comederos",
     "destacado": true,
     "variantes": [
-      { "tamaño": "Chico (15cm)", "precio": 4400 },
-      { "tamaño": "Mediano (18cm)", "precio": 5600 },
-      { "tamaño": "Grande (26cm)", "precio": 10700 }
+      {
+        "tamaño": "Chico (15cm)",
+        "precio": 4400
+      },
+      {
+        "tamaño": "Mediano (18cm)",
+        "precio": 5600
+      },
+      {
+        "tamaño": "Grande (26cm)",
+        "precio": 10700
+      }
     ]
   },
   {
     "id": 2,
     "nombre": "Alicate c/ lima curvo N12 Rosa",
-    "descripcion": "Alicate curvo con lima para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "descripcion": "Práctico alicate curvo con lima incorporada, diseñado para cortar las uñas de mascotas pequeñas de forma segura y precisa.",
     "stock": false,
     "imagen": "alicate_curvo_rosa.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 6900 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 6900
+      }
     ]
   },
   {
     "id": 3,
     "nombre": "Cepillo deslanador",
-    "descripcion": "Cepillo deslanador para perros y gatos. Ideal para eliminar el pelo muerto.",
+    "descripcion": "Cepillo deslanador ideal para remover el pelo suelto y reducir la muda en perros y gatos, dejando el pelaje suave y saludable.",
     "stock": true,
     "imagen": "cepillo_deslanador.png",
     "categoria": "higiene",
     "destacado": true,
     "variantes": [
-      { "tamaño": "M", "precio": 23700 },
-      { "tamaño": "L", "precio": 26500 },
-      { "tamaño": "XL", "precio": 29600 }
+      {
+        "tamaño": "M",
+        "precio": 23700
+      },
+      {
+        "tamaño": "L",
+        "precio": 26500
+      },
+      {
+        "tamaño": "XL",
+        "precio": 29600
+      }
     ]
   },
   {
     "id": 4,
     "nombre": "Limpia patas L",
-    "descripcion": "Limpia patas para perros y gatos. Ideal para mantener la casa limpia.",
+    "descripcion": "Práctico limpia patas que ayuda a remover la suciedad después de los paseos, manteniendo tus pisos más limpios.",
     "stock": true,
-    "imagen":"limpia_patas.png",
+    "imagen": "limpia_patas.png",
     "categoria": "higiene",
     "destacado": true,
     "variantes": [
-      { "tamaño": "10cm x 14.5cm x 8cm", "precio": 20000 }
+      {
+        "tamaño": "10cm x 14.5cm x 8cm",
+        "precio": 20000
+      }
     ]
   },
   {
     "id": 5,
     "nombre": "Comelento chico (gajos)",
-    "descripcion": "Comedero para perros y gatos. Ideal para mantener la comida fresca.",
+    "descripcion": "Comedero tipo comelento con diseño de gajos que estimula una alimentación más lenta y saludable en mascotas pequeñas.",
     "stock": true,
     "imagen": "comelento_chico_gajos.png",
     "categoria": "comederos",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Diam. 13cm - Prof. 3cm", "precio": 3500 }
+      {
+        "tamaño": "Diam. 13cm - Prof. 3cm",
+        "precio": 3500
+      }
     ]
   },
   {
     "id": 6,
     "nombre": "Alicate N10",
-    "descripcion": "Alicate para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "descripcion": "Alicate ergonómico para recortar uñas con precisión en mascotas pequeñas. Fácil de manejar y seguro.",
     "stock": false,
     "imagen": "alicate_n10.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "15cm", "precio": 6900 }
+      {
+        "tamaño": "15cm",
+        "precio": 6900
+      }
     ]
   },
   {
     "id": 7,
     "nombre": "Cepillo de dientes dedo x 2u",
-    "descripcion": "Cepillo de dientes para perros y gatos. Ideal para mantener la higiene dental.",
+    "descripcion": "Cepillos de dedo suaves, perfectos para limpiar los dientes de tu mascota y promover una buena salud bucal.",
     "stock": true,
     "imagen": "cepillo_dientes_dedo.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 2800 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 2800
+      }
     ]
   },
   {
     "id": 8,
     "nombre": "Cepillo de dientes largos x 2u",
-    "descripcion": "Cepillo de dientes para perros y gatos. Ideal para mantener la higiene dental.",
+    "descripcion": "Cepillos largos dobles que facilitan la limpieza dental en perros y gatos, incluso en zonas de difícil acceso.",
     "stock": true,
     "imagen": "cepillo_dientes_largo.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "23cm", "precio": 2200 }
+      {
+        "tamaño": "23cm",
+        "precio": 2200
+      }
     ]
   },
   {
     "id": 9,
     "nombre": "Quita pelusa silicona para lavarropa L",
-    "descripcion": "Quita pelusa de silicona para lavar ropa. Ideal para eliminar el pelo de mascotas.",
+    "descripcion": "Práctico quitapelusa de silicona reutilizable. Atrapa pelos de mascotas durante el lavado de ropa.",
     "stock": true,
     "imagen": "quita_pelusa.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "9cm x 1.3cm", "precio": 9500 }
+      {
+        "tamaño": "9cm x 1.3cm",
+        "precio": 9500
+      }
     ]
   },
   {
     "id": 10,
     "nombre": "Cardina cerda plástica N2",
-    "descripcion": "Cardina de cerda plástica para perros y gatos. Ideal para eliminar el pelo muerto.",
+    "descripcion": "Cardina con cerdas plásticas ideal para desenredar y eliminar el pelo suelto en mascotas de pelo medio a largo.",
     "stock": true,
     "imagen": "cardina_cerda_plastica_n2.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "12cm", "precio": 500 }
+      {
+        "tamaño": "12cm",
+        "precio": 500
+      }
     ]
   },
   {
     "id": 11,
     "nombre": "Bandeja sanitaria",
-    "descripcion": "Bandeja sanitaria para gatos. Ideal para mantener la higiene.",
+    "descripcion": "Bandeja sanitaria plástica de fácil limpieza, diseñada especialmente para gatos. Disponible en varios tamaños.",
     "stock": true,
     "imagen": "bandeja_sanitaria.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "M (40cm x 30cm x 10cm)", "precio": 5000 },
-      { "tamaño": "L (50cm x 39cm x 13cm)", "precio": 11800 }
+      {
+        "tamaño": "M (40cm x 30cm x 10cm)",
+        "precio": 5000
+      },
+      {
+        "tamaño": "L (50cm x 39cm x 13cm)",
+        "precio": 11800
+      }
     ]
   },
   {
     "id": 12,
     "nombre": "Gallo",
-    "descripcion": "Gallo de goma para perros. Ideal para jugar y morder.",
+    "descripcion": "Divertido gallo de goma con sonido, perfecto para el juego interactivo y la estimulación de tu perro.",
     "stock": true,
     "imagen": "gallo.png",
     "categoria": "juguetes",
     "destacado": true,
     "variantes": [
-      { "tamaño": "S (10cm)", "precio": 2300 },
-      { "tamaño": "L (30cm)", "precio": 7400 }
+      {
+        "tamaño": "S (10cm)",
+        "precio": 2300
+      },
+      {
+        "tamaño": "L (30cm)",
+        "precio": 7400
+      }
     ]
   },
   {
     "id": 13,
     "nombre": "Pera c/ catnip rascals",
-    "descripcion": "Pera de catnip para gatos. Ideal para jugar y estimular.",
+    "descripcion": "Juguete en forma de pera con catnip, pensado para entretener y estimular los sentidos de tu gato.",
     "stock": true,
     "imagen": "pera_catnip_rascals.png",
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
-      { "tamaño": "15cm", "precio": 8500 }
+      {
+        "tamaño": "15cm",
+        "precio": 8500
+      }
     ]
   },
-   {
+  {
     "id": 14,
     "nombre": "Manzana c/ catnip rascals",
-    "descripcion": "Manzana de catnip para gatos. Ideal para jugar y estimular.",
+    "descripcion": "Manzana rellena con catnip para gatos. Un juguete blando que promueve el juego y la relajación.",
     "stock": true,
     "imagen": "manzana_catnip_rascals.png",
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
-      { "tamaño": "15cm", "precio": 8500 }
+      {
+        "tamaño": "15cm",
+        "precio": 8500
+      }
     ]
   },
   {
     "id": 15,
     "nombre": "Alicate guillotina N11",
-    "descripcion": "Alicate guillotina para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "descripcion": "Cortauñas tipo guillotina que permite un corte limpio y cómodo en mascotas pequeñas.",
     "stock": true,
     "imagen": "alicate_guillotina_n11.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "12cm", "precio": 8600 }
+      {
+        "tamaño": "12cm",
+        "precio": 8600
+      }
     ]
   },
   {
     "id": 16,
     "nombre": "Alicate tijera M N2",
-    "descripcion": "Alicate tijera para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "descripcion": "Alicate tipo tijera de tamaño medio, ideal para mantener las uñas de perros y gatos prolijas y sin esfuerzo.",
     "stock": true,
     "imagen": "alicate_tijera_m_n2.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "12cm", "precio": 5600 }
+      {
+        "tamaño": "12cm",
+        "precio": 5600
+      }
     ]
   },
   {
     "id": 17,
     "nombre": "Pelota dosificadora",
-    "descripcion": "Pelota dosificadora para perros. Ideal para jugar y estimular.",
+    "descripcion": "Pelota dosificadora que combina juego y alimentación. Estimula mentalmente a tu perro mientras come.",
     "stock": true,
     "imagen": "pelota_dosificadora.png",
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
-      { "tamaño": "M", "precio": 5600 },
-      { "tamaño": "L", "precio": 7000 } 
+      {
+        "tamaño": "M",
+        "precio": 5600
+      },
+      {
+        "tamaño": "L",
+        "precio": 7000
+      }
     ]
   },
   {
     "id": 18,
     "nombre": "Conjunto pretal gato prince",
-    "descripcion": "Conjunto de pretal para gatos. Ideal para pasear y mantener la seguridad.",
+    "descripcion": "Conjunto de pretal con correa para gatos, cómodo y seguro para salidas al aire libre.",
     "stock": true,
     "imagen": "conjunto_pretal_gato_prince.png",
     "categoria": "correas-pretales",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 10000 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 10000
+      }
     ]
   },
   {
     "id": 19,
     "nombre": "Comedero retractil",
-    "descripcion": "Comedero retractil para perros y gatos. Ideal para viajes y mantener la comida fresca.",
+    "descripcion": "Comedero retráctil de silicona, compacto y fácil de transportar. Perfecto para salidas o viajes.",
     "stock": true,
     "imagen": "comedero_retractil.png",
     "categoria": "comederos",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Chico", "precio": 3000 },
-      { "tamaño": "Mediano", "precio": 6700 }
+      {
+        "tamaño": "Chico",
+        "precio": 3000
+      },
+      {
+        "tamaño": "Mediano",
+        "precio": 6700
+      }
     ]
   },
   {
-    "id":20,
+    "id": 20,
     "nombre": "Botella de paseo",
-    "descripcion": "Botella de paseo para perros y gatos. Ideal para mantener la hidratación.",
+    "descripcion": "Botella portátil con bebedero integrado. Ideal para mantener a tu mascota hidratada fuera de casa.",
     "stock": true,
     "imagen": "botella_de_paseo.png",
     "categoria": "comederos",
     "destacado": false,
     "variantes": [
-      { "tamaño": "250ml", "precio": 7200 },
-      { "tamaño": "500ml", "precio": 7400 }
+      {
+        "tamaño": "250ml",
+        "precio": 7200
+      },
+      {
+        "tamaño": "500ml",
+        "precio": 7400
+      }
     ]
   },
   {
     "id": 21,
     "nombre": "Cama nido",
-    "descripcion": "Cama nido para perros y gatos. Ideal para descansar y dormir (consultar por otros diseños)",
+    "descripcion": "Cama tipo nido acolchada, brinda abrigo y comodidad para el descanso de perros y gatos.",
     "stock": true,
     "imagen": "cama_nido.png",
     "categoria": "camas",
     "destacado": true,
     "variantes": [
-      { "tamaño": "Chico - 23cm", "precio": 18900 },
-      { "tamaño": "Mediano - 51cm", "precio": 24500 },
-      { "tamaño": "Grande - 60cm", "precio": 28600 }
+      {
+        "tamaño": "Chico - 23cm",
+        "precio": 18900
+      },
+      {
+        "tamaño": "Mediano - 51cm",
+        "precio": 24500
+      },
+      {
+        "tamaño": "Grande - 60cm",
+        "precio": 28600
+      }
     ]
   },
   {
     "id": 22,
     "nombre": "Mochila transportadora M",
-    "descripcion": "Mochila transportadora para perros y gatos. Ideal para pasear y viajar.",
+    "descripcion": "Mochila transportadora resistente y ventilada. Cómoda para llevar a tu mascota en viajes o paseos.",
     "stock": true,
     "imagen": "mochila_transportadora_m.png",
     "categoria": "transportadoras",
     "destacado": true,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 46000 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 46000
+      }
     ]
   },
   {
     "id": 23,
     "nombre": "Palta autoadhesiva con hierba gatera",
-    "descripcion": "Palta autoadhesiva con hierba gatera para gatos. Ideal para jugar y estimular.",
+    "descripcion": "Juguete con forma de palta, autoadhesivo y con hierba gatera. Atrae y estimula a los gatos.",
     "stock": true,
     "imagen": "palta_autoadhesiva.png",
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 5900 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 5900
+      }
     ]
   },
   {
     "id": 24,
     "nombre": "Cartera transportadora",
-    "descripcion": "Cartera transportadora para perros y gatos (55cm de ancho arriba, 35cm de ancho abajo, 35cm alto, base ovalada de 35x25cm)",
+    "descripcion": "Cartera transportadora elegante y espaciosa, ideal para llevar a tu mascota con comodidad.",
     "stock": true,
     "imagen": "cartera_transportadora.png",
     "categoria": "transportadoras",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 18900 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 18900
+      }
     ]
   },
   {
     "id": 25,
     "nombre": "Cepillo a vapor",
-    "descripcion": "Cepillo a vapor para perros y gatos. Ideal para eliminar el pelo muerto y mantener la higiene.",
+    "descripcion": "Cepillo a vapor que ayuda a remover el pelo suelto y limpiar profundamente el pelaje de tu mascota.",
     "stock": true,
     "imagen": "cepillo_a_vapor.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "6.5cm x 12cm", "precio": 17600 }
+      {
+        "tamaño": "6.5cm x 12cm",
+        "precio": 17600
+      }
     ]
   },
   {
     "id": 26,
     "nombre": "Cardina plástica",
-    "descripcion": "Cardina plástica para perros y gatos. Ideal para eliminar el pelo muerto.",
+    "descripcion": "Cardina plástica resistente con mango ergonómico, ideal para cepillar a diario perros y gatos.",
     "stock": true,
     "imagen": "cardina_plastica.png",
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Chica", "precio": 3400 },
-      { "tamaño": "Mediana", "precio": 4000 },
-      { "tamaño": "Grande", "precio": 5800 }
+      {
+        "tamaño": "Chica",
+        "precio": 3400
+      },
+      {
+        "tamaño": "Mediana",
+        "precio": 4000
+      },
+      {
+        "tamaño": "Grande",
+        "precio": 5800
+      }
     ]
   },
   {
     "id": 27,
     "nombre": "Cinturón de seguridad",
-    "descripcion": "Cinturón de seguridad para perros y gatos. Ideal para mantener la seguridad en el auto.",
+    "descripcion": "Cinturón de seguridad para mascotas, se ajusta al cinturón del auto y previene movimientos bruscos.",
     "stock": true,
     "imagen": "cinturon_seguridad.png",
     "categoria": "correas-pretales",
     "destacado": false,
     "variantes": [
-      { "tamaño": "70cm", "precio": 7700 }
+      {
+        "tamaño": "70cm",
+        "precio": 7700
+      }
     ]
   },
   {
     "id": 28,
     "nombre": "Catnip helado",
-    "descripcion": "Catnip helado para gatos. Ideal para jugar y estimular.",
+    "descripcion": "Juguete de catnip con forma de helado. Estimula el olfato y el juego en gatos.",
     "stock": true,
     "imagen": "catnip_helado.png",
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 5600 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 5600
+      }
     ]
   },
   {
     "id": 29,
     "nombre": "Pelota interactiva",
-    "descripcion": "Pelota interactiva para perros y gatos. Ideal para jugar y estimular.",
+    "descripcion": "Pelota interactiva que estimula mental y físicamente a tu mascota mediante el movimiento y el juego.",
     "stock": false,
     "imagen": "pelota_interactiva.png",
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
-      { "tamaño": "Tamaño Único", "precio": 12000 }
+      {
+        "tamaño": "Tamaño Único",
+        "precio": 12000
+      }
     ]
   }
 ]
