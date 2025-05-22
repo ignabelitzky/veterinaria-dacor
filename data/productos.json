@@ -234,5 +234,130 @@
       { "tamaño": "Chico", "precio": 3000 },
       { "tamaño": "Mediano", "precio": 6700 }
     ]
+  },
+  {
+    "id":20,
+    "nombre": "Botella de paseo",
+    "descripcion": "Botella de paseo para perros y gatos. Ideal para mantener la hidratación.",
+    "stock": true,
+    "imagen": "botella_de_paseo.png",
+    "categoria": "comederos",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "250ml", "precio": 7200 },
+      { "tamaño": "500ml", "precio": 7400 }
+    ]
+  },
+  {
+    "id": 21,
+    "nombre": "Cama nido",
+    "descripcion": "Cama nido para perros y gatos. Ideal para descansar y dormir (consultar por otros diseños)",
+    "stock": true,
+    "imagen": "cama_nido.png",
+    "categoria": "camas",
+    "destacado": true,
+    "variantes": [
+      { "tamaño": "Chico - 23cm", "precio": 18900 },
+      { "tamaño": "Mediano - 51cm", "precio": 24500 },
+      { "tamaño": "Grande - 60cm", "precio": 28600 }
+    ]
+  },
+  {
+    "id": 22,
+    "nombre": "Mochila transportadora M",
+    "descripcion": "Mochila transportadora para perros y gatos. Ideal para pasear y viajar.",
+    "stock": true,
+    "imagen": "mochila_transportadora_m.png",
+    "categoria": "transportadoras",
+    "destacado": true,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 46000 }
+    ]
+  },
+  {
+    "id": 23,
+    "nombre": "Palta autoadhesiva con hierba gatera",
+    "descripcion": "Palta autoadhesiva con hierba gatera para gatos. Ideal para jugar y estimular.",
+    "stock": true,
+    "imagen": "palta_autoadhesiva.png",
+    "categoria": "juguetes",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 5900 }
+    ]
+  },
+  {
+    "id": 24,
+    "nombre": "Cartera transportadora",
+    "descripcion": "Cartera transportadora para perros y gatos (55cm de ancho arriba, 35cm de ancho abajo, 35cm alto, base ovalada de 35x25cm)",
+    "stock": true,
+    "imagen": "cartera_transportadora.png",
+    "categoria": "transportadoras",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 18900 }
+    ]
+  },
+  {
+    "id": 25,
+    "nombre": "Cepillo a vapor",
+    "descripcion": "Cepillo a vapor para perros y gatos. Ideal para eliminar el pelo muerto y mantener la higiene.",
+    "stock": true,
+    "imagen": "cepillo_a_vapor.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "6.5cm x 12cm", "precio": 17600 }
+    ]
+  },
+  {
+    "id": 26,
+    "nombre": "Cardina plástica",
+    "descripcion": "Cardina plástica para perros y gatos. Ideal para eliminar el pelo muerto.",
+    "stock": true,
+    "imagen": "cardina_plastica.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Chica", "precio": 3400 },
+      { "tamaño": "Mediana", "precio": 4000 },
+      { "tamaño": "Grande", "precio": 5800 }
+    ]
+  },
+  {
+    "id": 27,
+    "nombre": "Cinturón de seguridad",
+    "descripcion": "Cinturón de seguridad para perros y gatos. Ideal para mantener la seguridad en el auto.",
+    "stock": true,
+    "imagen": "cinturon_seguridad.png",
+    "categoria": "correas-pretales",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "70cm", "precio": 7700 }
+    ]
+  },
+  {
+    "id": 28,
+    "nombre": "Catnip helado",
+    "descripcion": "Catnip helado para gatos. Ideal para jugar y estimular.",
+    "stock": true,
+    "imagen": "catnip_helado.png",
+    "categoria": "juguetes",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 5600 }
+    ]
+  },
+  {
+    "id": 29,
+    "nombre": "Pelota interactiva",
+    "descripcion": "Pelota interactiva para perros y gatos. Ideal para jugar y estimular.",
+    "stock": false,
+    "imagen": "pelota_interactiva.png",
+    "categoria": "juguetes",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 12000 }
+    ]
   }
 ]

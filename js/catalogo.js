@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectorCategoria = document.getElementById("categoria");
   const mostrarSinStock = document.getElementById("mostrarSinStock");
   const paginacion = document.getElementById("paginacion");
-  const productosPorPagina = 9; // Cambia este valor para ajustar la cantidad de productos por página
+  const productosPorPagina = 28; // Cambia este valor para ajustar la cantidad de productos por página
 
   let productos = [];
   let productosFiltrados = [];
