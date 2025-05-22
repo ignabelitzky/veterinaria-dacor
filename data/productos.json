@@ -1,16 +1,126 @@
 [
   {
     "id": 1,
-    "nombre": "Plato Comida Acero Inoxidable",
-    "descripcion": "Plato de acero inoxidable para comida de perros y gatos, fácil de limpiar.",
+    "nombre": "Comedero Acero Inoxidable",
+    "descripcion": "Plato de acero inoxidable con base antideslizante. Ideal para perros y gatos.",
     "stock": true,
     "imagen": "plato_acero_inoxidable.png",
-    "categoria": "accesorios",
+    "categoria": "comederos",
     "destacado": true,
     "variantes": [
-      { "tamaño": "Chico", "precio": 1500 },
-      { "tamaño": "Mediano", "precio": 1800 },
-      { "tamaño": "Grande", "precio": 2000 }
+      { "tamaño": "Chico (15cm)", "precio": 4400 },
+      { "tamaño": "Mediano (18cm)", "precio": 5600 },
+      { "tamaño": "Grande (26cm)", "precio": 10700 }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Alicate c/ lima curvo N12 Rosa",
+    "descripcion": "Alicate curvo con lima para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "stock": false,
+    "imagen": "alicate_curvo_rosa.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 6900 }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Cepillo deslanador",
+    "descripcion": "Cepillo deslanador para perros y gatos. Ideal para eliminar el pelo muerto.",
+    "stock": true,
+    "imagen": "cepillo_deslanador.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "M", "precio": 23700 },
+      { "tamaño": "L", "precio": 26500 },
+      { "tamaño": "XL", "precio": 29600 }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Limpia patas L",
+    "descripcion": "Limpia patas para perros y gatos. Ideal para mantener la casa limpia.",
+    "stock": true,
+    "imagen":"limpia_patas.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "10cm x 14.5cm x 8cm", "precio": 20000 }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Comelento chico (gajos)",
+    "descripcion": "Comedero para perros y gatos. Ideal para mantener la comida fresca.",
+    "stock": true,
+    "imagen": "comelento_chico_gajos.png",
+    "categoria": "comederos",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Diam. 13cm - Prof. 3cm", "precio": 3500 }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Alicate N10",
+    "descripcion": "Alicate para uñas de perros y gatos. Ideal para mascotas pequeñas.",
+    "stock": false,
+    "imagen": "alicate_n10.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "15cm", "precio": 6900 }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Cepillo de dientes dedo x 2u",
+    "descripcion": "Cepillo de dientes para perros y gatos. Ideal para mantener la higiene dental.",
+    "stock": true,
+    "imagen": "cepillo_dientes_dedo.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "Tamaño Único", "precio": 2800 }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Cepillo de dientes largos x 2u",
+    "descripcion": "Cepillo de dientes para perros y gatos. Ideal para mantener la higiene dental.",
+    "stock": true,
+    "imagen": "cepillo_dientes_largo.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "23cm", "precio": 2200 }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Quita pelusa silicona para lavar ropa L",
+    "descripcion": "Quita pelusa de silicona para lavar ropa. Ideal para eliminar el pelo de mascotas.",
+    "stock": true,
+    "imagen": "quita_pelusa.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "9cm x 1.3cm", "precio": 9500 }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Cardina cerda plástica N2",
+    "descripcion": "Cardina de cerda plástica para perros y gatos. Ideal para eliminar el pelo muerto.",
+    "stock": true,
+    "imagen": "cardina_cerda_plastica_n2.png",
+    "categoria": "higiene",
+    "destacado": false,
+    "variantes": [
+      { "tamaño": "12cm", "precio": 500 }
     ]
   }
 ]
