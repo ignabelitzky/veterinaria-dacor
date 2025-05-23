@@ -6,18 +6,13 @@
   },
   {
     "nombre": "Vacunación",
-    "descripcion": "Aplicación de vacunas obligatorias y optativas según la edad y especie.",
+    "descripcion": "Aplicación de vacunas según la edad y especie.",
     "imagen": "img/servicios/vacunacion.jpg"
   },
   {
     "nombre": "Desparasitación",
     "descripcion": "Tratamientos antiparasitarios internos y externos.",
     "imagen": "img/servicios/desparasitacion.jpg"
-  },
-  {
-    "nombre": "Atención de urgencias",
-    "descripcion": "Atención inmediata en casos de accidentes, intoxicaciones o emergencias clínicas.",
-    "imagen": "img/servicios/urgencias.jpg"
   },
   {
     "nombre": "Análisis clínicos",
