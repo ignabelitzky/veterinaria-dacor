@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-catalogo");
   const buscador = document.getElementById("buscador");
-  const modal = document.getElementById("modal");
-  const cerrarModal = document.getElementById("cerrarModal");
-  const modalNombre = document.getElementById("modalNombre");
-  const modalDescripcion = document.getElementById("modalDescripcion");
-  const selectorVariante = document.getElementById("selectorVariante");
-  const modalPrecio = document.getElementById("modalPrecio");
   const selectorCategoria = document.getElementById("categoria");
   const mostrarSinStock = document.getElementById("mostrarSinStock");
   const paginacion = document.getElementById("paginacion");
@@ -94,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       div.innerHTML = `
       </div>
-                  <span class="${claseStock}">${stockTexto}</span>
+        <p class="${claseStock}">${stockTexto}</p>
         <div class="galeria">
           <img src="img/productos/${
             producto.imagenes[0]
@@ -109,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               </div>
               <h2>${producto.nombre}</h2>
-              <p class="producto-descripcion>${producto.descripcion}</p>
+              <p class="producto-descripcion">${producto.descripcion}</p>
               <div class="precios">
                 ${producto.variantes
                   .map(
