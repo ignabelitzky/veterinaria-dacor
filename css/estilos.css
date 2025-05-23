@@ -448,15 +448,19 @@ h1 {
 }
 
 .producto h2 {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin: 0.5rem 0;
   color: #222;
   text-align: center;
 }
 
-.producto p {
+.producto producto-descripcion {
   font-size: 0.9rem;
   color: #555;
+  text-align: center;
+}
+
+.producto p {
   text-align: center;
 }
 
@@ -536,11 +540,14 @@ h1 {
   font-weight: bold;
 }
 
-.tamaño-precio {
-  margin-top: 1rem;
+.precios
+{
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-.precio {
+.precio-verde {
   color: #0c8a68; /* Verde moderno */
   font-weight: bold;
 }

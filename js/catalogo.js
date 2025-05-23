@@ -109,12 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               </div>
               <h2>${producto.nombre}</h2>
-              <p>${producto.descripcion}</p>
+              <p class="producto-descripcion>${producto.descripcion}</p>
               <div class="precios">
                 ${producto.variantes
                   .map(
                     (v) => `
-                  <p class="tamaño-precio"><strong>${v.tamaño}:</strong> <span class="precio">$${v.precio}</span></p>`
+                  <p>${v.tamaño}: <span class="precio-verde">$${v.precio}</span></p>`
                   )
                   .join("")}
                   `;
