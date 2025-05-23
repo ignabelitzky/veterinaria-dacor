@@ -128,17 +128,13 @@ header {
 }
 
 /* ----------------------------------
-   SOBRE NOSOTROS
+   SOBRE NOSOTROS - GALERIA
 ---------------------------------- */
 #sobre-nosotros {
-  background-color: #ffffff;
-  padding: 4rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+  padding: 1rem;
   text-align: center;
-}
-
-#sobre-nosotros .contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 #sobre-nosotros h2 {
@@ -146,6 +142,7 @@ header {
   color: #0c8a68;
   margin-bottom: 1.5rem;
   position: relative;
+  text-align: center;
 }
 
 #sobre-nosotros h2::after {
@@ -158,10 +155,85 @@ header {
   border-radius: 2px;
 }
 
-#sobre-nosotros p {
+.contenedor-galeria {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.galeria-nosotros {
+  max-width: 800px;
+  max-height: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+
+.image-wrapper {
+  position: relative;
+  max-width: 800px;
+  max-height: 600px;
+  margin: 0 auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 600px;
+  display: block;
+  object-fit: contain;
+}
+
+.titulo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: #444;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.nav:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  
+  .nav {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
 }
 
 /* ----------------------------------

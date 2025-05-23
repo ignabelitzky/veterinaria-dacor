@@ -35,7 +35,7 @@
         </div>
       </header>
 
-      <main>
+      <body>
         <!-- Hero -->
         <section id="hero">
           <div class="hero-contenido">
@@ -52,14 +52,26 @@
         <!-- Sobre nosotros -->
         <section id="sobre-nosotros">
           <div class="contenedor">
-            <h2>Sobre nosotros</h2>
-            <p>
-              Somos una veterinaria con más de 5 años de experiencia brindando
-              atención personalizada a mascotas en nuestra comunidad. Ofrecemos
-              servicios veterinarios de calidad, una tienda completa de
-              productos, y un trato humano y cálido tanto para los animales como
-              para sus familias.
-            </p>
+            <h2>Nuestra Vete</h2>
+            <div class="contenedor-galeria">
+              <div class="galeria-nosotros">
+                <button class="nav prev" aria-label="Imagen anterior">
+                  &#10094;
+                </button>
+                <div class="image-wrapper">
+                  <img
+                    id="imagen-galeria"
+                    src="img/galeria_nosotros/local1.png"
+                    alt="Imagen de galería"
+                  />
+                  <div class="titulo" id="titulo-galeria">Titulo 1</div>
+
+                  <button class="nav next" aria-label="Imagen siguiente">
+                    &#10095;
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -124,10 +136,11 @@
             </div>
           </div>
         </section>
-      </main>
+      </body>
 
       <script src="js/catalogoDestacado.js"></script>
       <script src="js/navbar.js"></script>
+      <script src="js/galeria_nosotros.js"></script>
 
       <footer>
         <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
