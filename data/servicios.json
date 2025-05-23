@@ -2,36 +2,36 @@
   {
     "nombre": "Consulta veterinaria",
     "descripcion": "Revisión general, control de salud y orientación médica para tu mascota.",
-    "imagen": "img/servicios/consulta.jpg"
+    "imagen": "img/servicios/consulta.webp"
   },
   {
     "nombre": "Vacunación",
     "descripcion": "Aplicación de vacunas según la edad y especie.",
-    "imagen": "img/servicios/vacunacion.jpg"
+    "imagen": "img/servicios/vacunacion.webp"
   },
   {
     "nombre": "Desparasitación",
     "descripcion": "Tratamientos antiparasitarios internos y externos.",
-    "imagen": "img/servicios/desparasitacion.jpg"
+    "imagen": "img/servicios/desparasitacion.webp"
   },
   {
     "nombre": "Análisis clínicos",
     "descripcion": "Estudios de laboratorio como análisis de sangre, orina y coproparasitológicos.",
-    "imagen": "img/servicios/analisis.jpg"
+    "imagen": "img/servicios/analisis.webp"
   },
   {
     "nombre": "Certificados de salud",
     "descripcion": "Emisión de certificados sanitarios para viajes, concursos o adopciones.",
-    "imagen": "img/servicios/certificados.jpg"
+    "imagen": "img/servicios/certificados.webp"
   },
   {
     "nombre": "Asesoramiento nutricional",
     "descripcion": "Orientación sobre alimentación balanceada según raza, edad y condición del animal.",
-    "imagen": "img/servicios/nutricion.jpg"
+    "imagen": "img/servicios/nutricion.webp"
   },
   {
     "nombre": "Control pre y post quirúrgico",
     "descripcion": "Supervisión médica antes y después de procedimientos quirúrgicos.",
-    "imagen": "img/servicios/control-quirurgico.jpg"
+    "imagen": "img/servicios/control-quirurgico.webp"
   }
 ]
