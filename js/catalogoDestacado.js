@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.classList.add("card-producto");
       card.innerHTML = `
-        <img src="img/productos/${producto.imagen}" alt="${producto.nombre}" />
+        <img src="img/productos/${producto.imagenes[0]}" alt="${producto.nombre}" />
         <h3>${producto.nombre}</h3>
       `;
       contenedor.appendChild(card);

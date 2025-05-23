@@ -4,7 +4,7 @@
     "nombre": "Comedero Acero Inoxidable",
     "descripcion": "Resistente plato de acero inoxidable con base antideslizante para evitar derrames. Apto para perros y gatos.",
     "stock": true,
-    "imagen": "plato_acero_inoxidable.png",
+    "imagenes": ["plato_acero_inoxidable.png","plato_acero_inoxidable_2.png"],
     "categoria": "comederos",
     "destacado": true,
     "variantes": [
@@ -27,7 +27,7 @@
     "nombre": "Alicate c/ lima curvo N12 Rosa",
     "descripcion": "Práctico alicate curvo con lima incorporada, diseñado para cortar las uñas de mascotas pequeñas de forma segura y precisa.",
     "stock": false,
-    "imagen": "alicate_curvo_rosa.png",
+    "imagenes": ["alicate_curvo_rosa.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -42,7 +42,7 @@
     "nombre": "Cepillo deslanador",
     "descripcion": "Cepillo deslanador ideal para remover el pelo suelto y reducir la muda en perros y gatos, dejando el pelaje suave y saludable.",
     "stock": true,
-    "imagen": "cepillo_deslanador.png",
+    "imagenes": ["cepillo_deslanador.png"],
     "categoria": "higiene",
     "destacado": true,
     "variantes": [
@@ -65,7 +65,7 @@
     "nombre": "Limpia patas L",
     "descripcion": "Práctico limpia patas que ayuda a remover la suciedad después de los paseos, manteniendo tus pisos más limpios.",
     "stock": true,
-    "imagen": "limpia_patas.png",
+    "imagenes": ["limpia_patas.png"],
     "categoria": "higiene",
     "destacado": true,
     "variantes": [
@@ -80,7 +80,7 @@
     "nombre": "Comelento chico (gajos)",
     "descripcion": "Comedero tipo comelento con diseño de gajos que estimula una alimentación más lenta y saludable en mascotas pequeñas.",
     "stock": true,
-    "imagen": "comelento_chico_gajos.png",
+    "imagenes": ["comelento_chico_gajos.png"],
     "categoria": "comederos",
     "destacado": false,
     "variantes": [
@@ -95,7 +95,7 @@
     "nombre": "Alicate N10",
     "descripcion": "Alicate ergonómico para recortar uñas con precisión en mascotas pequeñas. Fácil de manejar y seguro.",
     "stock": false,
-    "imagen": "alicate_n10.png",
+    "imagenes": ["alicate_n10.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -110,7 +110,7 @@
     "nombre": "Cepillo de dientes dedo x 2u",
     "descripcion": "Cepillos de dedo suaves, perfectos para limpiar los dientes de tu mascota y promover una buena salud bucal.",
     "stock": true,
-    "imagen": "cepillo_dientes_dedo.png",
+    "imagenes": ["cepillo_dientes_dedo.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -125,7 +125,7 @@
     "nombre": "Cepillo de dientes largos x 2u",
     "descripcion": "Cepillos largos dobles que facilitan la limpieza dental en perros y gatos, incluso en zonas de difícil acceso.",
     "stock": true,
-    "imagen": "cepillo_dientes_largo.png",
+    "imagenes": ["cepillo_dientes_largo.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -140,7 +140,7 @@
     "nombre": "Quita pelusa silicona para lavarropa L",
     "descripcion": "Práctico quitapelusa de silicona reutilizable. Atrapa pelos de mascotas durante el lavado de ropa.",
     "stock": true,
-    "imagen": "quita_pelusa.png",
+    "imagenes": ["quita_pelusa.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -155,7 +155,7 @@
     "nombre": "Cardina cerda plástica N2",
     "descripcion": "Cardina con cerdas plásticas ideal para desenredar y eliminar el pelo suelto en mascotas de pelo medio a largo.",
     "stock": true,
-    "imagen": "cardina_cerda_plastica_n2.png",
+    "imagenes": ["cardina_cerda_plastica_n2.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -170,7 +170,7 @@
     "nombre": "Bandeja sanitaria",
     "descripcion": "Bandeja sanitaria plástica de fácil limpieza, diseñada especialmente para gatos. Disponible en varios tamaños.",
     "stock": true,
-    "imagen": "bandeja_sanitaria.png",
+    "imagenes": ["bandeja_sanitaria.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -189,7 +189,7 @@
     "nombre": "Gallo",
     "descripcion": "Divertido gallo de goma con sonido, perfecto para el juego interactivo y la estimulación de tu perro.",
     "stock": true,
-    "imagen": "gallo.png",
+    "imagenes": ["gallo.png"],
     "categoria": "juguetes",
     "destacado": true,
     "variantes": [
@@ -208,7 +208,7 @@
     "nombre": "Pera c/ catnip rascals",
     "descripcion": "Juguete en forma de pera con catnip, pensado para entretener y estimular los sentidos de tu gato.",
     "stock": true,
-    "imagen": "pera_catnip_rascals.png",
+    "imagenes": ["pera_catnip_rascals.png"],
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
@@ -223,7 +223,7 @@
     "nombre": "Manzana c/ catnip rascals",
     "descripcion": "Manzana rellena con catnip para gatos. Un juguete blando que promueve el juego y la relajación.",
     "stock": true,
-    "imagen": "manzana_catnip_rascals.png",
+    "imagenes": ["manzana_catnip_rascals.png"],
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
@@ -238,7 +238,7 @@
     "nombre": "Alicate guillotina N11",
     "descripcion": "Cortauñas tipo guillotina que permite un corte limpio y cómodo en mascotas pequeñas.",
     "stock": true,
-    "imagen": "alicate_guillotina_n11.png",
+    "imagenes": ["alicate_guillotina_n11.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -253,7 +253,7 @@
     "nombre": "Alicate tijera M N2",
     "descripcion": "Alicate tipo tijera de tamaño medio, ideal para mantener las uñas de perros y gatos prolijas y sin esfuerzo.",
     "stock": true,
-    "imagen": "alicate_tijera_m_n2.png",
+    "imagenes": ["alicate_tijera_m_n2.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -268,7 +268,7 @@
     "nombre": "Pelota dosificadora",
     "descripcion": "Pelota dosificadora que combina juego y alimentación. Estimula mentalmente a tu perro mientras come.",
     "stock": true,
-    "imagen": "pelota_dosificadora.png",
+    "imagenes": ["pelota_dosificadora.png"],
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
@@ -287,7 +287,7 @@
     "nombre": "Conjunto pretal gato prince",
     "descripcion": "Conjunto de pretal con correa para gatos, cómodo y seguro para salidas al aire libre.",
     "stock": true,
-    "imagen": "conjunto_pretal_gato_prince.png",
+    "imagenes": ["conjunto_pretal_gato_prince.png"],
     "categoria": "correas-pretales",
     "destacado": false,
     "variantes": [
@@ -302,7 +302,7 @@
     "nombre": "Comedero retractil",
     "descripcion": "Comedero retráctil de silicona, compacto y fácil de transportar. Perfecto para salidas o viajes.",
     "stock": true,
-    "imagen": "comedero_retractil.png",
+    "imagenes": ["comedero_retractil.png"],
     "categoria": "comederos",
     "destacado": false,
     "variantes": [
@@ -321,7 +321,7 @@
     "nombre": "Botella de paseo",
     "descripcion": "Botella portátil con bebedero integrado. Ideal para mantener a tu mascota hidratada fuera de casa.",
     "stock": true,
-    "imagen": "botella_de_paseo.png",
+    "imagenes": ["botella_de_paseo.png"],
     "categoria": "comederos",
     "destacado": false,
     "variantes": [
@@ -340,7 +340,7 @@
     "nombre": "Cama nido",
     "descripcion": "Cama tipo nido acolchada, brinda abrigo y comodidad para el descanso de perros y gatos.",
     "stock": true,
-    "imagen": "cama_nido.png",
+    "imagenes": ["cama_nido.png"],
     "categoria": "camas",
     "destacado": true,
     "variantes": [
@@ -363,7 +363,7 @@
     "nombre": "Mochila transportadora M",
     "descripcion": "Mochila transportadora resistente y ventilada. Cómoda para llevar a tu mascota en viajes o paseos.",
     "stock": true,
-    "imagen": "mochila_transportadora_m.png",
+    "imagenes": ["mochila_transportadora_m.png"],
     "categoria": "transportadoras",
     "destacado": true,
     "variantes": [
@@ -378,7 +378,7 @@
     "nombre": "Palta autoadhesiva con hierba gatera",
     "descripcion": "Juguete con forma de palta, autoadhesivo y con hierba gatera. Atrae y estimula a los gatos.",
     "stock": true,
-    "imagen": "palta_autoadhesiva.png",
+    "imagenes": ["palta_autoadhesiva.png"],
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
@@ -393,7 +393,7 @@
     "nombre": "Cartera transportadora",
     "descripcion": "Cartera transportadora elegante y espaciosa, ideal para llevar a tu mascota con comodidad.",
     "stock": true,
-    "imagen": "cartera_transportadora.png",
+    "imagenes": ["cartera_transportadora.png"],
     "categoria": "transportadoras",
     "destacado": false,
     "variantes": [
@@ -408,7 +408,7 @@
     "nombre": "Cepillo a vapor",
     "descripcion": "Cepillo a vapor que ayuda a remover el pelo suelto y limpiar profundamente el pelaje de tu mascota.",
     "stock": true,
-    "imagen": "cepillo_a_vapor.png",
+    "imagenes": ["cepillo_a_vapor.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -423,7 +423,7 @@
     "nombre": "Cardina plástica",
     "descripcion": "Cardina plástica resistente con mango ergonómico, ideal para cepillar a diario perros y gatos.",
     "stock": true,
-    "imagen": "cardina_plastica.png",
+    "imagenes": ["cardina_plastica.png"],
     "categoria": "higiene",
     "destacado": false,
     "variantes": [
@@ -446,7 +446,7 @@
     "nombre": "Cinturón de seguridad",
     "descripcion": "Cinturón de seguridad para mascotas, se ajusta al cinturón del auto y previene movimientos bruscos.",
     "stock": true,
-    "imagen": "cinturon_seguridad.png",
+    "imagenes": ["cinturon_seguridad.png"],
     "categoria": "correas-pretales",
     "destacado": false,
     "variantes": [
@@ -461,7 +461,7 @@
     "nombre": "Catnip helado",
     "descripcion": "Juguete de catnip con forma de helado. Estimula el olfato y el juego en gatos.",
     "stock": true,
-    "imagen": "catnip_helado.png",
+    "imagenes": ["catnip_helado.png"],
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [
@@ -476,7 +476,7 @@
     "nombre": "Pelota interactiva",
     "descripcion": "Pelota interactiva que estimula mental y físicamente a tu mascota mediante el movimiento y el juego.",
     "stock": false,
-    "imagen": "pelota_interactiva.png",
+    "imagenes": ["pelota_interactiva.png"],
     "categoria": "juguetes",
     "destacado": false,
     "variantes": [

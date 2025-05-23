@@ -85,54 +85,50 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    lista.forEach(producto => {
+    lista.forEach((producto) => {
       const div = document.createElement("div");
       div.className = "producto";
 
-      const stockTexto = producto.stock ? "Disponible" : "Sin stock";
+      const stockTexto = producto.stock ? "Disponible" : "Agotado";
       const claseStock = producto.stock ? "stock-disponible" : "stock-agotado";
 
       div.innerHTML = `
-        <img src="img/productos/${producto.imagen}" alt="${producto.nombre}">
-        <h2>${producto.nombre}</h2>
-        <p>${producto.descripcion}</p>
-        <span class="${claseStock}">${stockTexto}</span>
-      `;
-      div.addEventListener("click", () => abrirModal(producto));
+      </div>
+                  <span class="${claseStock}">${stockTexto}</span>
+        <div class="galeria">
+          <img src="img/productos/${
+            producto.imagenes[0]
+          }" class="imagen-principal" alt="${producto.nombre}">
+          <div class="miniaturas">
+            ${producto.imagenes
+              .map(
+                (img) => `
+              <img src="img/productos/${img}" class="thumbnail" alt="${producto.nombre}">`
+              )
+              .join("")}
+              </div>
+              </div>
+              <h2>${producto.nombre}</h2>
+              <p>${producto.descripcion}</p>
+              <div class="precios">
+                ${producto.variantes
+                  .map(
+                    (v) => `
+                  <p class="tamaño-precio"><strong>${v.tamaño}:</strong> <span class="precio">$${v.precio}</span></p>`
+                  )
+                  .join("")}
+                  `;
+
       contenedor.appendChild(div);
+      // Asignar evento a miniaturas
+      div.querySelectorAll(".thumbnail").forEach((miniatura) => {
+        miniatura.addEventListener("click", (e) => {
+          const galeria = e.target.closest(".galeria");
+          galeria.querySelector(".imagen-principal").src = e.target.src;
+        });
+      });
     });
   }
-
-  function abrirModal(producto) {
-    modalNombre.textContent = producto.nombre;
-    modalDescripcion.textContent = producto.descripcion;
-
-    // Limpiar selector
-    selectorVariante.innerHTML = "";
-
-    producto.variantes.forEach((variante, i) => {
-      const option = document.createElement("option");
-      option.value = i;
-      option.textContent = `${variante.tamaño}`;
-      selectorVariante.appendChild(option);
-    });
-
-    // Mostrar precio de la primera variante
-    modalPrecio.className = "precio-verde";
-    modalPrecio.textContent = `$${producto.variantes[0].precio}`;
-
-    // Actualizar precio al cambiar variante
-    selectorVariante.onchange = () => {
-      const i = selectorVariante.value;
-      modalPrecio.textContent = `$${producto.variantes[i].precio}`;
-    };
-
-    modal.classList.remove("oculto");
-  }
-
-  cerrarModal.addEventListener("click", () => {
-    modal.classList.add("oculto");
-  });
 
   // -----------------------
   // 6. Controles de paginación
