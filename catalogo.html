@@ -1,75 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-419">
+  <!-- Latin America -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo - Veterinaria Dacor</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
   </head>
   <body>
-    <div class="contenedor-pagina">
-      <header>
-        <div class="contenedor-header">
-          <a href="index.html" class="logo-link">
-            <img
-              src="img/dacor_logo_500.png"
-              alt="Logo de la veterinaria"
-              class="logo"
-            />
-          </a>
-          <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="catalogo.html" class="activo">Catálogo</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="envios.html">Cómo comprar</a>
-            <a href="contacto.html">Contacto</a>
-          </nav>
-          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-            &#9776;
-          </button>
+    <header>
+      <div class="header-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="img/dacor_logo_500.png"
+            alt="Logo de la veterinaria"
+            class="logo"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Abrir menú"
+          type="button"
+        >
+          &#9776;
+        </button>
+        <nav class="pages" role="navigation" aria-label="Menú principal">
+          <a href="index.html" class="pages__link">Inicio</a>
+          <a href="catalogo.html" class="pages__link" aria-current="page"
+            >Catálogo</a
+          >
+          <a href="servicios.html" class="pages__link">Servicios</a>
+          <a href="envios.html" class="pages__link">Cómo comprar</a>
+          <a href="contacto.html" class="pages__link">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="contenedor">
+        <h1 class="titulo-seccion">Catálogo de Productos</h1>
+
+        <section class="filtros-catalogo">
+          <input type="text" id="buscador" placeholder="Buscar productos..." />
+          <select id="categoria">
+            <option value="todas">Todas</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="camas">Camas</option>
+            <option value="transportadoras">Transportadoras</option>
+            <option value="comederos">Comederos</option>
+            <option value="correas-pretales">Correas y pretales</option>
+            <option value="juguetes">Juguetes</option>
+            <option value="higiene">Higiene</option>
+            <option value="accesorios">Accesorios</option>
+            <option value="salud">Salud</option>
+            <option value="ropa">Ropa</option>
+            <option value="otros">Otros</option>
+          </select>
+          <label>
+            <input type="checkbox" id="mostrarSinStock" checked />
+            Mostrar productos agotados
+          </label>
+        </section>
+
+        <div class="catalogo" id="contenedor-catalogo">
+          <!-- Productos se insertan dinámicamente -->
         </div>
-      </header>
 
-      <main>
-        <div class="contenedor">
-          <h1 class="titulo-seccion">Catálogo de Productos</h1>
-
-          <section class="filtros-catalogo">
-            <input
-              type="text"
-              id="buscador"
-              placeholder="Buscar productos..."
-            />
-            <select id="categoria">
-              <option value="todas">Todas</option>
-              <option value="alimentos">Alimentos</option>
-              <option value="camas">Camas</option>
-              <option value="transportadoras">Transportadoras</option>
-              <option value="comederos">Comederos</option>
-              <option value="correas-pretales">Correas y pretales</option>
-              <option value="juguetes">Juguetes</option>
-              <option value="higiene">Higiene</option>
-              <option value="accesorios">Accesorios</option>
-              <option value="salud">Salud</option>
-              <option value="ropa">Ropa</option>
-              <option value="otros">Otros</option>
-            </select>
-            <label>
-              <input type="checkbox" id="mostrarSinStock" checked />
-              Mostrar productos agotados
-            </label>
-          </section>
-
-          <div class="catalogo" id="contenedor-catalogo">
-            <!-- Productos se insertan dinámicamente -->
-          </div>
-
-          <div id="paginacion" class="paginacion">
-            <!-- Paginación se insertará dinámicamente -->
-          </div>
+        <div id="paginacion" class="paginacion">
+          <!-- Paginación se insertará dinámicamente -->
         </div>
-      </main>
+      </div>
       <div class="catalog-disclaimer">
         <p>
           <strong>Importante:</strong> Los precios del catálogo son orientativos
@@ -78,21 +80,22 @@
         </p>
       </div>
 
-      <script src="js/catalogo.js"></script>
-      <script src="js/navbar.js"></script>
+      <!-- Floating whatsapp button -->
+      <a
+        href="https://wa.me/5493516784060"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Chatear por WhatsApp"
+      >
+        <img src="img/whatsapp-icono-30.png" alt="WhatsApp" />
+      </a>
+    </main>
 
-      <footer>
-        <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
-      </footer>
-    </div>
+    <script src="js/catalogo.js"></script>
+    <script src="js/navbar-toggle.js"></script>
 
-    <a
-      href="https://wa.me/5493516784060"
-      class="whatsapp-float"
-      target="_blank"
-      aria-label="Chatear por WhatsApp"
-    >
-      <img src="img/whatsapp-icono-30.png" alt="WhatsApp" />
-    </a>
+    <footer>
+      <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
+    </footer>
   </body>
 </html>

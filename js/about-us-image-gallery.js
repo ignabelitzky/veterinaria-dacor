@@ -1,11 +1,11 @@
 const images = [
-  { src: 'img/galeria_nosotros/mascotas1.webp', title: "Nuestras Mascotas" },
-  { src: 'img/galeria_nosotros/mascotas1.webp', title: "Nuestras Mascotas 2" }
+  { src: 'img/about-us-images/mascotas1.webp', title: "Nuestras Mascotas" },
+  { src: 'img/about-us-images/mascotas1.webp', title: "Nuestras Mascotas 2" }
 ];
 
 let currentIndex = 0;
-const imageElement = document.getElementById("imagen-galeria");
-const titleElement = document.getElementById("titulo-galeria");
+const imageElement = document.getElementById("about-us__image");
+const titleElement = document.getElementById("about-us__image-title");
 
 function updateGallery() {
   imageElement.classList.add("fade-out");

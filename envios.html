@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-419">
+  <!-- Latin America -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicios - Veterinaria Dacor</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
   </head>
   <body>
-    <div class="contenedor-pagina">
-      <header>
-        <div class="contenedor-header">
-          <a href="index.html" class="logo-link">
-            <img
-              src="img/dacor_logo_500.png"
-              alt="Logo de la veterinaria"
-              class="logo"
-            />
-          </a>
-          <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="envios.html" class="activo">Cómo comprar</a>
-            <a href="contacto.html">Contacto</a>
-          </nav>
-          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-            &#9776;
-          </button>
-        </div>
-      </header>
+    <header>
+      <div class="header-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="img/dacor_logo_500.png"
+            alt="Logo de la veterinaria"
+            class="logo"
+          />
+        </a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Abrir menú"
+          type="button"
+        >
+          &#9776;
+        </button>
+        <nav class="pages" role="navigation" aria-label="Menú principal">
+          <a href="index.html" class="pages__link">Inicio</a>
+          <a href="catalogo.html" class="pages__link">Catálogo</a>
+          <a href="servicios.html" class="pages__link">Servicios</a>
+          <a href="envios.html" class="pages__link" aria-current="page"
+            >Cómo comprar</a
+          >
+          <a href="contacto.html" class="pages__link">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-      <script src="js/navbar.js"></script>
-      
-      <footer>
-        <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
-      </footer>
-    </div>
+    <main></main>
+
+    <script src="js/navbar-toggle.js"></script>
+
+    <footer>
+      <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
+    </footer>
   </body>
 </html>

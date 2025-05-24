@@ -26,12 +26,6 @@ img {
 /* ----------------------------------
    ESTRUCTURA DE LA PÁGINA
 ---------------------------------- */
-.contenedor-pagina {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 main {
   flex: 1;
 }
@@ -45,7 +39,7 @@ header {
   padding: 10px 20px;
 }
 
-.contenedor-header {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +50,11 @@ header {
   height: 50px;
 }
 
-.navbar a {
+.pages.active {
+  display: flex;
+}
+
+.pages__link {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -64,12 +62,12 @@ header {
   margin: 0 5px;
 }
 
-.navbar a.activo {
+.pages a[aria-current="page"] {
   font-weight: bold;
   color: #f0f0f0;
 }
 
-.navbar a:hover {
+.pages__link:hover {
   font-weight: bold;
   color: #f0f0f0;
 }
@@ -86,7 +84,7 @@ header {
 /* ----------------------------------
    HERO - SECCIÓN PRINCIPAL
 ---------------------------------- */
-#hero {
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,24 +93,24 @@ header {
   background-color: #e0f7f4;
 }
 
-.hero-contenido {
+.hero__content {
   flex: 1 1 150px;
   max-width: 1200px;
 }
 
-#hero h1 {
+.hero__title{
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #0c8a68;
 }
 
-#hero p {
+.hero__subtitle {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #444;
 }
 
-#hero .btn {
+.hero__cta {
   padding: 0.8rem 1.6rem;
   background-color: #0c8a68;
   color: white;
@@ -123,21 +121,21 @@ header {
   transition: background-color 0.3s ease;
 }
 
-#hero .btn:hover {
+.hero__cta:hover {
   background-color: #0a6f56;
 }
 
 /* ----------------------------------
-   SOBRE NOSOTROS - GALERIA
+   ABOUT US - IMAGE GALLERY
 ---------------------------------- */
-#sobre-nosotros {
+.about-us {
   font-family: "Segoe UI", sans-serif;
   background-color: #f4f4f4;
   padding: 1rem;
   text-align: center;
 }
 
-#sobre-nosotros h2 {
+.about-us__title {
   font-size: 2rem;
   color: #0c8a68;
   margin-bottom: 1.5rem;
@@ -145,22 +143,7 @@ header {
   text-align: center;
 }
 
-#sobre-nosotros h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #0c8a68;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
-.contenedor-galeria {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.galeria-nosotros {
+.about-us__gallery {
   max-width: 800px;
   max-height: 600px;
   margin: 0 auto;
@@ -171,15 +154,14 @@ header {
   background: white;
 }
 
-
-.image-wrapper {
+.about-us__slide {
   position: relative;
   max-width: 800px;
   max-height: 600px;
   margin: 0 auto;
 }
 
-.image-wrapper img {
+.about-us__slide img {
   width: 100%;
   height: auto;
   max-width: 800px;
@@ -188,7 +170,7 @@ header {
   object-fit: contain;
 }
 
-.titulo {
+.about-us__image-title {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -224,21 +206,9 @@ header {
   right: 10px;
 }
 
-@media (max-width: 600px) {
-  .titulo {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-  
-  .nav {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-}
-
-.image-wrapper.fade img,
-.titulo.fade {
-  transition: opacity 0.3s ease;
+.about-us__slide.fade img,
+.about-us__image-title.fade {
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-out {
@@ -577,8 +547,7 @@ h1 {
   margin-right: auto;
 }
 
-.filtros-catalogo input[type="text"]
-.filtros-catalogo select{
+.filtros-catalogo input[type="text"] .filtros-catalogo select {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
@@ -638,8 +607,7 @@ h1 {
   font-weight: bold;
 }
 
-.precios
-{
+.precios {
   margin-top: 0.2rem;
   font-weight: bold;
   font-size: 0.9rem;
@@ -649,7 +617,6 @@ h1 {
   color: #0c8a68;
   font-weight: bold;
 }
-
 
 .paginacion {
   display: flex;
@@ -776,46 +743,58 @@ footer {
   background-color: #0c8a68;
   color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  padding: 1rem;
+  margin-top: auto;
 }
 
 /* ----------------------------------
    RESPONSIVE - MÓVILES
 ---------------------------------- */
 @media (max-width: 768px) {
-  #hero {
+  .hero {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1rem;
   }
 
-  .hero-contenido {
+  .hero__content {
     max-width: 100%;
   }
 
-  .hero-img {
-    max-width: 100%;
+  .about-us__image-title {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
 
-  .contenedor-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .logo {
+  height: 30px;
+}
+
+  .nav {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
 
-  .navbar {
+  .pages {
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: #0c8a68;
     padding: 10px 0;
   }
 
-  .navbar.active {
+  .pages.active {
     display: flex;
   }
 
+  .pages__link {
+    padding: 10px 20px;
+    margin: 0;
+    color: white;
+  }
+
   .menu-toggle {
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
+    color: white;
   }
 }
