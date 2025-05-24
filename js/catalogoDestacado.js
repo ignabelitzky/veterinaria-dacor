@@ -1,63 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const contenedor = document.getElementById("contenedor-destacados");
-  const paginacion = document.getElementById("paginacion-destacados");
-  const productosPorPagina = 5;
-  let destacados = [];
-  let paginaActual = 1;
+fetch('/data/productos.json')
+  .then(res => res.json())
+  .then(data => mostrarDestacados(data.filter(p => p.destacado)));
 
-  fetch("data/productos.json")
-    .then((response) => response.json())
-    .then((productos) => {
-      destacados = productos.filter((producto) => producto.destacado);
-      renderizarPaginaDestacados();
-      renderizarControlesPaginacion();
-    })
-    .catch((error) => {
-      console.error("Error cargando el catálogo:", error);
-      contenedor.innerHTML = "<p>Error al cargar productos destacados.</p>";
-    });
+function mostrarDestacados(productos) {
+  const contenedor = document.getElementById('contenedor-destacados');
+  contenedor.innerHTML = '';
 
-  function renderizarPaginaDestacados() {
-    contenedor.innerHTML = "";
-    const inicio = (paginaActual - 1) * productosPorPagina;
-    const fin = inicio + productosPorPagina;
-    const pagina = destacados.slice(inicio, fin);
+  productos.forEach(producto => {
+    const card = document.createElement('div');
+    card.className = 'card-producto';
 
-    if (pagina.length === 0) {
-      contenedor.innerHTML = "<p>No hay productos destacados para mostrar.</p>";
-      return;
-    }
+    const imagen = document.createElement('img');
+    imagen.src = `img/productos/${producto.imagenes[0]}`;
+    imagen.alt = producto.nombre;
 
-    pagina.forEach((producto) => {
-      const card = document.createElement("div");
-      card.classList.add("card-producto");
-      card.innerHTML = `
-        <img src="img/productos/${producto.imagenes[0]}" alt="${producto.nombre}" />
-        <h3>${producto.nombre}</h3>
-      `;
-      contenedor.appendChild(card);
-    });
-  }
+    const nombre = document.createElement('h3');
+    nombre.textContent = producto.nombre;
 
-  function renderizarControlesPaginacion() {
-    paginacion.innerHTML = "";
-    const totalPaginas = Math.ceil(destacados.length / productosPorPagina);
+    const precio = document.createElement('p');
+    const precios = producto.variantes.map(v => v.precio);
+    const menorPrecio = Math.min(...precios);
+    precio.className = 'precios';
+    precio.innerHTML = `Desde <span class="precio-verde">$${menorPrecio}</span>`;
 
-    for (let i = 1; i <= totalPaginas; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      btn.classList.add("btn-pagina");
-      if (i === paginaActual) {
-        btn.classList.add("activo");
-      }
+    card.appendChild(imagen);
+    card.appendChild(nombre);
+    card.appendChild(precio);
 
-      btn.addEventListener("click", () => {
-        paginaActual = i;
-        renderizarPaginaDestacados();
-        renderizarControlesPaginacion();
-      });
-
-      paginacion.appendChild(btn);
-    }
-  }
-});
+    contenedor.appendChild(card);
+  });
+}
