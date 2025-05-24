@@ -1,6 +1,4 @@
 const images = [
-  { src: 'img/galeria_nosotros/local1.webp', title: "Dacor Veterinaria" },
-  { src: 'img/galeria_nosotros/personal1.webp', title: "Medica Veterinaria" },
   { src: 'img/galeria_nosotros/mascotas1.webp', title: "Nuestras Mascotas" }
 ];
 
