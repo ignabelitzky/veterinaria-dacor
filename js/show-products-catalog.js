@@ -1,3 +1,13 @@
+/*
+  This file is part of the Dacor Vet Website.
+  Copyright (C) 2025 Dacor Vet Web Team
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+*/
+
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-catalogo");
   const buscador = document.getElementById("buscador");
@@ -13,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------
   // 1. Cargar JSON
   // -----------------------
-  fetch("data/productos.json")
+  fetch("data/products.json")
     .then((res) => res.json())
     .then((data) => {
       productos = data;
