@@ -10,11 +10,14 @@
 
 <!DOCTYPE html>
 <html lang="es-419">
-  <!-- Latin America -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catálogo - Veterinaria Dacor</title>
+    <meta
+      name="description"
+      content="Conocé todos los productos que ofrece Veterinaria Dacor en Córdoba: alimentos, accesorios, higiene y más."
+    />
+    <title>Veterinaria Dacor - Catálogo</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
   </head>
@@ -49,13 +52,21 @@
     </header>
 
     <main>
-      <div class="contenedor">
-        <h1 class="titulo-seccion">Catálogo de Productos</h1>
+      <section class="catalog-content">
+        <h1 class="catalog-content__title">Catálogo de Productos</h1>
 
-        <section class="filtros-catalogo">
-          <input type="text" id="buscador" placeholder="Buscar productos..." />
-          <select id="categoria">
-            <option value="todas">Todas</option>
+        <section class="catalog-content__filters">
+          <input
+            type="text"
+            id="catalog-content__searchBox"
+            class="catalog-content__searchBox"
+            placeholder="Buscar productos..."
+          />
+          <select
+            id="catalog-content__categorySelector"
+            class="catalog-content__categorySelector"
+          >
+            <option value="todas">Todas las categorías</option>
             <option value="alimentos">Alimentos</option>
             <option value="camas">Camas</option>
             <option value="transportadoras">Transportadoras</option>
@@ -69,36 +80,42 @@
             <option value="otros">Otros</option>
           </select>
           <label>
-            <input type="checkbox" id="mostrarSinStock" checked />
+            <input
+              type="checkbox"
+              id="catalog-content__checkboxStock"
+              class="catalog-content__checkboxStock"
+              checked
+            />
             Mostrar productos agotados
           </label>
         </section>
 
-        <div class="catalogo" id="contenedor-catalogo">
+        <div class="catalog-content__cards" id="catalog-content__cards">
           <!-- Productos se insertan dinámicamente -->
         </div>
 
-        <div id="paginacion" class="paginacion">
+        <div id="catalog-content__pages" class="catalog-content__pages">
           <!-- Paginación se insertará dinámicamente -->
         </div>
-      </div>
-      <div class="catalog-disclaimer">
-        <p>
-          <strong>Importante:</strong> Los precios del catálogo son orientativos
-          y pueden diferir de los vigentes en la tienda física. Los colores y
-          diseños de los productos están sujetos a disponibilidad de stock.
-        </p>
-      </div>
+        <div class="catalog-content__disclaimer">
+          <p class="catalog-content__disclaimer-text">
+            <strong>Importante:</strong> Los precios del catálogo son
+            orientativos y pueden diferir de los vigentes en la tienda física.
+            Los colores y diseños de los productos están sujetos a
+            disponibilidad de stock.
+          </p>
+        </div>
 
-      <!-- Floating whatsapp button -->
-      <a
-        href="https://wa.me/5493516784060"
-        class="whatsapp-float"
-        target="_blank"
-        aria-label="Chatear por WhatsApp"
-      >
-        <img src="img/whatsapp-icono-30.png" alt="WhatsApp" />
-      </a>
+        <!-- Floating whatsapp button -->
+        <a
+          href="https://wa.me/5493516784060"
+          class="catalog-content__whatsapp-btn"
+          target="_blank"
+          aria-label="Chatear por WhatsApp"
+        >
+          <img class="catalog-content__whatsapp-img" src="img/whatsapp-icono-30.png" alt="WhatsApp" />
+        </a>
+      </section>
     </main>
 
     <script src="js/show-products-catalog.js"></script>

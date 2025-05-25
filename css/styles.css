@@ -115,7 +115,7 @@ header {
   max-width: 1200px;
 }
 
-.hero__title{
+.hero__title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #0c8a68;
@@ -260,7 +260,7 @@ header {
   overflow-x: auto;
   padding-bottom: 1rem;
   justify-content: start;
-  margin-bottom: 2rem;;
+  margin-bottom: 2rem;
 }
 
 .featured-products__container::-webkit-scrollbar {
@@ -385,7 +385,6 @@ header {
   transform: scale(1.2);
 }
 
-
 .google-maps {
   flex: 1 1 400px;
   max-width: 400px;
@@ -474,7 +473,7 @@ h1 {
 /* ----------------------------------
    CATÁLOGO DE PRODUCTOS
 ---------------------------------- */
-.catalogo {
+.catalog-content__cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -483,14 +482,14 @@ h1 {
   margin: 1.5rem 1.5rem;
 }
 
-.titulo-seccion {
+.catalog-content__title {
   color: #0c8a68;
   font-size: 2.2rem;
   margin: 0.5rem 0.5rem;
   text-align: center;
 }
 
-.producto {
+.catalog-content__card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -500,25 +499,25 @@ h1 {
   flex-direction: column;
 }
 
-.galeria {
+.catalog-contetent__card-image {
   margin-top: 0.1rem;
 }
 
-.galeria .imagen-principal {
+.catalog-content__card-image .catalog-content__card-main-image {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
-.galeria .miniaturas {
+.catalog-content__card-image .catalog-content__card-thumbnails {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   justify-content: center;
 }
 
-.galeria .thumbnail {
+.catalog-content__card-thumbnail {
   width: 40px;
   height: auto;
   cursor: pointer;
@@ -527,36 +526,32 @@ h1 {
   transition: transform 0.2s;
 }
 
-.galeria .thumbnail:hover {
+.catalog-content__card-image .catalog-content__card-thumbnail:hover {
   transform: scale(1.1);
 }
 
-.imagen-principal {
+.catalog-content__card-main-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.producto h2 {
+.catalog-content__card-title {
   font-size: 1rem;
   margin: 0.2rem 0.5rem;
   color: #222;
   text-align: center;
 }
 
-.producto-descripcion {
+.catalog-content__card-description {
   font-size: 0.8rem;
   margin: 0 0.5rem;
   color: #555;
   text-align: center;
 }
 
-.producto p {
-  text-align: center;
-}
-
-#buscador {
+.catalog-content__searchBox {
   width: 100%;
   max-width: 400px;
   margin: 1rem auto;
@@ -567,8 +562,8 @@ h1 {
   border: 1px solid #ccc;
 }
 
-/* Filtros: buscador + categoría */
-.filtros-catalogo {
+/* Filters: Search box & category selector */
+.catalog-content__filters {
   background-color: #ffffff;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -584,7 +579,7 @@ h1 {
   margin-right: auto;
 }
 
-.filtros-catalogo input[type="text"] .filtros-catalogo select {
+.catalog-content__searchBox .catalog-content__categorySelector {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
@@ -594,14 +589,14 @@ h1 {
   transition: border-color 0.3s;
 }
 
-.filtros-catalogo input[type="text"]:focus,
-.filtros-catalogo select:focus {
+.catalog-content__searchBox:focus,
+.catalog-content__categorySelector:focus {
   border-color: #0c8a68;
   outline: none;
 }
 
 /* Estilo del selector */
-.filtros-catalogo select {
+.catalog-content__categorySelector {
   padding: 0.8rem 1rem;
   margin: 1rem auto;
   font-size: 1rem;
@@ -616,46 +611,36 @@ h1 {
   background-size: 1rem;
 }
 
-.filtros-catalogo label {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  user-select: none;
-}
-
-.stock-disponible {
+.catalog-content__card-stock-available {
   display: block;
   font-size: 0.8rem;
   color: #0c8a68;
   font-weight: bold;
+  margin-top: 0.2rem;
+  text-align: center;
 }
 
-.stock-agotado {
+.catalog-content__card-stock-unavailable {
   display: block;
   font-size: 0.8rem;
   color: #d9534f;
   font-weight: bold;
+  margin-top: 0.2rem;
+  text-align: center;
 }
 
-.precios {
+.catalog-content__card-price {
   margin-top: 0.2rem;
   font-weight: bold;
   font-size: 0.9rem;
+  text-align: center;
 }
 
-.precio-verde {
+.catalog-content__card-price--green {
   color: #0c8a68;
-  font-weight: bold;
 }
 
-.paginacion {
+.catalog-content__pages {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -663,23 +648,28 @@ h1 {
   flex-wrap: wrap;
 }
 
-.paginacion .btn-pagina {
+.catalog-content__pages-btn {
   padding: 0.5rem 1rem;
   border: none;
   background-color: #0c8a68;
   color: white;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.paginacion .btn-pagina.activo {
+.catalog-content__pages-btn--active {
+  background-color: #4caf50;
+}
+
+.catalog-content__pages-btn:hover {
   background-color: #4caf50;
   color: white;
+  transform: scale(1.05);
 }
 
 /* Disclaimer */
-.catalog-disclaimer {
+.catalog-content__disclaimer {
   margin-top: 2rem;
   padding: 1rem;
   background-color: #f8f9fa;
@@ -688,13 +678,13 @@ h1 {
   color: #555;
 }
 
-.catalog-disclaimer p {
+.catalog-content__disclaimer-text {
   margin: 0;
   line-height: 1.4;
 }
 
-/* Botón flotante whatsapp */
-.whatsapp-float {
+/* Floating Whatsapp Button */
+.catalog-content__whatsapp-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -710,11 +700,11 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.whatsapp-float:hover {
+.catalog-content__whatsapp-btn:hover {
   transform: scale(1.2);
 }
 
-.whatsapp-float img {
+.catalog-content__whatsapp-img {
   width: 40px;
   height: 40px;
 }
@@ -761,7 +751,7 @@ h1 {
   border-radius: 8px;
 }
 
-.services-content__card-title{
+.services-content__card-title {
   margin: 0.5rem 0;
   font-size: 1.2rem;
 }
@@ -802,8 +792,8 @@ footer {
   }
 
   .header-container__logo {
-  height: 30px;
-}
+    height: 30px;
+  }
 
   .nav {
     font-size: 0.9rem;

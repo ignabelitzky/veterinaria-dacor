@@ -9,152 +9,167 @@
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const contenedor = document.getElementById("contenedor-catalogo");
-  const buscador = document.getElementById("buscador");
-  const selectorCategoria = document.getElementById("categoria");
-  const mostrarSinStock = document.getElementById("mostrarSinStock");
-  const paginacion = document.getElementById("paginacion");
-  const productosPorPagina = 28; // Cambia este valor para ajustar la cantidad de productos por página
+  const productCards = document.getElementById("catalog-content__cards");
+  const searchBox = document.getElementById("catalog-content__searchBox");
+  const categorySelector = document.getElementById(
+    "catalog-content__categorySelector"
+  );
+  const checkboxStock = document.getElementById(
+    "catalog-content__checkboxStock"
+  );
+  const pages = document.getElementById("catalog-content__pages");
+  const maxCards = 28; // Cambia este valor para ajustar la cantidad de productos por página
 
-  let productos = [];
-  let productosFiltrados = [];
-  let paginaActual = 1;
+  let products = [];
+  let filteredProducts = [];
+  let currentPage = 1;
 
   // -----------------------
-  // 1. Cargar JSON
+  // 1. Load JSON data
   // -----------------------
   fetch("data/list-products.json")
-    .then((res) => res.json())
+    .then((response) => response.json())
     .then((data) => {
-      productos = data;
-      aplicarFiltros(); // Se inicializa con todos los productos
+      products = data;
+      applyFilters(); // Se inicializa con todos los productos
     })
     .catch((error) => {
       console.error("Error cargando productos:", error);
-      contenedor.innerHTML = "<p>Error al cargar el catálogo.</p>";
+      productCards.innerHTML = "<p>Error al cargar el catálogo.</p>";
     });
 
   // -----------------------
-  // 2. Eventos de filtros
+  // 2. Filter events
   // -----------------------
-  buscador.addEventListener("input", aplicarFiltros);
-  selectorCategoria.addEventListener("change", aplicarFiltros);
-  mostrarSinStock.addEventListener("change", aplicarFiltros);
+  searchBox.addEventListener("input", applyFilters);
+  categorySelector.addEventListener("change", applyFilters);
+  checkboxStock.addEventListener("change", applyFilters);
 
   // -----------------------
-  // 3. Función para aplicar filtros y reiniciar página
+  // 3. Function to apply filters
   // -----------------------
-  function aplicarFiltros() {
-    const texto = buscador.value.toLowerCase();
-    const categoria = selectorCategoria.value;
+  function applyFilters() {
+    const searchQuery = searchBox.value.toLowerCase();
+    const selectedCategory = categorySelector.value;
 
-    productosFiltrados = productos.filter((p) => {
-      const coincideTexto =
-        p.nombre.toLowerCase().includes(texto) ||
-        p.descripcion.toLowerCase().includes(texto);
+    filteredProducts = products.filter((product) => {
+      const matchesSearchText =
+        product.nombre.toLowerCase().includes(searchQuery) ||
+        product.descripcion.toLowerCase().includes(searchQuery);
 
-      const coincideCategoria =
-        categoria === "todas" || p.categoria === categoria;
+      const matchesCategory =
+        selectedCategory === "todas" || product.categoria === selectedCategory;
 
-      const tieneStock = mostrarSinStock.checked || p.stock;
+      const passesStockFilter = checkboxStock.checked || product.stock;
 
-      return coincideTexto && coincideCategoria && tieneStock;
+      return matchesSearchText && matchesCategory && passesStockFilter;
     });
 
-    paginaActual = 1;
-    renderizarProductosPaginados();
+    currentPage = 1;
+    renderCurrentPageProducts();
   }
 
   // -----------------------
-  // 4. Mostrar productos de una página
+  // 4. Render products of the current page
   // -----------------------
-  function renderizarProductosPaginados() {
-    const total = productosFiltrados.length;
-    const inicio = (paginaActual - 1) * productosPorPagina;
-    const fin = inicio + productosPorPagina;
-    const productosPagina = productosFiltrados.slice(inicio, fin);
+  function renderCurrentPageProducts() {
+    const total = filteredProducts.length;
+    const startIndex = (currentPage - 1) * maxCards;
+    const endIndex = startIndex + maxCards;
+    const productsOnPage = filteredProducts.slice(startIndex, endIndex);
 
-    mostrarProductos(productosPagina);
-    renderizarControlesPaginacion(total);
+    showProducts(productsOnPage);
+    renderPaginationControls(total);
   }
 
   // -----------------------
-  // 5. Renderizar tarjetas de productos
+  // 5. Show products card
   // -----------------------
-  function mostrarProductos(lista) {
-    contenedor.innerHTML = "";
+  function showProducts(products) {
+    productCards.innerHTML = "";
 
-    if (lista.length === 0) {
-      contenedor.innerHTML = "<p>No se encontraron productos.</p>";
+    if (products.length === 0) {
+      productCards.textContent = "No se encontraron productos.";
       return;
     }
 
-    lista.forEach((producto) => {
-      const div = document.createElement("div");
-      div.className = "producto";
+    products.forEach((product) => {
+      const div = document.createElement("article");
+      div.className = "catalog-content__card";
 
-      const stockTexto = producto.stock ? "Disponible" : "Agotado";
-      const claseStock = producto.stock ? "stock-disponible" : "stock-agotado";
+      const stockText = product.stock ? "Disponible" : "Agotado";
+      const typeStock = product.stock ? "stock-available" : "stock-unavailable";
 
       div.innerHTML = `
-      </div>
-        <p class="${claseStock}">${stockTexto}</p>
-        <div class="galeria">
+        <p class="catalog-content__card-${typeStock}">${stockText}</p>
+        <div class="catalog-content__card-image">
           <img src="img/productos/${
-            producto.imagenes[0]
-          }" class="imagen-principal" alt="${producto.nombre}">
-          <div class="miniaturas">
-            ${producto.imagenes
+            product.imagenes[0]
+          }" class="catalog-content__card-main-image" alt="${product.nombre}">
+          <div class="catalog-content__card-thumbnails">
+            ${product.imagenes
               .map(
                 (img) => `
-              <img src="img/productos/${img}" class="thumbnail" alt="${producto.nombre}">`
+              <img src="img/productos/${img}" class="catalog-content__card-thumbnail" alt="${product.nombre}">`
               )
               .join("")}
               </div>
               </div>
-              <h2>${producto.nombre}</h2>
-              <p class="producto-descripcion">${producto.descripcion}</p>
-              <div class="precios">
-                ${producto.variantes
+              <h2 class="catalog-content__card-title">${product.nombre}</h2>
+              <p class="catalog-content__card-description">${
+                product.descripcion
+              }</p>
+              <div class="catalog-content__card-price">
+                ${product.variantes
                   .map(
                     (v) => `
-                  <p>${v.tamaño}: <span class="precio-verde">$${v.precio}</span></p>`
+                  <p>${v.tamaño}: <span class="catalog-content__card-price--green">$${v.precio}</span></p>`
                   )
-                  .join("")}
+                  .join("")}</div>
                   `;
 
-      contenedor.appendChild(div);
-      // Asignar evento a miniaturas
-      div.querySelectorAll(".thumbnail").forEach((miniatura) => {
-        miniatura.addEventListener("click", (e) => {
-          const galeria = e.target.closest(".galeria");
-          galeria.querySelector(".imagen-principal").src = e.target.src;
+      productCards.appendChild(div);
+
+      // Add event listeners to thumbnail images
+      div
+        .querySelectorAll(".catalog-content__card-thumbnail")
+        .forEach((thumbnail) => {
+          thumbnail.addEventListener("click", (e) => {
+            const gallery = e.target.closest(".catalog-content__card-image");
+            gallery.querySelector(".catalog-content__card-main-image").src =
+              e.target.src;
+          });
         });
-      });
     });
   }
 
   // -----------------------
-  // 6. Controles de paginación
+  // 6. Pagination controls
   // -----------------------
-  function renderizarControlesPaginacion(total) {
-    const totalPaginas = Math.ceil(total / productosPorPagina);
-    paginacion.innerHTML = "";
+  function renderPaginationControls(totalProducts) {
+    const totalPages = Math.ceil(totalProducts / maxCards);
+    pages.innerHTML = "";
 
-    if (totalPaginas <= 1) return; // No mostrar paginación si hay una sola página
+    if (totalPages <= 1) return;
 
-    for (let i = 1; i <= totalPaginas; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      btn.classList.add("btn-pagina");
-      if (i === paginaActual) btn.classList.add("activo");
+    for (let pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+      const button = document.createElement("button");
+      button.textContent = pageNumber;
 
-      btn.addEventListener("click", () => {
-        paginaActual = i;
-        renderizarProductosPaginados();
+      // Always add base class
+      button.classList.add("catalog-content__pages-btn");
+
+      // Add modifier class if this is the current page
+      if (pageNumber === currentPage) {
+        button.classList.add("catalog-content__pages-btn--active");
+      }
+
+      button.addEventListener("click", () => {
+        currentPage = pageNumber;
+        renderCurrentPageProducts();
       });
 
-      paginacion.appendChild(btn);
+      pages.appendChild(button);
     }
   }
 });
