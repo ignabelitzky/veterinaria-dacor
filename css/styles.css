@@ -9,8 +9,20 @@
 */
 
 /* ----------------------------------
-   RESET BÁSICO Y ESTILOS GENERALES
+   BASIC RESET AND VARIABLES
 ---------------------------------- */
+
+:root {
+  --color-primary: #0c8a68;
+  --color-secondary: #f4f4f4;
+  --color-text: #333;
+  --color-background: #ffffff;
+  --color-btn-hover: #0a6f56;
+  --color-footer: lightgray;
+  --color-link: #0077cc;
+  --font-main: "Segoe UI", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,10 +33,12 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -34,7 +48,7 @@ img {
 }
 
 /* ----------------------------------
-   ESTRUCTURA DE LA PÁGINA
+   WEBSITE LAYOUT
 ---------------------------------- */
 main {
   flex: 1;
@@ -50,7 +64,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #0c8a68;
+  background-color: var(--color-primary);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,8 +86,7 @@ header {
 
 .pages__link {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: var(--color-text);
   transition: color 0.3s ease;
   margin: 0 5px;
 }
@@ -99,7 +112,7 @@ header {
 }
 
 /* ----------------------------------
-   HERO - SECCIÓN PRINCIPAL
+   MAIN PAGE
 ---------------------------------- */
 .hero {
   display: flex;
@@ -107,7 +120,7 @@ header {
   align-items: center;
   text-align: center;
   padding: 1rem 0;
-  background-color: #e0f7f4;
+  background-color: var(--color-background);
 }
 
 .hero__content {
@@ -118,18 +131,17 @@ header {
 .hero__title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #0c8a68;
+  color: var(--color-primary);
 }
 
 .hero__subtitle {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #444;
 }
 
 .hero__cta {
   padding: 0.8rem 1.6rem;
-  background-color: #0c8a68;
+  background-color: var(--color-primary);
   color: white;
   font-weight: bold;
   border-radius: 8px;
@@ -139,23 +151,22 @@ header {
 }
 
 .hero__cta:hover {
-  background-color: #0a6f56;
+  background-color: var(--color-btn-hover);
 }
 
 /* ----------------------------------
-   ABOUT US - IMAGE GALLERY
+   ABOUT US - IMAGE GALLERY (MAIN PAGE)
 ---------------------------------- */
 .about-us {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--color-secondary);
   padding: 1rem;
   text-align: center;
 }
 
 .about-us__title {
   font-size: 2rem;
-  color: #0c8a68;
-  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
   position: relative;
   text-align: center;
 }
@@ -193,7 +204,7 @@ header {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 0.75rem;
+  padding: 1rem;
   text-align: center;
   font-size: 1.1rem;
 }
@@ -237,7 +248,7 @@ header {
 }
 
 /* ----------------------------------
-   FEATURED PRODUCTS
+   FEATURED PRODUCTS (MAIN PAGE)
 ---------------------------------- */
 .featured-products {
   gap: 1rem;
@@ -249,8 +260,8 @@ header {
 
 .featured-products__title {
   font-size: 2rem;
-  color: #0c8a68;
-  margin-bottom: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -268,8 +279,9 @@ header {
 }
 
 .featured-products__container::-webkit-scrollbar-thumb {
-  background: #0c8a68;
+  background: var(--color-primary);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .featured-products__card {
@@ -297,7 +309,7 @@ header {
 
 .featured-products__cta {
   padding: 1rem 1.2rem;
-  background-color: #0c8a68;
+  background-color: var(--color-primary);
   color: white;
   font-weight: bold;
   border-radius: 10px;
@@ -307,7 +319,7 @@ header {
 }
 
 .featured-products__cta:hover {
-  background-color: #0a6f56;
+  background-color: var(--color-btn-hover);
 }
 
 .featured-products__pagination {
@@ -315,10 +327,10 @@ header {
 }
 
 /* ----------------------------------
-   CONTACT INFORMATION
+   CONTACT INFORMATION (MAIN PAGE)
 ---------------------------------- */
 .contact-information {
-  background-color: #ffffff;
+  background-color: var(--color-secondary);
   padding: 1rem 1rem;
   text-align: center;
 }
@@ -333,8 +345,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .contact-information__details {
@@ -342,20 +353,9 @@ header {
   text-align: center;
 }
 
-.contact_information__details p {
+.contact-information__details p {
   font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-  color: #444;
-}
-
-.contact_information__details a {
-  color: #0c8a68;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact_information__details a:hover {
-  text-decoration: underline;
+  color: var(--color-text);
 }
 
 .contact-information__details--openingHours {
@@ -363,6 +363,7 @@ header {
   padding-left: 1rem;
   margin: 0 auto 1rem;
   color: #555;
+  font-style:italic; 
   font-size: 1rem;
 }
 
@@ -394,8 +395,8 @@ header {
    FOOTER
 ---------------------------------- */
 .footer {
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--color-footer);
+  color: var(--color-text);
   padding: 1.5rem;
   text-align: center;
   font-size: 0.9rem;
@@ -403,7 +404,7 @@ header {
 }
 
 .footer__content a {
-  color: #0077cc;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -412,16 +413,7 @@ header {
 }
 
 /* ----------------------------------
-   TÍTULOS GENERALES
----------------------------------- */
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* ----------------------------------
-   SECCIÓN DE CONTACTO
+   CONTACT PAGE
 ---------------------------------- */
 .contenedor-contacto {
   display: flex;
@@ -434,7 +426,7 @@ h1 {
 
 .contenedor-contacto h1 {
   font-size: 1.8rem;
-  color: #333;
+  color: var(--color-primary);
   margin-bottom: 2rem;
 }
 
@@ -442,7 +434,7 @@ h1 {
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-primary);
   width: 100%;
   max-width: 300px;
   margin-bottom: 2rem;
@@ -459,23 +451,23 @@ h1 {
   padding: 1rem 1.5rem;
   color: white;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
   font-size: 1.1rem;
-  background-color: #25d366;
+  background-color: var(--color-primary);
   transition: background-color 0.3s;
 }
 
 .whatsapp-button a:hover {
-  background-color: #1ebe5d;
+  background-color: var(--color-btn-hover);
 }
 
 /* ----------------------------------
-   CATÁLOGO DE PRODUCTOS
+   CATALOG PAGE
 ---------------------------------- */
 
 .catalog-content {
-  background-color: #ffffff;
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem;
@@ -492,7 +484,7 @@ h1 {
 }
 
 .catalog-content__title {
-  color: #0c8a68;
+  color: var(--color-primary);
   font-size: 2.2rem;
   text-align: center;
 }
@@ -507,17 +499,6 @@ h1 {
   flex-direction: column;
 }
 
-.catalog-contetent__card-image {
-  margin-top: 0.1rem;
-}
-
-.catalog-content__card-image .catalog-content__card-main-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
 .catalog-content__card-image .catalog-content__card-thumbnails {
   display: flex;
   flex-wrap: wrap;
@@ -530,25 +511,25 @@ h1 {
   height: auto;
   cursor: pointer;
   border-radius: 5px;
-  border: 0.1rem solid gray;
+  border: 0.1rem solid var(--color-primary);
   transition: transform 0.2s;
 }
 
-.catalog-content__card-image .catalog-content__card-thumbnail:hover {
+.catalog-content__card-thumbnail:hover {
   transform: scale(1.1);
 }
 
 .catalog-content__card-main-image {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
-  border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .catalog-content__card-title {
   font-size: 1rem;
   margin: 0.2rem 0.5rem;
-  color: #222;
+  color: var(--color-text);
   text-align: center;
 }
 
@@ -560,7 +541,7 @@ h1 {
 }
 
 .catalog-content__filters {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 18px;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -575,38 +556,22 @@ h1 {
 .catalog-content__searchBox {
   width: 100%;
   max-width: 400px;
-  margin: 0.25rem auto;
-  display: block;
+  margin: 1rem 1rem;
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
-.catalog-content__searchBox .catalog-content__categorySelector {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 240px;
-  box-shadow: 0 2px 4pc rgba(0, 0, 0, 0.05);
-  transition: border-color 0.3s;
-}
 
-.catalog-content__searchBox:focus,
-.catalog-content__categorySelector:focus {
-  border-color: #0c8a68;
-  outline: none;
-}
-
-/* Estilo del selector */
 .catalog-content__categorySelector {
+  width: 260px;
+  max-width: 400px;
+  margin: 1rem 1rem;
   padding: 0.8rem 1rem;
-  margin: 1rem auto;
   font-size: 1rem;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  min-width: 200px;
-  background-color: #fff;
+  border: 1px solid #ccc;
+  background-color: white;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%230c8a68'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -614,10 +579,20 @@ h1 {
   background-size: 1rem;
 }
 
+.catalog-content__checkboxStock {
+  margin-bottom: 1rem;
+}
+
+.catalog-content__searchBox:focus,
+.catalog-content__categorySelector:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
 .catalog-content__card-stock-available {
   display: block;
   font-size: 0.8rem;
-  color: #0c8a68;
+  color: darkgreen;
   font-weight: bold;
   margin-top: 0.2rem;
   text-align: center;
@@ -626,7 +601,7 @@ h1 {
 .catalog-content__card-stock-unavailable {
   display: block;
   font-size: 0.8rem;
-  color: #d9534f;
+  color: darkred;
   font-weight: bold;
   margin-top: 0.2rem;
   text-align: center;
@@ -640,7 +615,7 @@ h1 {
 }
 
 .catalog-content__card-price--green {
-  color: #0c8a68;
+  color: darkgreen;
 }
 
 .catalog-content__pages {
@@ -654,7 +629,7 @@ h1 {
 .catalog-content__pages-btn {
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #0c8a68;
+  background-color: var(--color-primary);
   color: white;
   font-weight: bold;
   border-radius: 8px;
@@ -662,12 +637,11 @@ h1 {
 }
 
 .catalog-content__pages-btn--active {
-  background-color: #4caf50;
+  background-color: green;
 }
 
 .catalog-content__pages-btn:hover {
-  background-color: #4caf50;
-  color: white;
+  background-color: var(--color-btn-hover);
   transform: scale(1.05);
 }
 
@@ -676,7 +650,7 @@ h1 {
   margin-top: 2rem;
   padding: 1rem;
   background-color: #f8f9fa;
-  border-left: 4px solid #ffc107;
+  border-left: 4px solid orange;
   font-size: 0.9rem;
   color: #555;
 }
@@ -704,7 +678,7 @@ h1 {
 }
 
 .catalog-content__whatsapp-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 .catalog-content__whatsapp-img {
@@ -713,18 +687,18 @@ h1 {
 }
 
 /* ----------------------------------
-   SERVICES
+   SERVICES PAGE
 ---------------------------------- */
 
 .services-content {
-  background-color: #ffffff;
+  background-color: var(--color-background);
   text-align: center;
   padding: 2rem 1rem;
 }
 
 .services-content__title {
   font-size: 2rem;
-  color: #0c8a68;
+  color: var(--color-primary);
 }
 
 .services-content__cards {
@@ -738,7 +712,6 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
-  background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
@@ -749,9 +722,9 @@ h1 {
 
 .services-content__card-image {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .services-content__card-title {
@@ -759,24 +732,8 @@ h1 {
   font-size: 1.2rem;
 }
 
-.services-content__cards-description {
-  font-size: 0.95rem;
-  color: #444;
-}
-
 /* ----------------------------------
-   FOOTER
----------------------------------- */
-footer {
-  background-color: #0c8a68;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-}
-
-/* ----------------------------------
-   RESPONSIVE - MÓVILES
+   RESPONSIVE - MOBILE STYLES
 ---------------------------------- */
 @media (max-width: 768px) {
   .hero {
@@ -807,7 +764,7 @@ footer {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #0c8a68;
+    background-color: var(--color-primary);
     padding: 10px 0;
   }
 
