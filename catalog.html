@@ -55,6 +55,7 @@
       <section class="catalog-content">
         <h1 class="catalog-content__title">Catálogo de Productos</h1>
 
+        <!-- Filter Section -->
         <section class="catalog-content__filters">
           <input
             type="text"
@@ -90,32 +91,40 @@
           </label>
         </section>
 
-        <div class="catalog-content__cards" id="catalog-content__cards">
-          <!-- Productos se insertan dinámicamente -->
-        </div>
+        <!-- Product cards section & Pagination-->
+        <section>
+          <section class="catalog-content__cards" id="catalog-content__cards">
+            <!-- Productos se insertan dinámicamente -->
+          </section>
 
-        <div id="catalog-content__pages" class="catalog-content__pages">
-          <!-- Paginación se insertará dinámicamente -->
-        </div>
-        <div class="catalog-content__disclaimer">
-          <p class="catalog-content__disclaimer-text">
-            <strong>Importante:</strong> Los precios del catálogo son
-            orientativos y pueden diferir de los vigentes en la tienda física.
-            Los colores y diseños de los productos están sujetos a
-            disponibilidad de stock.
-          </p>
-        </div>
-
-        <!-- Floating whatsapp button -->
-        <a
-          href="https://wa.me/5493516784060"
-          class="catalog-content__whatsapp-btn"
-          target="_blank"
-          aria-label="Chatear por WhatsApp"
-        >
-          <img class="catalog-content__whatsapp-img" src="img/whatsapp-icono-30.png" alt="WhatsApp" />
-        </a>
+          <div id="catalog-content__pages" class="catalog-content__pages">
+            <!-- Paginación se insertará dinámicamente -->
+          </div>
+        </section>
       </section>
+
+      <!-- Disclaimer -->
+      <div class="catalog-content__disclaimer">
+        <p class="catalog-content__disclaimer-text">
+          <strong>Importante:</strong> Los precios del catálogo son orientativos
+          y pueden diferir de los vigentes en la tienda física. Los colores y
+          diseños de los productos están sujetos a disponibilidad de stock.
+        </p>
+      </div>
+
+      <!-- Floating whatsapp button -->
+      <a
+        href="https://wa.me/5493516784060"
+        class="catalog-content__whatsapp-btn"
+        target="_blank"
+        aria-label="Chatear por WhatsApp"
+      >
+        <img
+          class="catalog-content__whatsapp-img"
+          src="img/whatsapp-icono-30.png"
+          alt="WhatsApp"
+        />
+      </a>
     </main>
 
     <script src="js/show-products-catalog.js"></script>
