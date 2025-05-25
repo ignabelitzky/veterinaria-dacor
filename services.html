@@ -10,22 +10,25 @@
 
 <!DOCTYPE html>
 <html lang="es-419">
-  <!-- Latin America -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios - Veterinaria Dacor</title>
+    <meta
+      name="description"
+      content="Conocé todos los servicios veterinarios que ofrece Veterinaria Dacor en Córdoba: atención médica, vacunación, consultas y más."
+    />
+    <title>Veterinaria Dacor - Servicios</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
   </head>
   <body>
     <header>
       <div class="header-container">
-        <a href="index.html" class="logo-link">
+        <a href="index.html" class="header-container__logoLink">
           <img
             src="img/dacor_logo_500.png"
             alt="Logo de la veterinaria"
-            class="logo"
+            class="header-container__logo"
           />
         </a>
         <button
@@ -39,7 +42,7 @@
         <nav class="pages" role="navigation" aria-label="Menú principal">
           <a href="index.html" class="pages__link">Inicio</a>
           <a href="catalog.html" class="pages__link">Catálogo</a>
-          <a href="servicios.html" class="pages__link" aria-current="page"
+          <a href="services.html" class="pages__link" aria-current="page"
             >Servicios</a
           >
           <a href="envios.html" class="pages__link">Cómo comprar</a>
@@ -48,14 +51,18 @@
       </div>
     </header>
 
-    <main id="servicios" class="contenedor">
-      <h2>Servicios</h2>
-      <div id="lista-servicios" class="grid-servicios">
-        <!-- Se completara dinámicamente -->
-      </div>
+    <main>
+      <section class="services-content">
+        <h1 class="services-content__title">Nuestros Servicios</h1>
+        <div id="services-content__cards" class="services-content__cards">
+          <noscript>
+            <p>Para ver los servicios ofrecidos, activá JavaScript en tu navegador.</p>
+          </noscript>
+        </div>
+      </section>
     </main>
 
-    <script src="js/servicios.js"></script>
+    <script src="js/show-services.js"></script>
     <script src="js/navbar-toggle.js"></script>
 
     <footer class="footer">

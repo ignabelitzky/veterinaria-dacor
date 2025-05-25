@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------
   // 1. Cargar JSON
   // -----------------------
-  fetch("data/products.json")
+  fetch("data/list-products.json")
     .then((res) => res.json())
     .then((data) => {
       productos = data;

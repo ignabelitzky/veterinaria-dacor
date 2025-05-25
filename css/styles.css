@@ -38,15 +38,20 @@ img {
 ---------------------------------- */
 main {
   flex: 1;
+  padding-top: 70px;
 }
 
 /* ----------------------------------
-   HEADER Y NAVEGACIÓN
+   HEADER - NAVIGATION
 ---------------------------------- */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #0c8a68;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -54,9 +59,10 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 10px;
 }
 
-.logo {
+.header-container__logo {
   height: 50px;
 }
 
@@ -83,10 +89,10 @@ header {
   cursor: pointer;
 }
 
-/* Botón hamburguesa */
+/* Burger Menu */
 .menu-toggle {
   display: none;
-  font-size: 26px;
+  font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -100,7 +106,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 1rem 0;
   background-color: #e0f7f4;
 }
 
@@ -322,17 +328,13 @@ header {
   margin: 0 auto;
 }
 
-.contact-information__title {
-  font-size: 2rem;
-  color: #0c8a68;
-}
-
-.info-contacto {
+.contact-information__content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .contact-information__details {
@@ -718,30 +720,28 @@ h1 {
 }
 
 /* ----------------------------------
-   SECCIÓN SERVICIOS
+   SERVICES
 ---------------------------------- */
 
-#servicios {
+.services-content {
   background-color: #ffffff;
-  padding: 2rem 2rem;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
-#servicios h2 {
+.services-content__title {
   font-size: 2rem;
   color: #0c8a68;
-  margin-bottom: 1.5rem;
-  position: relative;
 }
 
-.grid-servicios {
+.services-content__cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
-.servicio {
+.services-content__card {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
@@ -750,23 +750,23 @@ h1 {
   transition: transform 0.2s;
 }
 
-.servicio:hover {
+.services-content__card:hover {
   transform: scale(1.02);
 }
 
-.servicio img {
+.services-content__card-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.servicio h3 {
+.services-content__card-title{
   margin: 0.5rem 0;
   font-size: 1.2rem;
 }
 
-.servicio p {
+.services-content__cards-description {
   font-size: 0.95rem;
   color: #444;
 }
@@ -789,7 +789,7 @@ footer {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 0 0;
   }
 
   .hero__content {
@@ -801,7 +801,7 @@ footer {
     padding: 0.5rem;
   }
 
-  .logo {
+  .header-container__logo {
   height: 30px;
 }
 

@@ -8,7 +8,7 @@
   (at your option) any later version.
 */
 
-fetch('/data/products.json')
+fetch('/data/list-products.json')
   .then(response => response.json())
   .then(data => showProductData(data.filter(product => product.destacado)));
 
