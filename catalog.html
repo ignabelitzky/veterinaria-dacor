@@ -63,32 +63,49 @@
             class="catalog-content__searchBox"
             placeholder="Buscar productos..."
           />
-          <select
-            id="catalog-content__categorySelector"
-            class="catalog-content__categorySelector"
-          >
-            <option value="todas">Todas las categorías</option>
-            <option value="alimentos">Alimentos</option>
-            <option value="camas">Camas</option>
-            <option value="transportadoras">Transportadoras</option>
-            <option value="comederos">Comederos</option>
-            <option value="correas-pretales">Correas y pretales</option>
-            <option value="juguetes">Juguetes</option>
-            <option value="higiene">Higiene</option>
-            <option value="accesorios">Accesorios</option>
-            <option value="salud">Salud</option>
-            <option value="ropa">Ropa</option>
-            <option value="otros">Otros</option>
-          </select>
-          <label>
+          <div>
+            <label for="catalog-content__categorySelector">Categoría:</label>
+            <select
+              id="catalog-content__categorySelector"
+              class="catalog-content__categorySelector"
+            >
+              <option value="todas">Todas las categorías</option>
+              <option disabled>──────────</option>
+              <option value="accesorios">Accesorios</option>
+              <option value="alimentos">Alimentos</option>
+              <option value="camas">Camas</option>
+              <option value="comederos">Comederos</option>
+              <option value="correas-pretales">Correas y pretales</option>
+              <option value="higiene">Higiene</option>
+              <option value="juguetes">Juguetes</option>
+              <option value="ropa">Ropa</option>
+              <option value="salud">Salud</option>
+              <option value="transportadoras">Transportadoras</option>
+              <option disabled>──────────</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+          <div>
+            <label for="catalog-content__sortSelector">Ordenar por:</label>
+            <select
+              id="catalog-content__sortSelector"
+              class="catalog-content__sortSelector"
+            >
+              <option value="default">Predeterminado</option>
+              <option value="az">Nombre (A-Z)</option>
+              <option value="za">Nombre (Z-A)</option>
+              <option value="category">Categoría</option>
+            </select>
+          </div>
+          <div>
             <input
               type="checkbox"
               id="catalog-content__checkboxStock"
               class="catalog-content__checkboxStock"
               checked
             />
-            Mostrar productos agotados
-          </label>
+            <label> Mostrar productos agotados </label>
+          </div>
         </section>
 
         <!-- Product cards section & Pagination-->

@@ -579,13 +579,30 @@ header {
   background-size: 1rem;
 }
 
+.catalog-content__sortSelector {
+  width: 180px;
+  max-width: 300px;
+  margin: 1rem 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%230c8a68'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
 .catalog-content__checkboxStock {
   margin-bottom: 1rem;
 }
 
 .catalog-content__searchBox:focus,
-.catalog-content__categorySelector:focus {
-  border-color: var(--color-primary);
+.catalog-content__categorySelector:focus,
+.catalog-content__sortSelector:focus {
+  border: 1px solid var(--color-primary);
   outline: none;
 }
 

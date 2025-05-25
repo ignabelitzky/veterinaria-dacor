@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkboxStock = document.getElementById(
     "catalog-content__checkboxStock"
   );
+  const sortSelector = document.getElementById("catalog-content__sortSelector");
   const pages = document.getElementById("catalog-content__pages");
-  const maxCards = 28; // Cambia este valor para ajustar la cantidad de productos por página
+  const maxCards = 28;
 
   let products = [];
   let filteredProducts = [];
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.json())
     .then((data) => {
       products = data;
-      applyFilters(); // Se inicializa con todos los productos
+      applyFilters();
     })
     .catch((error) => {
       console.error("Error cargando productos:", error);
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   searchBox.addEventListener("input", applyFilters);
   categorySelector.addEventListener("change", applyFilters);
   checkboxStock.addEventListener("change", applyFilters);
+  sortSelector.addEventListener("change", applyFilters);
 
   // -----------------------
   // 3. Function to apply filters
@@ -60,13 +62,30 @@ document.addEventListener("DOMContentLoaded", () => {
       const matchesCategory =
         selectedCategory === "todas" || product.categoria === selectedCategory;
 
-      const passesStockFilter = checkboxStock.checked || product.stock;
+      const hasStock = checkboxStock.checked || product.stock;
 
-      return matchesSearchText && matchesCategory && passesStockFilter;
+      return matchesSearchText && matchesCategory && hasStock;
     });
 
+    sortProducts();
     currentPage = 1;
     renderCurrentPageProducts();
+  }
+
+  // Ordenar según opción seleccionada
+  function sortProducts() {
+    const sortOption = sortSelector.value;
+
+    filteredProducts.sort((a, b) => {
+      if (sortOption === "az") {
+        return a.nombre.localeCompare(b.nombre);
+      } else if (sortOption === "za") {
+        return b.nombre.localeCompare(a.nombre);
+      } else if (sortOption === "category") {
+        return a.categoria.localeCompare(b.categoria);
+      }
+      return 0; // "default"
+    });
   }
 
   // -----------------------
@@ -94,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     products.forEach((product) => {
-      const div = document.createElement("article");
-      div.className = "catalog-content__card";
+      const card = document.createElement("article");
+      card.className = "catalog-content__card";
 
       const stockText = product.stock ? "Disponible" : "Agotado";
       const typeStock = product.stock ? "stock-available" : "stock-unavailable";
 
-      div.innerHTML = `
+      card.innerHTML = `
         <p class="catalog-content__card-${typeStock}">${stockText}</p>
         <div class="catalog-content__card-image">
           <img src="img/productos/${
@@ -128,10 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   .join("")}</div>
                   `;
 
-      productCards.appendChild(div);
+      productCards.appendChild(card);
 
       // Add event listeners to thumbnail images
-      div
+      card
         .querySelectorAll(".catalog-content__card-thumbnail")
         .forEach((thumbnail) => {
           thumbnail.addEventListener("click", (e) => {
