@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${product.variantes
                   .map(
                     (v) => `
-                  <p>${v.tamaño}: <span class="catalog-content__card-price--green">$${v.precio}</span></p>`
+                  <p>${v.tamaño}: <span class="catalog-content__card-price--purple">$${v.precio.toLocaleString("es-AR")}</span></p>`
                   )
                   .join("")}</div>
                   `;

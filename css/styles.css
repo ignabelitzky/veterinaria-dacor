@@ -13,13 +13,17 @@
 ---------------------------------- */
 
 :root {
-  --color-primary: #4285f4;
+  --color-primary: #a88bda;
   --color-secondary: #f4f4f4;
   --color-text: #333;
-  --color-background: #ffffff;
-  --color-btn-hover: #3367d6;
-  --color-footer: lightgray;
-  --color-link: #0077cc;
+  --color-background: #f7f5fa;
+  --color-btn-normal: #c4a7e7;
+  --color-btn-hover: #b192dd;
+  --color-btn-active: #6F54AD;
+  --color-contact-section: #e8e3f1;
+  --color-footer: #695A87;
+  --color-price: #6F54AD;
+  --color-link: #7ac8ff;
   --font-main: "Segoe UI", sans-serif;
 }
 
@@ -115,7 +119,6 @@ header {
    MAIN PAGE
 ---------------------------------- */
 .hero {
-  background: linear-gradient(to right, #f1fcff, #ffffff);
   padding: 4rem 2rem;
 }
 
@@ -135,7 +138,7 @@ header {
 
 .hero__title {
   font-size: 3rem;
-  color: #0c4a6e;
+  color: var(--color-primary);
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -162,7 +165,7 @@ header {
 }
 
 .hero__cta {
-  background-color: var(--color-primary);
+  background-color: var(--color-btn-normal);
   color: white;
 }
 
@@ -172,6 +175,10 @@ header {
 
 .hero__cta:hover {
   background-color: var(--color-btn-hover);
+}
+
+.hero__cta:active {
+  background-color: var(--color-btn-active);
 }
 
 .hero__image {
@@ -187,105 +194,11 @@ header {
 }
 
 /* ----------------------------------
-   ABOUT US - IMAGE GALLERY (MAIN PAGE)
----------------------------------- */
-.about-us {
-  background-color: var(--color-secondary);
-  padding: 1rem;
-  text-align: center;
-}
-
-.about-us__title {
-  font-size: 2rem;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  position: relative;
-  text-align: center;
-}
-
-.about-us__gallery {
-  max-width: 800px;
-  max-height: 600px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background: white;
-}
-
-.about-us__slide {
-  position: relative;
-  max-width: 800px;
-  max-height: 600px;
-  margin: 0 auto;
-}
-
-.about-us__slide img {
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  max-height: 600px;
-  display: block;
-  object-fit: contain;
-}
-
-.about-us__image-title {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.nav:hover {
-  background: rgba(255, 255, 255, 1);
-}
-
-.prev {
-  left: 10px;
-}
-.next {
-  right: 10px;
-}
-
-.about-us__slide.fade img,
-.about-us__image-title.fade {
-  transition: opacity 0.5s ease-in-out;
-}
-
-.fade-out {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
-}
-
-/* ----------------------------------
    FEATURED PRODUCTS (MAIN PAGE)
 ---------------------------------- */
 
 .featured-products {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
   text-align: center;
 }
 
@@ -359,11 +272,14 @@ header {
   background-color: var(--color-btn-hover);
 }
 
+.featured-products__cta:active {
+  background-color: var(--color-btn-active);
+}
+
 /* ----------------------------------
     TESTIMONIALS (MAIN PAGE)
 ---------------------------------- */
 .testimonials {
-  background-color: #f8f9fa;
   padding: 4rem 1rem;
   text-align: center;
 }
@@ -438,7 +354,7 @@ header {
    CONTACT INFORMATION (MAIN PAGE)
 ---------------------------------- */
 .contact-information {
-  background-color: var(--color-secondary);
+  background-color: var(--color-contact-section);
   padding: 1rem 1rem;
   text-align: center;
 }
@@ -504,7 +420,7 @@ header {
 ---------------------------------- */
 .footer {
   background-color: var(--color-footer);
-  color: var(--color-text);
+  color: #dadada;
   padding: 1.5rem;
   text-align: center;
   font-size: 0.9rem;
@@ -568,6 +484,10 @@ header {
 
 .whatsapp-button a:hover {
   background-color: var(--color-btn-hover);
+}
+
+.wahtsapp-button a:active {
+  background-color: var(--color-btn-active);
 }
 
 /* ----------------------------------
@@ -683,7 +603,7 @@ header {
   border: 1px solid #ccc;
   background-color: white;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%234285F4'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 1rem;
@@ -699,7 +619,7 @@ header {
   border: 1px solid #ccc;
   background-color: white;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%234285F4'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 1rem;
@@ -742,8 +662,8 @@ header {
   text-align: center;
 }
 
-.catalog-content__card-price--green {
-  color: green;
+.catalog-content__card-price--purple {
+  color: var(--color-price);
 }
 
 .catalog-content__pages {
@@ -764,7 +684,7 @@ header {
 }
 
 .catalog-content__pages-btn--active {
-  background-color: darkblue;
+  background-color: var(--color-btn-active);
 }
 
 .catalog-content__pages-btn:hover {
