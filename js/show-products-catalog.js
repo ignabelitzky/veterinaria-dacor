@@ -11,9 +11,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const productCards = document.getElementById("catalog-content__cards");
   const searchBox = document.getElementById("catalog-content__searchBox");
-  const categorySelector = document.getElementById("catalog-content__categorySelector");
-  const subcategorySelector = document.getElementById("catalog-content__subcategorySelector");
-  const checkboxStock = document.getElementById("catalog-content__checkboxStock");
+  const categorySelector = document.getElementById(
+    "catalog-content__categorySelector"
+  );
+  const subcategorySelector = document.getElementById(
+    "catalog-content__subcategorySelector"
+  );
+  const checkboxStock = document.getElementById(
+    "catalog-content__checkboxStock"
+  );
   const sortSelector = document.getElementById("catalog-content__sortSelector");
   const pages = document.getElementById("catalog-content__pages");
 
@@ -27,18 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function toSlug(text) {
     return text
       .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/\s+/g, "_")
-      .replace(/\//g, "_")
-      .replace(/[^a-z0-9_]/g, "");
+      .replace(/\s+/g, "_") // reemplaza espacios por guiones bajos
+      .replace(/\//g, "_") // reemplaza / por guión bajo
+      .replace(/[^a-z0-9_áéíóúüñ]/g, ""); // conserva letras acentuadas, ü y ñ
   }
 
   // Convierte slug en texto legible
   function prettifySlug(slug) {
     return slug
       .replace(/[_-]/g, " ")
-      .replace(/\b\w/g, (char) => char.toUpperCase());
+      .replace(
+        /\p{L}+/gu,
+        (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      );
   }
 
   function buildSubcategoryMap(products) {
@@ -66,7 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (category === "todas" || !subcategoriesByCategory[category]) return;
 
-    subcategoriesByCategory[category].forEach((sub) => {
+    subcategoriesByCategory[category]
+    .slice()  // Copia para evitar modificar el original
+    .sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })) // Ordena alfabéticamente
+    .forEach((sub) => {
       const option = document.createElement("option");
       option.value = toSlug(sub);
       option.textContent = prettifySlug(sub);
@@ -93,7 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const hasStock = checkboxStock.checked || product.stock;
 
-      return matchesSearchText && matchesCategory && matchesSubcategory && hasStock;
+      return (
+        matchesSearchText && matchesCategory && matchesSubcategory && hasStock
+      );
     });
 
     sortProducts();
@@ -106,7 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
     filteredProducts.sort((a, b) => {
       if (sortOption === "az") return a.nombre.localeCompare(b.nombre);
       if (sortOption === "za") return b.nombre.localeCompare(a.nombre);
-      if (sortOption === "category") return a.categoria.localeCompare(b.categoria);
+      if (sortOption === "category")
+        return a.categoria.localeCompare(b.categoria);
       return 0;
     });
   }
@@ -131,7 +144,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const button = document.createElement("button");
       button.textContent = i;
       button.classList.add("catalog-content__pages-btn");
-      if (i === currentPage) button.classList.add("catalog-content__pages-btn--active");
+      if (i === currentPage)
+        button.classList.add("catalog-content__pages-btn--active");
 
       button.addEventListener("click", () => {
         currentPage = i;
@@ -159,28 +173,45 @@ document.addEventListener("DOMContentLoaded", () => {
       card.innerHTML = `
         <p class="catalog-content__card-${typeStock}">${stockText}</p>
         <div class="catalog-content__card-image">
-          <img src="img/productos/${product.imagenes[0]}" class="catalog-content__card-main-image" alt="${product.nombre}">
+          <img src="img/productos/${
+            product.imagenes[0]
+          }" class="catalog-content__card-main-image" alt="${product.nombre}">
           <div class="catalog-content__card-thumbnails">
-            ${product.imagenes.map(img => `
+            ${product.imagenes
+              .map(
+                (img) => `
               <img src="img/productos/${img}" class="catalog-content__card-thumbnail" alt="${product.nombre}">
-            `).join("")}
+            `
+              )
+              .join("")}
           </div>
         </div>
         <h2 class="catalog-content__card-title">${product.nombre}</h2>
         <p class="catalog-content__card-description">${product.descripcion}</p>
         <div class="catalog-content__card-price">
-          ${product.variantes.map(v => `
-            <p>${v.tamaño}: <span class="catalog-content__card-price--purple">$${v.precio.toLocaleString("es-AR")}</span></p>
-          `).join("")}
+          ${product.variantes
+            .map(
+              (v) => `
+            <p>${
+              v.tamaño
+            }: <span class="catalog-content__card-price--purple">$${v.precio.toLocaleString(
+                "es-AR"
+              )}</span></p>
+          `
+            )
+            .join("")}
         </div>
       `;
 
-      card.querySelectorAll(".catalog-content__card-thumbnail").forEach((thumb) => {
-        thumb.addEventListener("click", (e) => {
-          const gallery = e.target.closest(".catalog-content__card-image");
-          gallery.querySelector(".catalog-content__card-main-image").src = e.target.src;
+      card
+        .querySelectorAll(".catalog-content__card-thumbnail")
+        .forEach((thumb) => {
+          thumb.addEventListener("click", (e) => {
+            const gallery = e.target.closest(".catalog-content__card-image");
+            gallery.querySelector(".catalog-content__card-main-image").src =
+              e.target.src;
+          });
         });
-      });
 
       productCards.appendChild(card);
     });

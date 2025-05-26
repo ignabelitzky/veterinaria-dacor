@@ -86,7 +86,7 @@
     "stock": true,
     "imagenes": ["comelento_chico_gajos.webp"],
     "categoria": "comederos_bebederos",
-    "subcategoria": "comedores_comelento",
+    "subcategoria": "comederos_comelento",
     "destacado": false,
     "variantes": [
       {
@@ -322,7 +322,7 @@
     "stock": true,
     "imagenes": ["comedero_retractil.webp"],
     "categoria": "comederos_bebederos",
-    "subcategoria": "comederos_plasticos",
+    "subcategoria": "comederos_plásticos",
     "destacado": false,
     "variantes": [
       {
@@ -342,7 +342,7 @@
     "stock": true,
     "imagenes": ["botella_de_paseo.webp"],
     "categoria": "comederos_bebederos",
-    "subcategoria": "bebedores_portatiles",
+    "subcategoria": "bebedores_portátiles",
     "destacado": false,
     "variantes": [
       {
