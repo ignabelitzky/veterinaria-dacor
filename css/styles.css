@@ -575,6 +575,8 @@ header {
 ---------------------------------- */
 
 .catalog-content {
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
@@ -607,7 +609,7 @@ header {
   flex-direction: column;
 }
 
-.catalog-content__card-image .catalog-content__card-thumbnails {
+.catalog-content__card-image, .catalog-content__card-thumbnails {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -664,8 +666,8 @@ header {
 .catalog-content__searchBox {
   width: 100%;
   max-width: 400px;
-  margin: 1rem 1rem;
-  padding: 0.8rem 1.2rem;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -674,8 +676,8 @@ header {
 .catalog-content__categorySelector {
   width: 260px;
   max-width: 400px;
-  margin: 1rem 1rem;
-  padding: 0.8rem 1rem;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -690,8 +692,8 @@ header {
 .catalog-content__sortSelector {
   width: 180px;
   max-width: 300px;
-  margin: 1rem 1rem;
-  padding: 0.8rem 1rem;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -704,7 +706,8 @@ header {
 }
 
 .catalog-content__checkboxStock {
-  margin-bottom: 1rem;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .catalog-content__searchBox:focus,
@@ -747,7 +750,6 @@ header {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -772,8 +774,11 @@ header {
 
 /* Disclaimer */
 .catalog-content__disclaimer {
-  margin-top: 2rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #f8f9fa;
   border-left: 4px solid orange;
   font-size: 0.9rem;
@@ -816,9 +821,11 @@ header {
 ---------------------------------- */
 
 .services-content {
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: var(--color-background);
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .services-content__title {
@@ -904,5 +911,11 @@ header {
   .menu-toggle {
     display: block;
     color: white;
+  }
+
+  .google-maps {
+    margin-top: 2rem;
+    width: 100%;
+    height: 300px;
   }
 }

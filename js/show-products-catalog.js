@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   const sortSelector = document.getElementById("catalog-content__sortSelector");
   const pages = document.getElementById("catalog-content__pages");
-  const maxCards = 28;
+  const maxCards = 24;
 
   let products = [];
   let filteredProducts = [];
