@@ -8,37 +8,27 @@
   (at your option) any later version.
 */
 
-fetch('/data/list-products.json')
-  .then(response => response.json())
-  .then(data => showProductData(data.filter(product => product.destacado)));
+fetch("/data/list-products.json")
+  .then((response) => response.json())
+  .then((data) => showProductData(data.filter((product) => product.destacado)));
 
 function showProductData(products) {
-  const container = document.getElementById('featured-products__container');
-  container.innerHTML = '';
-
-  products.forEach(product => {
-    const productCard = document.createElement('div');
-    productCard.className = 'featured-products__card';
-
-    const image = document.createElement('img');
-    image.className = 'featured-products__cardImage';
-    image.src = `img/productos/${product.imagenes[0]}`;
-    image.alt = product.nombre;
-
-    const productTitle = document.createElement('h3');
-    productTitle.className = 'featured-products__cardName';
-    productTitle.textContent = product.nombre;
-
-    const price = document.createElement('p');
-    const prices = product.variantes.map(v => v.precio);
-    const lowPrice = Math.min(...prices);
-    price.className = 'featured-products__price';
-    price.innerHTML = `Desde <span class="precio-verde">$${lowPrice}</span>`;
-
-    productCard.appendChild(image);
-    productCard.appendChild(productTitle);
-    productCard.appendChild(price);
-
-    container.appendChild(productCard);
+  const featuredContainer = document.getElementById("featured-list");
+  products.forEach((product) => {
+    const lowPrice = Math.min(...product.variantes.map((v) => v.precio));
+    const card = document.createElement("div");
+    card.className = "featured-products__card";
+    card.innerHTML = `
+      <img src="img/productos/${
+        product.imagenes[0]
+      }" class="featured-products__card-image" alt="${product.nombre}">
+      <div class="featured-products__card-info">
+      <h3 class="featured-products__card-title">${product.nombre}</h3>
+      <p class="featured-products__card-low-price">Desde $${lowPrice.toLocaleString(
+        "es-AR"
+      )}</p>
+      </div>
+      `;
+    featuredContainer.appendChild(card);
   });
 }

@@ -55,53 +55,90 @@
       <!-- Hero -->
       <section class="hero">
         <div class="hero__content">
-          <h1 class="hero__title">Bienvenidos a Veterinaria Dacor</h1>
-          <p class="hero__subtitle">
-            Cuidamos a tus mascotas con amor y profesionalismo.
-          </p>
-          <a href="catalog.html" class="hero__cta">Ver Catálogo</a>
-          <a href="services.html" class="hero__cta">Ver Servicios</a>
-        </div>
-      </section>
-
-      <!-- About us - Image Gallery -->
-      <section class="about-us">
-        <h2 class="about-us__title">Nuestra Vete</h2>
-        <div class="about-us__gallery">
-          <button type="button" class="nav prev" aria-label="Imagen anterior">
-            &#10094;
-          </button>
-          <div class="about-us__slide fade">
-            <img
-              id="about-us__image"
-              src="img/about-us-images/mascotas1.webp"
-              alt="Imagen de galería"
-            />
-            <div class="about-us__image-title fade" id="about-us__image-title">
-              Titulo 1
+          <div class="hero__text">
+            <h1 class="hero__title">DACOR Veterinaria & Pet Shop</h1>
+            <p class="hero__description">
+              Cuidamos a tus mascotas con amor y profesionalismo.
+            </p>
+            <div class="hero__buttons">
+              <a href="catalog.html" class="hero__cta">Ver Catálogo</a>
+              <a href="services.html" class="hero__cta">Ver Servicios</a>
             </div>
           </div>
-          <button type="button" class="nav next" aria-label="Imagen siguiente">
-            &#10095;
-          </button>
+          <div class="hero__image">
+            <img
+              src="img/hero-mascota.webp"
+              alt="Mascota feliz en la veterinaria"
+            />
+          </div>
         </div>
       </section>
 
       <!-- Featured Products -->
       <section class="featured-products">
-        <h2 class="featured-products__title">Productos destacados</h2>
-        <div
-          class="featured-products__container"
-          id="featured-products__container"
-        >
-          <!-- Productos inserted using javascript -->
+        <div class="featured-products__header">
+          <h2 class="featured-products__title">Productos destacados</h2>
+          <p class="featured-products__description">
+            Elegimos algunos de nuestros productos más populares para vos y tu
+            mascota.
+          </p>
+
+          <div class="featured-products__product-grid" id="featured-list">
+            <!-- Here will be injected the featured products by JS -->
+          </div>
+
+          <div class="featured-products__footer">
+            <a href="catalog.html" class="featured-products__cta"
+              >Ver Catálogo Completo</a
+            >
+          </div>
         </div>
-        <a
-          href="catalog.html"
-          class="featured-products__cta"
-          aria-label="Catálogo completo"
-          >Ver catálogo completo</a
-        >
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <h2 class="testimonials__title">Lo que nuestros clientes dicen...</h2>
+        <div class="testimonials__list">
+          <div class="testimonials__testimonial">
+            <p class="testimonials__testimonial-text">
+              "Tiene productos de muy buena calidad y una excelente atención."
+            </p>
+            <div class="testimonials__testimonial-info">
+              <span class="testimonials__client-name">– Ariel F.</span>
+              <span class="testimonials__stars">★★★★★</span>
+            </div>
+          </div>
+          <div class="testimonials__testimonial">
+            <p class="testimonials__testimonial-text">
+              "Excelente veterinaria. El personal es amable y profesional,
+              realmente se preocupan por el bienestar de las mascotas y las
+              tratan con mucho cariño. Muy recomendable!"
+            </p>
+            <div class="testimonials__testimonial-info">
+              <span class="testimonials__client-name">– Florencia L.</span>
+              <span class="testimonials__stars">★★★★★</span>
+            </div>
+          </div>
+          <div class="testimonials__testimonial">
+            <p class="testimonials__testimonial-text">
+              "Hermoso lugar!!! Mucha variedad de productos.. excelentes
+              precios, calidad y muy amable atencion .. los recomiendo!"
+            </p>
+            <div class="testimonials__testimonial-info">
+              <span class="testimonials__client-name">– Melisa F.</span>
+              <span class="testimonials__stars">★★★★★</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__google-reviews-button">
+          <a
+            href="https://www.google.com/search?q=DACOR+VETERINARIA+-+PET+SHOP+Opiniones"
+            target="_blank"
+            rel="noopener"
+          >
+            ★ Ver más reseñas en Google
+          </a>
+        </div>
       </section>
 
       <!-- Contact information -->

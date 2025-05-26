@@ -44,7 +44,7 @@
     "stock": true,
     "imagenes": ["cepillo_deslanador.webp"],
     "categoria": "higiene",
-    "destacado": true,
+    "destacado": false,
     "variantes": [
       {
         "tamaño": "M",
@@ -67,7 +67,7 @@
     "stock": true,
     "imagenes": ["limpia_patas.webp"],
     "categoria": "higiene",
-    "destacado": true,
+    "destacado": false,
     "variantes": [
       {
         "tamaño": "10cm x 14.5cm x 8cm",
