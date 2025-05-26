@@ -594,7 +594,23 @@ header {
 }
 
 .catalog-content__categorySelector {
-  width: 260px;
+  width: 240px;
+  max-width: 400px;
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.catalog-content__subcategorySelector {
+  width: 240px;
   max-width: 400px;
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 0.5rem;

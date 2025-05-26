@@ -5,7 +5,8 @@
     "descripcion": "Resistente plato de acero inoxidable con base antideslizante para evitar derrames. Apto para perros y gatos.",
     "stock": true,
     "imagenes": ["plato_acero_inoxidable.webp","plato_acero_inoxidable_2.webp"],
-    "categoria": "comederos",
+    "categoria": "comederos_bebederos",
+    "subcategoria": "comederos_acero_inoxidable",
     "destacado": true,
     "variantes": [
       {
@@ -28,7 +29,8 @@
     "descripcion": "Práctico alicate curvo con lima incorporada, diseñado para cortar las uñas de mascotas pequeñas de forma segura y precisa.",
     "stock": false,
     "imagenes": ["alicate_curvo_rosa.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "alicates",
     "destacado": false,
     "variantes": [
       {
@@ -43,7 +45,8 @@
     "descripcion": "Cepillo deslanador ideal para remover el pelo suelto y reducir la muda en perros y gatos, dejando el pelaje suave y saludable.",
     "stock": true,
     "imagenes": ["cepillo_deslanador.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "cepillos_peines",
     "destacado": false,
     "variantes": [
       {
@@ -66,7 +69,8 @@
     "descripcion": "Práctico limpia patas que ayuda a remover la suciedad después de los paseos, manteniendo tus pisos más limpios.",
     "stock": true,
     "imagenes": ["limpia_patas.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "limpia_patas",
     "destacado": false,
     "variantes": [
       {
@@ -81,7 +85,8 @@
     "descripcion": "Comedero tipo comelento con diseño de gajos que estimula una alimentación más lenta y saludable en mascotas pequeñas.",
     "stock": true,
     "imagenes": ["comelento_chico_gajos.webp"],
-    "categoria": "comederos",
+    "categoria": "comederos_bebederos",
+    "subcategoria": "comedores_comelento",
     "destacado": false,
     "variantes": [
       {
@@ -96,7 +101,8 @@
     "descripcion": "Alicate ergonómico para recortar uñas con precisión en mascotas pequeñas. Fácil de manejar y seguro.",
     "stock": false,
     "imagenes": ["alicate_n10.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "alicates",
     "destacado": false,
     "variantes": [
       {
@@ -111,7 +117,8 @@
     "descripcion": "Cepillos de dedo suaves, perfectos para limpiar los dientes de tu mascota y promover una buena salud bucal.",
     "stock": true,
     "imagenes": ["cepillo_dientes_dedo.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "cepillos_dentales",
     "destacado": false,
     "variantes": [
       {
@@ -126,7 +133,8 @@
     "descripcion": "Cepillos largos dobles que facilitan la limpieza dental en perros y gatos, incluso en zonas de difícil acceso.",
     "stock": true,
     "imagenes": ["cepillo_dientes_largo.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "cepillos_dentales",
     "destacado": false,
     "variantes": [
       {
@@ -141,7 +149,8 @@
     "descripcion": "Práctico quitapelusa de silicona reutilizable. Atrapa pelos de mascotas durante el lavado de ropa.",
     "stock": true,
     "imagenes": ["quita_pelusa.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "quita_pelusa",
     "destacado": false,
     "variantes": [
       {
@@ -156,7 +165,8 @@
     "descripcion": "Cardina con cerdas plásticas ideal para desenredar y eliminar el pelo suelto en mascotas de pelo medio a largo.",
     "stock": true,
     "imagenes": ["cardina_cerda_plastica_n2.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "cepillos_peines",
     "destacado": false,
     "variantes": [
       {
@@ -171,7 +181,8 @@
     "descripcion": "Bandeja sanitaria plástica de fácil limpieza, diseñada especialmente para gatos. Disponible en varios tamaños.",
     "stock": true,
     "imagenes": ["bandeja_sanitaria.webp"],
-    "categoria": "higiene",
+    "categoria": "gatos_exclusivo",
+    "subcategoria": "bandejas_sanitarias",
     "destacado": false,
     "variantes": [
       {
@@ -191,6 +202,7 @@
     "stock": true,
     "imagenes": ["gallo.webp"],
     "categoria": "juguetes",
+    "subcategoria": "juguetes_interactivos",
     "destacado": true,
     "variantes": [
       {
@@ -210,6 +222,7 @@
     "stock": true,
     "imagenes": ["pera_catnip_rascals.webp"],
     "categoria": "juguetes",
+    "subcategoria": "juguetes_gatos",
     "destacado": false,
     "variantes": [
       {
@@ -225,6 +238,7 @@
     "stock": true,
     "imagenes": ["manzana_catnip_rascals.webp"],
     "categoria": "juguetes",
+    "subcategoria": "juguetes_gatos",
     "destacado": false,
     "variantes": [
       {
@@ -239,7 +253,8 @@
     "descripcion": "Cortauñas tipo guillotina que permite un corte limpio y cómodo en mascotas pequeñas.",
     "stock": true,
     "imagenes": ["alicate_guillotina_n11.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "alicates",
     "destacado": false,
     "variantes": [
       {
@@ -254,7 +269,8 @@
     "descripcion": "Alicate tipo tijera de tamaño medio, ideal para mantener las uñas de perros y gatos prolijas y sin esfuerzo.",
     "stock": true,
     "imagenes": ["alicate_tijera_m_n2.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "alicates",
     "destacado": false,
     "variantes": [
       {
@@ -270,6 +286,7 @@
     "stock": true,
     "imagenes": ["pelota_dosificadora.webp"],
     "categoria": "juguetes",
+    "subcategoria": "pelotas",
     "destacado": false,
     "variantes": [
       {
@@ -288,7 +305,8 @@
     "descripcion": "Conjunto de pretal con correa para gatos, cómodo y seguro para salidas al aire libre.",
     "stock": true,
     "imagenes": ["conjunto_pretal_gato_prince.webp"],
-    "categoria": "correas-pretales",
+    "categoria": "accesorios",
+    "subcategoria": "pretales_arneses",
     "destacado": false,
     "variantes": [
       {
@@ -303,7 +321,8 @@
     "descripcion": "Comedero retráctil de silicona, compacto y fácil de transportar. Perfecto para salidas o viajes.",
     "stock": true,
     "imagenes": ["comedero_retractil.webp"],
-    "categoria": "comederos",
+    "categoria": "comederos_bebederos",
+    "subcategoria": "comederos_plasticos",
     "destacado": false,
     "variantes": [
       {
@@ -322,7 +341,8 @@
     "descripcion": "Botella portátil con bebedero integrado. Ideal para mantener a tu mascota hidratada fuera de casa.",
     "stock": true,
     "imagenes": ["botella_de_paseo.webp"],
-    "categoria": "comederos",
+    "categoria": "comederos_bebederos",
+    "subcategoria": "bebedores_portatiles",
     "destacado": false,
     "variantes": [
       {
@@ -341,7 +361,8 @@
     "descripcion": "Cama tipo nido acolchada, brinda abrigo y comodidad para el descanso de perros y gatos.",
     "stock": true,
     "imagenes": ["cama_nido.webp"],
-    "categoria": "camas",
+    "categoria": "camas_descanso",
+    "subcategoria": "camas_acolchonadas",
     "destacado": true,
     "variantes": [
       {
@@ -364,7 +385,8 @@
     "descripcion": "Mochila transportadora resistente y ventilada. Cómoda para llevar a tu mascota en viajes o paseos.",
     "stock": true,
     "imagenes": ["mochila_transportadora_m.webp"],
-    "categoria": "transportadoras",
+    "categoria": "transporte",
+    "subcategoria": "mochilas_transportadoras",
     "destacado": true,
     "variantes": [
       {
@@ -380,6 +402,7 @@
     "stock": true,
     "imagenes": ["palta_autoadhesiva.webp"],
     "categoria": "juguetes",
+    "subcategoria": "juguetes_gatos",
     "destacado": false,
     "variantes": [
       {
@@ -394,7 +417,8 @@
     "descripcion": "Cartera transportadora elegante y espaciosa, ideal para llevar a tu mascota con comodidad.",
     "stock": true,
     "imagenes": ["cartera_transportadora.webp"],
-    "categoria": "transportadoras",
+    "categoria": "transporte",
+    "subcategoria": "bolsos_transportadores",
     "destacado": false,
     "variantes": [
       {
@@ -409,7 +433,8 @@
     "descripcion": "Cepillo a vapor que ayuda a remover el pelo suelto y limpiar profundamente el pelaje de tu mascota.",
     "stock": true,
     "imagenes": ["cepillo_a_vapor.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "cepillos_peines",
     "destacado": false,
     "variantes": [
       {
@@ -424,7 +449,8 @@
     "descripcion": "Cardina plástica resistente con mango ergonómico, ideal para cepillar a diario perros y gatos.",
     "stock": true,
     "imagenes": ["cardina_plastica.webp"],
-    "categoria": "higiene",
+    "categoria": "higiene_cuidado",
+    "subcategoria": "cepillos_peines",
     "destacado": false,
     "variantes": [
       {
@@ -447,7 +473,8 @@
     "descripcion": "Cinturón de seguridad para mascotas, se ajusta al cinturón del auto y previene movimientos bruscos.",
     "stock": true,
     "imagenes": ["cinturon_seguridad.webp"],
-    "categoria": "correas-pretales",
+    "categoria": "accesorios",
+    "subcategoria": "cinturones_seguridad",
     "destacado": false,
     "variantes": [
       {
@@ -463,6 +490,7 @@
     "stock": true,
     "imagenes": ["catnip_helado.webp"],
     "categoria": "juguetes",
+    "subcategoria": "juguetes_gatos",
     "destacado": false,
     "variantes": [
       {
@@ -478,6 +506,7 @@
     "stock": false,
     "imagenes": ["pelota_interactiva.webp"],
     "categoria": "juguetes",
+    "subcategoria": "juguetes_interactivos",
     "destacado": false,
     "variantes": [
       {
