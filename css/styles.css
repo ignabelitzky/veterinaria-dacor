@@ -113,6 +113,11 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
 }
 
 /* ----------------------------------
@@ -162,19 +167,13 @@ header {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-}
-
-.hero__cta {
   background-color: var(--color-btn-normal);
   color: white;
 }
 
 .hero__cta:hover {
   background-color: var(--color-btn-hover);
-}
-
-.hero__cta:hover {
-  background-color: var(--color-btn-hover);
+  transform: scale(1.1);
 }
 
 .hero__cta:active {
@@ -265,11 +264,12 @@ header {
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .featured-products__cta:hover {
   background-color: var(--color-btn-hover);
+  transform: scale(1.1);
 }
 
 .featured-products__cta:active {
@@ -343,11 +343,12 @@ header {
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .testimonials__google-reviews-button a:hover {
   background-color: var(--color-btn-hover);
+  transform: scale(1.05);
 }
 
 /* ----------------------------------
@@ -404,6 +405,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
 }
 
 .contact-information__socialMedia--images .social-icon:hover {
@@ -413,6 +415,15 @@ header {
 .google-maps {
   flex: 1 1 400px;
   max-width: 400px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-primary);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.google-maps:hover {
+  transform: scale(1.05);
 }
 
 /* ----------------------------------
@@ -459,10 +470,21 @@ header {
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid var(--color-primary);
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
   width: 100%;
   max-width: 300px;
   margin-bottom: 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-contacto select:focus {
+  border-color: var(--color-primary);
+  outline: none;
 }
 
 .whatsapp-button {
@@ -479,11 +501,12 @@ header {
   text-decoration: none;
   font-size: 1.1rem;
   background-color: var(--color-primary);
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .whatsapp-button a:hover {
   background-color: var(--color-btn-hover);
+  transform: scale(1.1);
 }
 
 .wahtsapp-button a:active {
@@ -697,6 +720,7 @@ header {
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .catalog-content__pages-btn--active {
@@ -705,7 +729,7 @@ header {
 
 .catalog-content__pages-btn:hover {
   background-color: var(--color-btn-hover);
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* Disclaimer */
