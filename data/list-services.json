@@ -25,11 +25,6 @@
     "imagen": "img/servicios/certificados.webp"
   },
   {
-    "nombre": "Asesoramiento nutricional",
-    "descripcion": "Orientación sobre alimentación balanceada según raza, edad y condición del animal.",
-    "imagen": "img/servicios/nutricion.webp"
-  },
-  {
     "nombre": "Control pre y post quirúrgico",
     "descripcion": "Supervisión médica antes y después de procedimientos quirúrgicos.",
     "imagen": "img/servicios/control-quirurgico.webp"
