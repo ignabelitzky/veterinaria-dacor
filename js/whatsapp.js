@@ -1,27 +1,27 @@
 // whasapp.js
 
 document.addEventListener("DOMContentLoaded", function () {
-    const botonDiv = document.getElementById("botonWhatsapp");
-    const select = document.getElementById("opcionContacto");
+    const buttonDiv = document.getElementById("contact-content__whatsapp-cta");
+    const selector = document.getElementById("contact-content__selector");
 
-    select.addEventListener("change", () => {
-        const opcion = select.value;
+    selector.addEventListener("change", () => {
+        const option = selector.value;
 
         let link = "";
-        let textoBoton = "";
+        let buttonText = "";
 
-        if (opcion === "consultorio") {
+        if (option === "consultorio") {
             link = "https://wa.me/+5493513142528?text=Hola%20tengo%20una%20consulta%20para%20la%20veterinaria";
-            textoBoton = "Contactar Consultorio Veterinario";
-        } else if (opcion === "petshop") {
+            buttonText = "Contactar Consultorio Veterinario";
+        } else if (option === "petshop") {
             link = "https://wa.me/+5493516784060?text=Hola%20tengo%20una%20consulta%20para%20el%20pet-shop";
-            textoBoton = "Contactar al Pet-Shop";
+            buttonText = "Contactar al Pet-Shop";
         } else {
-            botonDiv.style.display = "none";
+            buttonDiv.style.display = "none";
             return;
         }
 
-        botonDiv.innerHTML = `<a href="${link}" target="_blank" rel="noopener">${textoBoton}</a>`;
-        botonDiv.style.display = "block";
+        buttonDiv.innerHTML = `<a href="${link}" target="_blank" rel="noopener">${buttonText}</a>`;
+        buttonDiv.style.display = "block";
     })
 })

@@ -33,7 +33,7 @@
 
     gtag("config", "G-4W85S0XCM4");
   </script>
-  
+
   <body>
     <header>
       <div class="header-container">
@@ -57,7 +57,7 @@
           <a href="catalog.html" class="pages__link">Catálogo</a>
           <a href="services.html" class="pages__link">Servicios</a>
           <a href="envios.html" class="pages__link">Cómo comprar</a>
-          <a href="contacto.html" class="pages__link" aria-current="page"
+          <a href="contact.html" class="pages__link" aria-current="page"
             >Contacto</a
           >
         </nav>
@@ -65,16 +65,16 @@
     </header>
 
     <main>
-      <div class="contenedor-contacto">
-        <h1>¿Con qué área querés contactarte?</h1>
+      <div class="contact-content">
+        <h1 class="contact-content__title">¿Con qué área querés contactarte?</h1>
 
-        <select id="opcionContacto">
-          <option value="">Elegí una opción...</option>
+        <select id="contact-content__selector" class="contact-content__selector">
+          <option value="" disabled selected>Elegí una opción...</option>
           <option value="consultorio">Consultorio Veterinario</option>
-          <option value="petshop">Pet-Shop / Venta Artículos</option>
+          <option value="petshop">Venta Artículos / Pet-Shop</option>
         </select>
 
-        <div class="whatsapp-button" id="botonWhatsapp">
+        <div class="contact-content__whatsapp-cta" id="contact-content__whatsapp-cta">
           <!-- Se llenará dinámicamente -->
         </div>
       </div>

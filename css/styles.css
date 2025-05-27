@@ -19,10 +19,10 @@
   --color-background: #f7f5fa;
   --color-btn-normal: #c4a7e7;
   --color-btn-hover: #b192dd;
-  --color-btn-active: #6F54AD;
+  --color-btn-active: #6f54ad;
   --color-contact-section: #e8e3f1;
-  --color-footer: #695A87;
-  --color-price: #6F54AD;
+  --color-footer: #695a87;
+  --color-price: #6f54ad;
   --color-link: #7ac8ff;
   --font-main: "Segoe UI", sans-serif;
 }
@@ -415,10 +415,7 @@ header {
 .google-maps {
   flex: 1 1 400px;
   max-width: 400px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--color-primary);
-  border-radius: 12px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -445,72 +442,6 @@ header {
 
 .footer__content a:hover {
   text-decoration: underline;
-}
-
-/* ----------------------------------
-   CONTACT PAGE
----------------------------------- */
-.contenedor-contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
-.contenedor-contacto h1 {
-  font-size: 1.8rem;
-  color: var(--color-primary);
-  margin-bottom: 2rem;
-}
-
-.contenedor-contacto select {
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--color-primary);
-  appearance: none;
-  background-color: white;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1rem;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contenedor-contacto select:focus {
-  border-color: var(--color-primary);
-  outline: none;
-}
-
-.whatsapp-button {
-  margin-top: 2rem;
-  display: none;
-}
-
-.whatsapp-button a {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  color: white;
-  font-weight: bold;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background-color: var(--color-primary);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-button a:hover {
-  background-color: var(--color-btn-hover);
-  transform: scale(1.1);
-}
-
-.wahtsapp-button a:active {
-  background-color: var(--color-btn-active);
 }
 
 /* ----------------------------------
@@ -552,7 +483,8 @@ header {
   flex-direction: column;
 }
 
-.catalog-content__card-image, .catalog-content__card-thumbnails {
+.catalog-content__card-image,
+.catalog-content__card-thumbnails {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -825,6 +757,72 @@ header {
 }
 
 /* ----------------------------------
+   CONTACT PAGE
+---------------------------------- */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.contact-content__title {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.contact-content__selector {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content__selector:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.contact-content__whatsapp-cta {
+  margin-top: 1rem;
+  display: none;
+}
+
+.contact-content__whatsapp-cta a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.contact-content__whatsapp-cta a:hover {
+  background-color: var(--color-btn-hover);
+  transform: scale(1.1);
+}
+
+.contact-content__whatsapp-cta a:active {
+  background-color: var(--color-btn-active);
+}
+
+/* ----------------------------------
    RESPONSIVE - MOBILE STYLES
 ---------------------------------- */
 @media (max-width: 768px) {
@@ -833,7 +831,8 @@ header {
     text-align: center;
   }
 
-  .hero__text, .hero__image {
+  .hero__text,
+  .hero__image {
     flex: 1 1 100%;
   }
 
@@ -876,6 +875,6 @@ header {
   .google-maps {
     margin-top: 2rem;
     width: 100%;
-    height: 300px;
+    height: auto;
   }
 }
