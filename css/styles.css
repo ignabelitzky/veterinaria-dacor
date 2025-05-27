@@ -756,6 +756,41 @@ header {
   font-size: 1.2rem;
 }
 
+/* -----------------------------------
+   HOW TO BUY PAGE
+----------------------------------- */
+.under-construction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #fff8e1;
+  min-height: 70vh;
+}
+
+.under-construction__message {
+  max-width: 600px;
+}
+
+.under-construction__title {
+  font-size: 2rem;
+  color: #e65100;
+  margin-bottom: 1rem;
+}
+
+.under-construction__description {
+  font-size: 1.1rem;
+  color: #5d4037;
+  margin-bottom: 1rem;
+}
+
+.under-construction__image {
+  width: 220px;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
 /* ----------------------------------
    CONTACT PAGE
 ---------------------------------- */

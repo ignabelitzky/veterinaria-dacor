@@ -8,9 +8,22 @@
   (at your option) any later version.
 */
 
-fetch("/data/list-products.json")
+fetch("https://opensheet.elk.sh/1iYANfdzcN3VeahzJe-HtJNIkthPgfCPg4ZHVgD9t6a0/1")
   .then((response) => response.json())
-  .then((data) => showProductData(data.filter((product) => product.destacado)));
+  .then((data) => {
+    const products = data.map((product) => ({
+      ...product,
+      stock: product.stock.toLowerCase() === "true",
+      destacado: product.destacado.toLowerCase() === "true",
+      imagenes: JSON.parse(product.imagenes),
+      variantes: JSON.parse(product.variantes),
+    }));
+    showProductData(products.filter((product) => product.destacado && product.stock));
+  })
+  .catch((error) => {
+    console.error("Error cargando productos destacados:", error);
+    document.getElementById("featured-list").innerHTML = "<p>Error al cargar los productos destacados.</p>";
+  });
 
 function showProductData(products) {
   const featuredContainer = document.getElementById("featured-list");
@@ -23,12 +36,12 @@ function showProductData(products) {
         product.imagenes[0]
       }" class="featured-products__card-image" alt="${product.nombre}">
       <div class="featured-products__card-info">
-      <h3 class="featured-products__card-title">${product.nombre}</h3>
-      <p class="featured-products__card-low-price">Desde $${lowPrice.toLocaleString(
-        "es-AR"
-      )}</p>
+        <h3 class="featured-products__card-title">${product.nombre}</h3>
+        <p class="featured-products__card-low-price">Desde $${lowPrice.toLocaleString(
+          "es-AR"
+        )}</p>
       </div>
-      `;
+    `;
     featuredContainer.appendChild(card);
   });
 }
