@@ -175,12 +175,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="catalog-content__card-image">
           <img src="img/productos/${
             product.imagenes[0]
-          }" class="catalog-content__card-main-image" alt="${product.nombre}">
+          }" loading="lazy" class="catalog-content__card-main-image" alt="${product.nombre}">
           <div class="catalog-content__card-thumbnails">
             ${product.imagenes
               .map(
                 (img) => `
-              <img src="img/productos/${img}" class="catalog-content__card-thumbnail" alt="${product.nombre}">
+              <img src="img/productos/${img}" loading="lazy" class="catalog-content__card-thumbnail" alt="${product.nombre}">
             `
               )
               .join("")}
