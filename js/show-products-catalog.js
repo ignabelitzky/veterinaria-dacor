@@ -90,6 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedSubcategory = subcategorySelector.value;
 
     filteredProducts = products.filter((product) => {
+      if (product.mostrar.toLowerCase() === "false") return false;
+
       const matchesSearchText =
         product.nombre.toLowerCase().includes(searchQuery) ||
         product.descripcion.toLowerCase().includes(searchQuery);
@@ -121,6 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (sortOption === "category")
         return a.categoria.localeCompare(b.categoria);
       return 0;
+    });
+
+    // Move products without stock to the end
+    filteredProducts.sort((a, b) => {
+      if (a.stock === b.stock) return 0;
+      return a.stock ? -1 : 1;
     });
   }
 
