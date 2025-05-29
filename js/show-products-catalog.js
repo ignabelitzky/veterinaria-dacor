@@ -150,6 +150,11 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         currentPage = i;
         renderCurrentPageProducts();
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       });
 
       pages.appendChild(button);
