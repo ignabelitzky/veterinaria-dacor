@@ -118,17 +118,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function sortProducts() {
     const sortOption = sortSelector.value;
     filteredProducts.sort((a, b) => {
-      if (sortOption === "az") return a.nombre.localeCompare(b.nombre);
-      if (sortOption === "za") return b.nombre.localeCompare(a.nombre);
-      if (sortOption === "category")
-        return a.categoria.localeCompare(b.categoria);
+      if (a.stock !== b.stock) return a.stock ? -1 : 1; // Move products with stock to the front
+      if (sortOption === "name-az") return a.nombre.localeCompare(b.nombre);
+      if (sortOption === "name-za") return b.nombre.localeCompare(a.nombre);
+      if (sortOption === "category") return a.categoria.localeCompare(b.categoria);
+      if (sortOption === "price-asc") {
+        const aPrice = Math.min(...a.variantes.map(v => v.precio));
+        const bPrice = Math.min(...b.variantes.map(v => v.precio));
+        return aPrice - bPrice;
+      }
+      if (sortOption === "price-desc") {
+        const aPrice = Math.min(...a.variantes.map(v => v.precio));
+        const bPrice = Math.min(...b.variantes.map(v => v.precio));
+        return bPrice - aPrice;
+      }
       return 0;
-    });
-
-    // Move products without stock to the end
-    filteredProducts.sort((a, b) => {
-      if (a.stock === b.stock) return 0;
-      return a.stock ? -1 : 1;
     });
   }
 
