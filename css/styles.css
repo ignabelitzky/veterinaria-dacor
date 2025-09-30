@@ -761,18 +761,18 @@ header {
 /* -----------------------------------
    HOW TO BUY PAGE
 ----------------------------------- */
+
 .under-construction {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 1rem;
-  text-align: center;
   background-color: #fff8e1;
-  min-height: 70vh;
 }
 
 .under-construction__message {
   max-width: 600px;
+  justify-content: center;
+  padding: 1rem 1rem;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
 }
 
 .under-construction__title {
