@@ -103,7 +103,7 @@ header {
 
 .pages__link:hover {
   font-weight: bold;
-  color: #f0f0f0;
+  color: lightpink;
   cursor: pointer;
   font-weight: 700;
 }
@@ -764,14 +764,15 @@ header {
 
 .under-construction {
   background-color: #fff8e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .under-construction__message {
   max-width: 600px;
-  justify-content: center;
-  padding: 1rem 1rem;
-  align-items: center;
   text-align: center;
+  padding: 1rem 1rem;
   min-height: 70vh;
 }
 
