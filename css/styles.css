@@ -82,6 +82,11 @@ header {
 
 .header-container__logo {
   height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.header-container__logo:hover {
+  transform: scale(1.1);
 }
 
 .pages.active {
@@ -220,11 +225,6 @@ header {
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.featured-products__card:hover {
-  transform: translateY(-4px);
 }
 
 .featured-products__card-image {
@@ -305,11 +305,6 @@ header {
   padding: 1.5rem;
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.testimonials__testimonial:hover {
-  transform: translateY(-5px);
 }
 
 .testimonials__testimonial-text {
