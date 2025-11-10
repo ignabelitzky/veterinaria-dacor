@@ -351,6 +351,45 @@ header {
 /* ----------------------------------
    CONTACT INFORMATION (MAIN PAGE)
 ---------------------------------- */
+
+.contact-content__whatsapp-cta {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-contact-section);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+}
+
+.contact-content__whatsapp-info {
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-content__whatsapp-btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: var(--color-primary);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-content__whatsapp-btn:hover {
+  background-color: var(--color-btn-hover);
+  transform: scale(1.1);
+}
+
+.contact-content__whatsapp-btn:active {
+  background-color: var(--color-btn-active);
+}
+
 .contact-information {
   background-color: var(--color-contact-section);
   padding: 1rem 1rem;
@@ -808,28 +847,6 @@ header {
   margin-bottom: 2rem;
 }
 
-.contact-content__selector {
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--color-primary);
-  appearance: none;
-  background-color: white;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,40 70,120 140,40' fill='%23A88BDA'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1rem;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-content__selector:focus {
-  border-color: var(--color-primary);
-  outline: none;
-}
-
 .contact-content__whatsapp-cta {
   margin-top: 1rem;
   display: none;
@@ -853,6 +870,37 @@ header {
 }
 
 .contact-content__whatsapp-cta a:active {
+  background-color: var(--color-btn-active);
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-btn-hover);
+  transform: scale(1.1);
+}
+
+.btn:active {
   background-color: var(--color-btn-active);
 }
 
@@ -898,6 +946,16 @@ header {
   .pages__link {
     padding: 10px 20px;
     margin: 0;
+    color: black;
+  }
+
+  .pages a[aria-current="page"] {
+    color: white;
+    font-weight: bold;
+  }
+
+  .pages__link:hover {
+    background-color: var(--color-btn-hover);
     color: white;
   }
 
