@@ -13,30 +13,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DACOR Veterinaria & Pet Shop</title>
     <meta
       name="description"
-      content="Veterinaria Dacor - Atención veterinaria, tienda de mascotas y productos. Cuidamos a tus mascotas con amor."
+      content="DACOR Veterinaria & Pet Shop - Productos para mascotas y atención veterinaria en Córdoba. Horarios, contacto y catálogo"
     />
-    <title>Veterinaria Dacor</title>
+    <link rel="canonical" href="https://www.veterinariadacor.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DACOR Veterinaria & Pet Shop" />
+    <meta
+      property="og:description"
+      content="Productos y servicios veterinarios en Córdoba."
+    />
+    <meta property="og:url" content="https://www.veterinariadacor.com/" />
+    "
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "DACOR Veterinaria & Pet Shop",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gral. Simón Bolivar 945",
+          "addressLocality": "Córdoba",
+          "addressRegion": "Córdoba",
+          "postalCode": "X5000",
+          "addressCountry": "AR"
+        },
+        "telephone": ["+5493516784060", "+5493513142528"],
+        "openingHours": [
+          "Mo-Fr 10:00-13:30",
+          "Mo-Fr 15:30-19:00",
+          "Sa 10:30-13:30"
+        ],
+        "url": "https://www.veterinariadacor.com"
+      }
+    </script>
   </head>
 
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4W85S0XCM4"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+  <!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Usamos cookies solo con fines estadísticos para mejorar tu experiencia.
+    <button id="accept-cookies">Aceptar</button>
+    <button id="decline-cookies">Rechazar</button>
+  </p>
+</div>
 
+<script>
+  const banner = document.getElementById("cookie-banner");
+  const accept = document.getElementById("accept-cookies");
+  const decline = document.getElementById("decline-cookies");
+
+  if (!localStorage.getItem("cookie-consent")) banner.style.display = "block";
+
+  accept.onclick = () => {
+    localStorage.setItem("cookie-consent", "accepted");
+    banner.remove();
+    loadAnalytics();
+  };
+  decline.onclick = () => {
+    localStorage.setItem("cookie-consent", "declined");
+    banner.remove();
+  };
+
+  if (localStorage.getItem("cookie-consent") === "accepted") loadAnalytics();
+
+  function loadAnalytics() {
+    const s1 = document.createElement("script");
+    s1.async = true;
+    s1.src = "https://www.googletagmanager.com/gtag/js?id=G-4W85S0XCM4";
+    document.head.appendChild(s1);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
     gtag("config", "G-4W85S0XCM4");
-  </script>
-  
+  }
+</script>
+
   <body>
     <header>
       <div class="header-container">
@@ -165,9 +222,24 @@
               <p>
                 <strong>Dirección:</strong> Gral. Simón Bolivar 945, Córdoba
               </p>
-              <p><strong>WhatsApp Pet-Shop:</strong> +54 9 351 678-4060</p>
-              <p><strong>WhatsApp Veterinaria:</strong> +54 9 351 314-2528</p>
-              <p><strong>Horarios de atención:</strong></p>
+              <p>
+                <a
+                  href="https://wa.me/543516784060"
+                  rel="noopener"
+                  aria-label="WhatsApp Pet-Shop"
+                  >WhatsApp Pet-Shop</a
+                >
+                <a href="tel:+543516784060">+54 9 351 678-4060</a>
+              </p>
+              <p>
+                <a
+                  href="https://wa.me/543513142528"
+                  rel="noopener"
+                  aria-label="WhatsApp Veterinaria"
+                  >WhatsApp Veterinaria</a
+                >
+                <a href="tel:+543513142528">+54 9 351 314-2528</a>
+              </p>
               <ul class="contact-information__details--openingHours">
                 <li>Lunes a Viernes: 10:00 a 13:30 - 15:30 a 19:00</li>
                 <li>Sábados: 10:30 a 13:30</li>
@@ -226,6 +298,7 @@
       <div class="footer__content">
         <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
         <p>
+          <a href="privacy-policy.html">Política de privacidad</a> |
           Código fuente licenciado bajo
           <a
             href="https://www.gnu.org/licenses/gpl-3.0.html"

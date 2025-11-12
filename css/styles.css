@@ -129,11 +129,71 @@ header {
   transform: scale(1.1);
 }
 
+/* === Cookie Consent Banner === */
+.cookie-banner {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 0.95rem;
+  padding: 1rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  display: none; /* shown dynamically */
+  z-index: 1100;
+}
+
+.cookie-banner p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.cookie-banner button {
+  margin-left: 0.5rem;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#accept-cookies {
+  background-color: #3fa34d; /* green accent */
+  color: white;
+}
+
+#accept-cookies:hover {
+  background-color: #348a40;
+}
+
+#decline-cookies {
+  background-color: #ddd;
+  color: #333;
+}
+
+#decline-cookies:hover {
+  background-color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .cookie-banner p {
+    font-size: 0.9rem;
+  }
+  .cookie-banner button {
+    margin-top: 0.4rem;
+    display: inline-block;
+  }
+}
+
+
 /* ----------------------------------
    MAIN PAGE
 ---------------------------------- */
 .hero {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .hero__content {
@@ -143,7 +203,7 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .hero__text {
@@ -353,18 +413,6 @@ header {
 /* ----------------------------------
    CONTACT INFORMATION (MAIN PAGE)
 ---------------------------------- */
-
-.contact-content__whatsapp-cta {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background-color: var(--color-contact-section);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  max-width: 400px;
-}
 
 .contact-content__whatsapp-info {
   font-size: 1rem;
@@ -838,15 +886,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .contact-content__title {
   font-size: 1.8rem;
   color: var(--color-primary);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contact-content__whatsapp-cta {
@@ -904,6 +950,32 @@ header {
 
 .btn:active {
   background-color: var(--color-btn-active);
+}
+
+/* ----------------------------------
+   PRIVACY POLICY PAGE
+---------------------------------- */
+.privacy-policy__content {
+  padding: 6rem 2rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.privacy-policy__content h1
+{
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.privacy-policy__content p
+{
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  max-width: 1200px;
 }
 
 /* ----------------------------------
