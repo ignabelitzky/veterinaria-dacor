@@ -898,7 +898,9 @@ header {
 
 .contact-content__whatsapp-cta {
   margin-top: 1rem;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-content__whatsapp-cta a {
@@ -946,7 +948,7 @@ header {
 
 .btn:hover {
   background-color: var(--color-btn-hover);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .btn:active {
