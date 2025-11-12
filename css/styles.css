@@ -890,6 +890,7 @@ header {
 }
 
 .contact-content__title {
+  text-align: center;
   font-size: 1.8rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
