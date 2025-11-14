@@ -11,6 +11,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const productCards = document.getElementById("catalog-content__cards");
   const searchBox = document.getElementById("catalog-content__searchBox");
+  const internSearchBox = document.getElementById(
+    "catalog-content__internSearchBox"
+  );
   const categorySelector = document.getElementById(
     "catalog-content__categorySelector"
   );
@@ -74,27 +77,34 @@ document.addEventListener("DOMContentLoaded", () => {
     if (category === "todas" || !subcategoriesByCategory[category]) return;
 
     subcategoriesByCategory[category]
-    .slice()  // Copia para evitar modificar el original
-    .sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })) // Ordena alfabéticamente
-    .forEach((sub) => {
-      const option = document.createElement("option");
-      option.value = toSlug(sub);
-      option.textContent = prettifySlug(sub);
-      subcategorySelector.appendChild(option);
-    });
+      .slice() // Copia para evitar modificar el original
+      .sort((a, b) => a.localeCompare(b, "es", { sensitivity: "base" })) // Ordena alfabéticamente
+      .forEach((sub) => {
+        const option = document.createElement("option");
+        option.value = toSlug(sub);
+        option.textContent = prettifySlug(sub);
+        subcategorySelector.appendChild(option);
+      });
   }
 
   function applyFilters() {
     const searchQuery = searchBox.value.toLowerCase();
+    const internSearchQuery = internSearchBox.value.toLowerCase();
     const selectedCategory = categorySelector.value;
     const selectedSubcategory = subcategorySelector.value;
 
     filteredProducts = products.filter((product) => {
       if (product.mostrar.toLowerCase() === "false") return false;
 
-      const matchesSearchText =
+      const matchesNormalSearch =
         product.nombre.toLowerCase().includes(searchQuery) ||
         product.descripcion.toLowerCase().includes(searchQuery);
+
+      const matchesInternalSearch =
+        internSearchQuery === "" ||
+        product.tags_internos.some((tag) =>
+          tag.toLowerCase().includes(internSearchQuery)
+        );
 
       const matchesCategory =
         selectedCategory === "todas" || product.categoria === selectedCategory;
@@ -106,7 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const hasStock = checkboxStock.checked || product.stock;
 
       return (
-        matchesSearchText && matchesCategory && matchesSubcategory && hasStock
+        matchesNormalSearch &&
+        matchesInternalSearch &&
+        matchesCategory &&
+        matchesSubcategory &&
+        hasStock
       );
     });
 
@@ -121,15 +135,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (a.stock !== b.stock) return a.stock ? -1 : 1; // Move products with stock to the front
       if (sortOption === "name-az") return a.nombre.localeCompare(b.nombre);
       if (sortOption === "name-za") return b.nombre.localeCompare(a.nombre);
-      if (sortOption === "category") return a.categoria.localeCompare(b.categoria);
+      if (sortOption === "category")
+        return a.categoria.localeCompare(b.categoria);
       if (sortOption === "price-asc") {
-        const aPrice = Math.min(...a.variantes.map(v => v.precio));
-        const bPrice = Math.min(...b.variantes.map(v => v.precio));
+        const aPrice = Math.min(...a.variantes.map((v) => v.precio));
+        const bPrice = Math.min(...b.variantes.map((v) => v.precio));
         return aPrice - bPrice;
       }
       if (sortOption === "price-desc") {
-        const aPrice = Math.min(...a.variantes.map(v => v.precio));
-        const bPrice = Math.min(...b.variantes.map(v => v.precio));
+        const aPrice = Math.min(...a.variantes.map((v) => v.precio));
+        const bPrice = Math.min(...b.variantes.map((v) => v.precio));
         return bPrice - aPrice;
       }
       return 0;
@@ -165,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
 
@@ -192,7 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="catalog-content__card-image">
           <img src="img/productos/${
             product.imagenes[0]
-          }" loading="lazy" class="catalog-content__card-main-image" alt="${product.nombre}">
+          }" loading="lazy" class="catalog-content__card-main-image" alt="${
+        product.nombre
+      }">
           <div class="catalog-content__card-thumbnails">
             ${product.imagenes
               .map(
@@ -235,16 +252,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Cargar productos
-  fetch("https://opensheet.elk.sh/1iYANfdzcN3VeahzJe-HtJNIkthPgfCPg4ZHVgD9t6a0/1")
+  fetch(
+    "https://opensheet.elk.sh/1iYANfdzcN3VeahzJe-HtJNIkthPgfCPg4ZHVgD9t6a0/1"
+  )
     .then((response) => response.json())
     .then((data) => {
-      products = data.map((product) => ({
-        ...product,
-        stock: product.stock.toLowerCase() === "true",
-        destacado: product.destacado.toLowerCase() === "true",
-        imagenes: JSON.parse(product.imagenes),
-        variantes: JSON.parse(product.variantes),
-      }));
+      products = data.map((product) => {
+        console.log("Producto:", product.nombre);
+        console.log("  imagenes RAW:", product.imagenes);
+        console.log("  variantes RAW:", product.variantes);
+        console.log("  tags RAW:", product.tags_internos);
+
+        let imagenes = [];
+        let variantes = [];
+        let tags_internos = [];
+
+        try {
+          imagenes = JSON.parse(product.imagenes);
+        } catch (e) {
+          console.error("Error en JSON de IMAGENES:", product.nombre);
+          console.error(product.imagenes);
+          throw e;
+        }
+
+        try {
+          variantes = JSON.parse(product.variantes);
+        } catch (e) {
+          console.error("Error en JSON de VARIANTES:", product.nombre);
+          console.error(product.variantes);
+          throw e;
+        }
+
+        try {
+          tags_internos =
+            product.tags_internos && product.tags_internos.trim() !== ""
+              ? JSON.parse(product.tags_internos)
+              : [];
+        } catch (e) {
+          console.error("Error en JSON de TAGS INTERNOS:", product.nombre);
+          console.error(product.tags_internos);
+          throw e;
+        }
+
+        return {
+          ...product,
+          stock: product.stock.toLowerCase() === "true",
+          destacado: product.destacado.toLowerCase() === "true",
+          imagenes,
+          variantes,
+          tags_internos,
+        };
+      });
 
       subcategoriesByCategory = buildSubcategoryMap(products);
       updateSubcategoryDropdown(categorySelector.value);
@@ -257,6 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Eventos
   searchBox.addEventListener("input", applyFilters);
+  internSearchBox.addEventListener("input", applyFilters);
   categorySelector.addEventListener("change", (e) => {
     updateSubcategoryDropdown(e.target.value);
     applyFilters();
@@ -264,4 +323,14 @@ document.addEventListener("DOMContentLoaded", () => {
   subcategorySelector.addEventListener("change", applyFilters);
   checkboxStock.addEventListener("change", applyFilters);
   sortSelector.addEventListener("change", applyFilters);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "d") {
+      const box = document.getElementById("catalog-content__internSearchBox");
+      box.style.display = box.style.display === "none" ? "block" : "none";
+      if (box.style.display === "block") {
+        box.focus();
+      }
+    }
+  });
 });
