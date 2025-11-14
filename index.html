@@ -53,45 +53,47 @@
   </head>
 
   <!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="cookie-banner">
-  <p>
-    Usamos cookies solo con fines estadísticos para mejorar tu experiencia.
-    <button id="accept-cookies">Aceptar</button>
-    <button id="decline-cookies">Rechazar</button>
-  </p>
-</div>
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+      Usamos cookies solo con fines estadísticos para mejorar tu experiencia.
+      <button id="accept-cookies">Aceptar</button>
+      <button id="decline-cookies">Rechazar</button>
+    </p>
+  </div>
 
-<script>
-  const banner = document.getElementById("cookie-banner");
-  const accept = document.getElementById("accept-cookies");
-  const decline = document.getElementById("decline-cookies");
+  <script>
+    const banner = document.getElementById("cookie-banner");
+    const accept = document.getElementById("accept-cookies");
+    const decline = document.getElementById("decline-cookies");
 
-  if (!localStorage.getItem("cookie-consent")) banner.style.display = "block";
+    if (!localStorage.getItem("cookie-consent")) banner.style.display = "block";
 
-  accept.onclick = () => {
-    localStorage.setItem("cookie-consent", "accepted");
-    banner.remove();
-    loadAnalytics();
-  };
-  decline.onclick = () => {
-    localStorage.setItem("cookie-consent", "declined");
-    banner.remove();
-  };
+    accept.onclick = () => {
+      localStorage.setItem("cookie-consent", "accepted");
+      banner.remove();
+      loadAnalytics();
+    };
+    decline.onclick = () => {
+      localStorage.setItem("cookie-consent", "declined");
+      banner.remove();
+    };
 
-  if (localStorage.getItem("cookie-consent") === "accepted") loadAnalytics();
+    if (localStorage.getItem("cookie-consent") === "accepted") loadAnalytics();
 
-  function loadAnalytics() {
-    const s1 = document.createElement("script");
-    s1.async = true;
-    s1.src = "https://www.googletagmanager.com/gtag/js?id=G-4W85S0XCM4";
-    document.head.appendChild(s1);
+    function loadAnalytics() {
+      const s1 = document.createElement("script");
+      s1.async = true;
+      s1.src = "https://www.googletagmanager.com/gtag/js?id=G-4W85S0XCM4";
+      document.head.appendChild(s1);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-4W85S0XCM4");
-  }
-</script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4W85S0XCM4");
+    }
+  </script>
 
   <body>
     <header>
@@ -239,11 +241,20 @@
                 >
                 <a href="tel:+543513142528">+54 9 351 314-2528</a>
               </p>
-              <ul class="contact-information__details--openingHours">
-                <li>Lunes a Viernes: 10:00 a 13:30 - 15:30 a 19:00</li>
-                <li>Sábados: 10:30 a 13:30</li>
-                <li>Domingos: Cerrado</li>
-              </ul>
+              <dl class="contact-information__details--openingHours">
+                <div>
+                  <dt>Lunes a Viernes</dt>
+                  <dd>10:00 a 13:30 – 15:30 a 19:00</dd>
+                </div>
+                <div>
+                  <dt>Sábados</dt>
+                  <dd>10:30 a 13:30</dd>
+                </div>
+                <div>
+                  <dt>Domingos</dt>
+                  <dd>Cerrado</dd>
+                </div>
+              </dl>
               <p class="contact-information__socialMedia">
                 <strong>Seguinos en redes:</strong>
               </p>
@@ -275,7 +286,9 @@
               </div>
             </div>
             <div class="google-maps">
+              <h3 class="google-maps__title">Nuestra ubicación</h3>
               <iframe
+                title="Mapa de ubicación de Veterinaria Dacor"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6073895048303!2d-64.1978064235965!3d-31.424941496666463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a27d56351aa5%3A0x1ce8b14639601a4c!2sGral.%20Sim%C3%B3n%20Bol%C3%ADvar%20945%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1747755698433!5m2!1ses!2sar"
                 width="100%"
                 height="250"
@@ -297,8 +310,8 @@
       <div class="footer__content">
         <p>&copy; 2025 Veterinaria Dacor | Todos los derechos reservados</p>
         <p>
-          <a href="privacy-policy.html">Política de privacidad</a> |
-          Código fuente licenciado bajo
+          <a href="privacy-policy.html">Política de privacidad</a> | Código
+          fuente licenciado bajo
           <a
             href="https://www.gnu.org/licenses/gpl-3.0.html"
             target="_blank"

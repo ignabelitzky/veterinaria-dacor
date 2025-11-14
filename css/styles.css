@@ -414,13 +414,22 @@ header {
    CONTACT INFORMATION (MAIN PAGE)
 ---------------------------------- */
 
+.contact-content__card {
+  background-color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
 .contact-content__whatsapp-info {
   font-size: 1rem;
   color: #444;
 }
 
 .contact-content__whatsapp-btn {
-  display: inline-block;
+  display: flex;
   padding: 1rem 1.5rem;
   color: white;
   font-weight: bold;
@@ -429,6 +438,7 @@ header {
   font-size: 1.1rem;
   background-color: var(--color-primary);
   transition: transform 0.3s ease, background-color 0.3s ease;
+  gap: 8px;
 }
 
 .contact-content__whatsapp-btn:hover {
@@ -904,7 +914,7 @@ header {
 }
 
 .contact-content__whatsapp-cta a {
-  display: inline-block;
+  display: flex;
   padding: 1rem 1.5rem;
   color: white;
   font-weight: bold;
@@ -913,6 +923,7 @@ header {
   font-size: 1.1rem;
   background-color: var(--color-primary);
   transition: transform 0.3s ease;
+  align-items: center;;
 }
 
 .contact-content__whatsapp-cta a:hover {
@@ -943,6 +954,7 @@ header {
   background-color: var(--color-primary);
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -955,6 +967,12 @@ header {
   background-color: var(--color-btn-active);
 }
 
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
 /* ----------------------------------
    PRIVACY POLICY PAGE
 ---------------------------------- */
@@ -965,20 +983,21 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-.privacy-policy__content h1
-{
+.privacy-policy__content--text--title {
+  font-size: 2rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.privacy-policy__content p
-{
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.privacy-policy__content--text--description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
   max-width: 1200px;
+  text-align: center;
 }
 
 /* ----------------------------------

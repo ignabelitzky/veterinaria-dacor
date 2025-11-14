@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonDiv.innerHTML = `
         <p class="contact-content__whatsapp-info">${infoText}</p>
         <a href="${link}" target="_blank" rel="noopener" class="contact-content__whatsapp-btn">
-          ${buttonText}
+          <img src="img/whatsapp-icono-30.png" alt="" class="btn-icon" />${buttonText}
         </a>
       `;
       buttonDiv.style.display = "flex";
