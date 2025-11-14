@@ -640,6 +640,10 @@ header {
   border: 1px solid #ccc;
 }
 
+.hidden {
+  display: none;
+}
+
 .catalog-content__categorySelector,
 .catalog-content__subcategorySelector,
 .catalog-content__sortSelector {

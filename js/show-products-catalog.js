@@ -327,7 +327,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "d") {
       const box = document.getElementById("catalog-content__internSearchBox");
-      box.style.display = box.style.display === "none" ? "block" : "none";
+      const currentDisplay = window.getComputedStyle(box).display;
+      box.style.display = currentDisplay === "none" ? "block" : "none";
       if (box.style.display === "block") {
         box.focus();
       }
