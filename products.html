@@ -57,8 +57,8 @@
         </button>
         <nav class="pages" role="navigation" aria-label="Menú principal">
           <a href="index.html" class="pages__link">Inicio</a>
-          <a href="catalog.html" class="pages__link" aria-current="page"
-            >Catálogo</a
+          <a href="products.html" class="pages__link" aria-current="page"
+            >Productos</a
           >
           <a href="services.html" class="pages__link">Servicios</a>
           <a href="how-to-buy.html" class="pages__link">Cómo comprar</a>
@@ -68,22 +68,22 @@
     </header>
 
     <main>
-      <section class="catalog-content">
-        <h1 class="catalog-content__title">Catálogo de Productos</h1>
+      <section class="products-content">
+        <h1 class="products-content__title">Catálogo de Productos</h1>
 
         <!-- Filter Section -->
-        <section class="catalog-content__filters">
+        <section class="products-content__filters">
           <input
             type="text"
-            id="catalog-content__searchBox"
-            class="catalog-content__searchBox"
+            id="products-content__searchBox"
+            class="products-content__searchBox"
             placeholder="Buscar productos..."
           />
           <div>
-            <label for="catalog-content__categorySelector">Categoría:</label>
+            <label for="products-content__categorySelector">Categoría:</label>
             <select
-              id="catalog-content__categorySelector"
-              class="catalog-content__categorySelector"
+              id="products-content__categorySelector"
+              class="products-content__categorySelector"
             >
               <option value="todas">Todas las categorías</option>
               <option disabled>──────────</option>
@@ -106,27 +106,27 @@
             </select>
           </div>
           <div>
-            <label for="catalog-content__subcategorySelector"
+            <label for="products-content__subcategorySelector"
               >Subcategoría:</label
             >
             <select
-              id="catalog-content__subcategorySelector"
-              class="catalog-content__subcategorySelector"
+              id="products-content__subcategorySelector"
+              class="products-content__subcategorySelector"
             ></select>
           </div>
           <div>
             <input
               type="text"
-              class="catalog-content__internSearchBox hidden"
-              id="catalog-content__internSearchBox"
+              class="products-content__internSearchBox hidden"
+              id="products-content__internSearchBox"
               placeholder="Buscar por tags internos"
             />
           </div>
           <div>
-            <label for="catalog-content__sortSelector">Ordenar por:</label>
+            <label for="products-content__sortSelector">Ordenar por:</label>
             <select
-              id="catalog-content__sortSelector"
-              class="catalog-content__sortSelector"
+              id="products-content__sortSelector"
+              class="products-content__sortSelector"
             >
               <option value="default">Predeterminado</option>
               <option value="name-az">Nombre (A-Z)</option>
@@ -139,8 +139,8 @@
           <div>
             <input
               type="checkbox"
-              id="catalog-content__checkboxStock"
-              class="catalog-content__checkboxStock"
+              id="products-content__checkboxStock"
+              class="products-content__checkboxStock"
               checked
             />
             <label> Mostrar productos agotados </label>
@@ -149,19 +149,19 @@
 
         <!-- Product cards section & Pagination-->
         <section>
-          <section class="catalog-content__cards" id="catalog-content__cards">
+          <section class="products-content__cards" id="products-content__cards">
             <!-- Productos se insertan dinámicamente -->
           </section>
 
-          <div id="catalog-content__pages" class="catalog-content__pages">
+          <div id="products-content__pages" class="products-content__pages">
             <!-- Paginación se insertará dinámicamente -->
           </div>
         </section>
       </section>
 
       <!-- Disclaimer -->
-      <div class="catalog-content__disclaimer">
-        <p class="catalog-content__disclaimer-text">
+      <div class="products-content__disclaimer">
+        <p class="products-content__disclaimer-text">
           <strong>Importante:</strong> Los precios del catálogo son orientativos
           y pueden diferir de los vigentes en la tienda física. Los colores y
           diseños de los productos están sujetos a disponibilidad de stock.
@@ -171,19 +171,19 @@
       <!-- Floating whatsapp button -->
       <a
         href="https://wa.me/5493516784060"
-        class="catalog-content__whatsapp-btn"
+        class="products-content__whatsapp-btn"
         target="_blank"
         aria-label="Chatear por WhatsApp"
       >
         <img
-          class="catalog-content__whatsapp-img"
+          class="products-content__whatsapp-img"
           src="img/whatsapp-icono-30.png"
           alt="WhatsApp"
         />
       </a>
     </main>
 
-    <script src="js/show-products-catalog.js"></script>
+    <script src="js/show-products.js"></script>
     <script src="js/navbar-toggle.js"></script>
 
     <footer class="footer">

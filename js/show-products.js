@@ -9,22 +9,24 @@
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const productCards = document.getElementById("catalog-content__cards");
-  const searchBox = document.getElementById("catalog-content__searchBox");
+  const productCards = document.getElementById("products-content__cards");
+  const searchBox = document.getElementById("products-content__searchBox");
   const internSearchBox = document.getElementById(
-    "catalog-content__internSearchBox"
+    "products-content__internSearchBox"
   );
   const categorySelector = document.getElementById(
-    "catalog-content__categorySelector"
+    "products-content__categorySelector"
   );
   const subcategorySelector = document.getElementById(
-    "catalog-content__subcategorySelector"
+    "products-content__subcategorySelector"
   );
   const checkboxStock = document.getElementById(
-    "catalog-content__checkboxStock"
+    "products-content__checkboxStock"
   );
-  const sortSelector = document.getElementById("catalog-content__sortSelector");
-  const pages = document.getElementById("catalog-content__pages");
+  const sortSelector = document.getElementById(
+    "products-content__sortSelector"
+  );
+  const pages = document.getElementById("products-content__pages");
 
   const maxCards = 24;
   let products = [];
@@ -113,7 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedSubcategory === "todas" ||
         toSlug(product.subcategoria) === selectedSubcategory;
 
-      const hasStock = checkboxStock.checked || product.stock;
+      const hasStock =
+        checkboxStock.checked ||
+        product.variantes.some((v) => v.stock === "true" || v.stock === true);
 
       return (
         matchesNormalSearch &&
@@ -132,7 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function sortProducts() {
     const sortOption = sortSelector.value;
     filteredProducts.sort((a, b) => {
-      if (a.stock !== b.stock) return a.stock ? -1 : 1; // Move products with stock to the front
+      const aHas = a.variantes.some((v) => v.stock === true);
+      const bHas = b.variantes.some((v) => v.stock === true);
+      if (aHas !== bHas) return aHas ? -1 : 1; // products with any variant in stock first
       if (sortOption === "name-az") return a.nombre.localeCompare(b.nombre);
       if (sortOption === "name-za") return b.nombre.localeCompare(a.nombre);
       if (sortOption === "category")
@@ -170,9 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 1; i <= totalPages; i++) {
       const button = document.createElement("button");
       button.textContent = i;
-      button.classList.add("catalog-content__pages-btn");
+      button.classList.add("products-content__pages-btn");
       if (i === currentPage)
-        button.classList.add("catalog-content__pages-btn--active");
+        button.classList.add("products-content__pages-btn--active");
 
       button.addEventListener("click", () => {
         currentPage = i;
@@ -198,39 +204,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     products.forEach((product) => {
       const card = document.createElement("article");
-      card.className = "catalog-content__card";
-      const stockText = product.stock ? "Disponible" : "Agotado";
-      const typeStock = product.stock ? "stock-available" : "stock-unavailable";
+      card.className = "products-content__card";
+      const productHasStock = product.variantes.some((v) => v.stock === true);
+      const stockText = productHasStock ? "Disponible" : "Agotado";
+      const typeStock = productHasStock
+        ? "stock-available"
+        : "stock-unavailable";
 
       card.innerHTML = `
-        <p class="catalog-content__card-${typeStock}">${stockText}</p>
-        <div class="catalog-content__card-image">
+        <p class="products-content__card-${typeStock}">${stockText}</p>
+        <div class="products-content__card-image">
           <img src="img/productos/${
             product.imagenes[0]
-          }" loading="lazy" class="catalog-content__card-main-image" alt="${
+          }" loading="lazy" class="products-content__card-main-image" alt="${
         product.nombre
       }">
-          <div class="catalog-content__card-thumbnails">
+          <div class="products-content__card-thumbnails">
             ${product.imagenes
               .map(
                 (img) => `
-              <img src="img/productos/${img}" loading="lazy" class="catalog-content__card-thumbnail" alt="${product.nombre}">
+              <img src="img/productos/${img}" loading="lazy" class="products-content__card-thumbnail" alt="${product.nombre}">
             `
               )
               .join("")}
           </div>
         </div>
-        <h2 class="catalog-content__card-title">${product.nombre}</h2>
-        <p class="catalog-content__card-description">${product.descripcion}</p>
-        <div class="catalog-content__card-price">
+        <h2 class="products-content__card-title">${product.nombre}</h2>
+        <p class="products-content__card-description">${product.descripcion}</p>
+        <div class="products-content__card-price">
           ${product.variantes
             .map(
               (v) => `
-            <p>${
-              v.tamaño
-            }: <span class="catalog-content__card-price--purple">$${v.precio.toLocaleString(
-                "es-AR"
-              )}</span></p>
+            <p>
+      ${v.tamaño}: 
+      <span class="products-content__card-price--purple">
+        $${v.precio.toLocaleString("es-AR")}
+      </span>
+      <span class="variant-stock ${v.stock ? "in-stock" : "out-of-stock"}">
+        ${v.stock ? "" : "(Agotado)"}
+      </span>
+    </p>
           `
             )
             .join("")}
@@ -238,11 +251,11 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
 
       card
-        .querySelectorAll(".catalog-content__card-thumbnail")
+        .querySelectorAll(".products-content__card-thumbnail")
         .forEach((thumb) => {
           thumb.addEventListener("click", (e) => {
-            const gallery = e.target.closest(".catalog-content__card-image");
-            gallery.querySelector(".catalog-content__card-main-image").src =
+            const gallery = e.target.closest(".products-content__card-image");
+            gallery.querySelector(".products-content__card-main-image").src =
               e.target.src;
           });
         });
@@ -277,6 +290,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
           variantes = JSON.parse(product.variantes);
+
+          // Normalize variant fields: ensure stock is a boolean and precio is a number
+          variantes = variantes.map((v) => {
+            // handle cases where v might be a string like "M" if owner wrote CSV-style; keep original fields
+            const stockRaw = v.hasOwnProperty("stock") ? v.stock : false;
+            return {
+              ...v,
+              precio:
+                typeof v.precio === "string" ? Number(v.precio) || 0 : v.precio,
+              stock:
+                stockRaw === true ||
+                stockRaw === "true" ||
+                stockRaw === "1" ||
+                stockRaw === 1,
+            };
+          });
         } catch (e) {
           console.error("Error en JSON de VARIANTES:", product.nombre);
           console.error(product.variantes);
@@ -296,7 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return {
           ...product,
-          stock: product.stock.toLowerCase() === "true",
           destacado: product.destacado.toLowerCase() === "true",
           imagenes,
           variantes,
@@ -326,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keydown", (e) => {
     if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "d") {
-      const box = document.getElementById("catalog-content__internSearchBox");
+      const box = document.getElementById("products-content__internSearchBox");
       const currentDisplay = window.getComputedStyle(box).display;
       box.style.display = currentDisplay === "none" ? "block" : "none";
       if (box.style.display === "block") {
