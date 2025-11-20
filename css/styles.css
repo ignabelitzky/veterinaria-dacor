@@ -482,6 +482,7 @@ header {
 .contact-information__details--openingHours {
   list-style: none;
   padding-left: 1rem;
+  padding-top: 1rem;
   margin: 0 auto 1rem;
   color: #555;
   font-style: italic;
@@ -510,14 +511,55 @@ header {
 
 .google-maps {
   flex: 1 1 400px;
-  max-width: 400px;
-  height: auto;
+  width: 100%;
+  max-width: 450px;
+  height: 450px;
+  border-radius: 1rem;
   transition: transform 0.3s ease;
 }
 
 .google-maps:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
+
+.contact-information__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center the whole block */
+  gap: 12px;
+  margin: 10px auto 0;        /* center horizontally */
+  max-width: 280px;           /* keeps items nicely aligned */
+}
+
+.phone-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* center each row */
+  gap: 10px;
+  width: 100%;                /* prevents shrinking left */
+}
+
+.phone-item__icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.phone-item__data {
+  display: flex;
+  flex-direction: column;
+  text-align: center;           /* keep text readable, not fully centered */
+}
+
+.phone-item__label {
+  font-weight: 600;
+}
+
+.phone-item__wa {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
 
 /* ----------------------------------
    FOOTER
@@ -565,8 +607,9 @@ header {
 
 .products-content__title {
   color: var(--color-primary);
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .products-content__card {
@@ -793,6 +836,8 @@ header {
 .services-content__title {
   font-size: 2rem;
   color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .services-content__cards {
@@ -875,7 +920,7 @@ header {
 
 .contact-content__title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
 }

@@ -15,20 +15,24 @@ fetch("https://opensheet.elk.sh/1iYANfdzcN3VeahzJe-HtJNIkthPgfCPg4ZHVgD9t6a0/1")
     const products = data
       .map((product) => {
         try {
-          // Normalize and convert product properties to usable JS types
+          const destacadoRaw = product.destacado ?? "";
+          const destacado = destacadoRaw.toString().toLowerCase() === "true";
+
+          const imagenes = safeJsonArray(product.imagenes);
+          const variantes = safeJsonArray(product.variantes);
+
           return {
             ...product,
-            stock: product.stock.toLowerCase() === "true",
-            destacado: product.destacado.toLowerCase() === "true",
-            imagenes: JSON.parse(product.imagenes),   // Parse stringified array
-            variantes: JSON.parse(product.variantes), // Parse stringified array
+            destacado,
+            imagenes,
+            variantes
           };
         } catch (error) {
-          console.warn("Error parsing JSON fields for product:", product, error);
+          console.warn("Error processing product:", product, error);
           return null;
         }
       })
-      .filter((p) => p && p.destacado && p.stock);  // Keep only featured products in stock
+      .filter((p) => p && p.destacado);
 
     showProductData(products);
   })
@@ -41,29 +45,58 @@ fetch("https://opensheet.elk.sh/1iYANfdzcN3VeahzJe-HtJNIkthPgfCPg4ZHVgD9t6a0/1")
   });
 
 /**
+ * Safely parse a JSON array, returns [] if invalid.
+ */
+function safeJsonArray(value) {
+  if (!value) return [];
+
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+/**
  * Dynamically adds product cards to the featured products section.
- * @param {Array} products - Array of featured, in-stock product objects
  */
 function showProductData(products) {
   const featuredContainer = document.getElementById("featured-list");
   if (!featuredContainer) return;
 
   products.forEach((product) => {
-    const lowPrice = Math.min(...product.variantes.map((v) => v.precio));
-    const imagePath = product.imagenes[0].startsWith("http")
-      ? product.imagenes[0]
-      : `img/productos/${product.imagenes[0]}`;
+    // Extract price list safely
+    const prices = product.variantes
+      .map((v) => Number(v.precio))
+      .filter((n) => !isNaN(n) && n > 0);
+
+    // If no valid price is found, skip product entirely
+    if (prices.length === 0) return;
+
+    const lowPrice = Math.min(...prices);
+
+    // Choose main image or fallback
+    const mainImage = product.imagenes[0] ?? "default.png";
+
+    const imagePath = mainImage.startsWith("http")
+      ? mainImage
+      : `img/productos/${mainImage}`;
 
     const card = document.createElement("div");
     card.className = "featured-products__card";
 
     card.innerHTML = `
-      <img src="${imagePath}" class="featured-products__card-image" alt="${product.nombre}">
+      <img src="${imagePath}"
+           class="featured-products__card-image"
+           alt="${product.nombre || "Producto"}">
+
       <div class="featured-products__card-info">
-        <h3 class="featured-products__card-title">${product.nombre}</h3>
+        <h3 class="featured-products__card-title">${product.nombre || "Producto sin nombre"}</h3>
         <p class="featured-products__card-low-price">Desde $${lowPrice.toLocaleString("es-AR")}</p>
       </div>
     `;
+
     featuredContainer.appendChild(card);
   });
 }
