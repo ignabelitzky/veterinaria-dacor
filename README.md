@@ -1,6 +1,6 @@
 # Veterinaria Dacor
 
-Sitio web oficial de [Veterinaria Dacor](https://www.veterinariadacor.com), una clínica veterinaria y pet shop ubicada en Córdoba, Argentina. Ofrecemos atención médica para mascotas, venta de productos y asesoramiento personalizado.
+Sitio web oficial de [Veterinaria Dacor](https://www.veterinariadacor.com), una veterinaria y pet shop ubicada en Córdoba, Argentina. Ofrecemos atención médica para mascotas, venta de productos y asesoramiento personalizado.
 
 ---
 
@@ -20,8 +20,7 @@ Este proyecto es una aplicación web estática que presenta los servicios, produ
 
 ## Características principales
 
-- Página de inicio con presentación de la clínica y enlaces rápidos.
-- Sección "Sobre nosotros" con información detallada de la empresa.
+- Página de inicio con presentación de la veterinaria y enlaces rápidos.
 - Catálogo de productos destacados.
 - Detalles de servicios veterinarios ofrecidos.
 - Información de contacto, incluyendo dirección, horarios y enlaces a redes sociales.
@@ -50,6 +49,7 @@ Este proyecto está licenciado bajo la [GNU General Public License v3.0](LICENSE
 ## Estado del proyecto
 
 El sitio está en funcionamiento y se encuentra en constante mejora.
+[DACOR Veterinaria & Pet Shop](https://www.veterinariadacor.com)
 
 ---
 
