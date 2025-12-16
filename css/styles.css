@@ -877,11 +877,11 @@ header {
 
 .how-to-buy {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 4rem auto;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   text-align: center;
 }
 
@@ -889,7 +889,7 @@ header {
 .how-to-buy__intro {
   background-color: #fff;
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
